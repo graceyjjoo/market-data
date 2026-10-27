@@ -1,0 +1,969 @@
+{
+  "schema_id": "market-yahoo-monitoring-v1",
+  "source_run_id": "20261027T065037Z-gh40463495763-1",
+  "reference_time": "2026-10-27T06:50:37Z",
+  "window_start": "2026-10-27T05:20:37Z",
+  "window_end": "2026-10-27T06:50:37Z",
+  "window_basis": "source as_of (not capture time)",
+  "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
+  "instruments": {
+    "^KS11": {
+      "name": "KOSPI",
+      "group": "korea",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^KS11:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 5638.13,
+        "as_of": "2026-10-27T06:30:30Z",
+        "day_change_pct": 3.083663,
+        "previous_close": 5469.47,
+        "currency": "KRW"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:30:30Z",
+        "last_value": 5638.13
+      }
+    },
+    "^KQ11": {
+      "name": "KOSDAQ",
+      "group": "korea",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^KQ11:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 743.58,
+        "as_of": "2026-10-27T06:30:30Z",
+        "day_change_pct": -1.078902,
+        "previous_close": 751.69,
+        "currency": "KRW"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:30:30Z",
+        "last_value": 743.58
+      }
+    },
+    "^GSPC": {
+      "name": "S&P 500",
+      "group": "us_index",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^GSPC:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 7676.77,
+        "as_of": "2026-10-26T20:43:43Z",
+        "day_change_pct": 0.696383,
+        "previous_close": 7623.68,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^NDX": {
+      "name": "Nasdaq 100",
+      "group": "us_index",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^NDX:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 29273.404,
+        "as_of": "2026-10-26T21:15:59Z",
+        "day_change_pct": 1.090829,
+        "previous_close": 28957.527,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^SOX": {
+      "name": "PHLX Semiconductor Index",
+      "group": "us_index",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^SOX:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 11083.47,
+        "as_of": "2026-10-26T21:15:59Z",
+        "day_change_pct": 2.820233,
+        "previous_close": 10779.464,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^RUT": {
+      "name": "Russell 2000",
+      "group": "us_index",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^RUT:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 2786.424,
+        "as_of": "2026-10-26T20:30:04Z",
+        "day_change_pct": 0.37912,
+        "previous_close": 2775.9,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^IXIC": {
+      "name": "Nasdaq Composite",
+      "group": "us_index",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^IXIC:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 26169.38,
+        "as_of": "2026-10-26T21:15:59Z",
+        "day_change_pct": 0.824639,
+        "previous_close": 25955.342,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^N225": {
+      "name": "Nikkei 225",
+      "group": "asia",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^N225:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 63268.37,
+        "as_of": "2026-10-27T06:30:01Z",
+        "day_change_pct": 1.734565,
+        "previous_close": 62189.65,
+        "currency": "JPY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:30:01Z",
+        "last_value": 63268.37
+      }
+    },
+    "^HSI": {
+      "name": "Hang Seng",
+      "group": "asia",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^HSI:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 23047.59,
+        "as_of": "2026-10-27T06:35:42Z",
+        "day_change_pct": -0.198368,
+        "previous_close": 23093.4,
+        "currency": "HKD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:35:42Z",
+        "last_value": 23047.59
+      }
+    },
+    "HSTECH.HK": {
+      "name": "Hang Seng TECH",
+      "group": "asia",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:HSTECH.HK:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 3805.47,
+        "as_of": "2026-10-27T06:35:44Z",
+        "day_change_pct": -1.349568,
+        "previous_close": 3857.53,
+        "currency": null
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:35:44Z",
+        "last_value": 3805.47
+      }
+    },
+    "000300.SS": {
+      "name": "CSI 300",
+      "group": "asia",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:000300.SS:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 4081.311,
+        "as_of": "2026-10-27T06:35:40Z",
+        "day_change_pct": -0.541776,
+        "previous_close": 4103.543,
+        "currency": "CNY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:35:40Z",
+        "last_value": 4081.311
+      }
+    },
+    "000001.SS": {
+      "name": "Shanghai Composite",
+      "group": "asia",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:000001.SS:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 3674.714,
+        "as_of": "2026-10-27T06:35:40Z",
+        "day_change_pct": -0.427207,
+        "previous_close": 3690.48,
+        "currency": "CNY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:35:40Z",
+        "last_value": 3674.714
+      }
+    },
+    "399001.SZ": {
+      "name": "Shenzhen Component",
+      "group": "asia",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:399001.SZ:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 11368.959,
+        "as_of": "2026-10-27T06:35:46Z",
+        "day_change_pct": -2.611326,
+        "previous_close": 11673.8,
+        "currency": "CNY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:35:46Z",
+        "last_value": 11368.959
+      }
+    },
+    "1306.T": {
+      "name": "TOPIX ETF proxy (not spot index)",
+      "group": "asia",
+      "instrument_type": "ETF_proxy",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:1306.T:ETF_proxy:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 420.6,
+        "as_of": "2026-10-27T06:30:00Z",
+        "day_change_pct": 0.525813,
+        "previous_close": 418.4,
+        "currency": "JPY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:30:00Z",
+        "last_value": 420.6
+      }
+    },
+    "^IRX": {
+      "name": "US 13-week Treasury yield (Yahoo proxy)",
+      "group": "rates",
+      "instrument_type": "government_yield",
+      "unit": "percent",
+      "series_id": "YAHOO:chart:^IRX:government_yield:percent:regularMarketPrice",
+      "snapshot": {
+        "value": 4.025,
+        "as_of": "2026-10-26T18:59:52Z",
+        "day_change_pct": -0.173611,
+        "previous_close": 4.032,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^FVX": {
+      "name": "US 5-year Treasury yield (Yahoo proxy)",
+      "group": "rates",
+      "instrument_type": "government_yield",
+      "unit": "percent",
+      "series_id": "YAHOO:chart:^FVX:government_yield:percent:regularMarketPrice",
+      "snapshot": {
+        "value": 4.824,
+        "as_of": "2026-10-26T18:59:52Z",
+        "day_change_pct": 0.395421,
+        "previous_close": 4.805,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^TNX": {
+      "name": "US 10-year Treasury yield (Yahoo proxy)",
+      "group": "rates",
+      "instrument_type": "government_yield",
+      "unit": "percent",
+      "series_id": "YAHOO:chart:^TNX:government_yield:percent:regularMarketPrice",
+      "snapshot": {
+        "value": 4.986,
+        "as_of": "2026-10-26T18:59:52Z",
+        "day_change_pct": -0.040096,
+        "previous_close": 4.988,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "^TYX": {
+      "name": "US 30-year Treasury yield (Yahoo proxy)",
+      "group": "rates",
+      "instrument_type": "government_yield",
+      "unit": "percent",
+      "series_id": "YAHOO:chart:^TYX:government_yield:percent:regularMarketPrice",
+      "snapshot": {
+        "value": 5.301,
+        "as_of": "2026-10-26T18:59:52Z",
+        "day_change_pct": -0.263405,
+        "previous_close": 5.315,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "KRW=X": {
+      "name": "USD/KRW",
+      "group": "fx",
+      "instrument_type": "fx",
+      "unit": "KRW_per_USD",
+      "series_id": "YAHOO:chart:KRW=X:fx:KRW_per_USD:regularMarketPrice",
+      "snapshot": {
+        "value": 1324.21,
+        "as_of": "2026-10-27T06:50:49Z",
+        "day_change_pct": -0.072444,
+        "previous_close": 1325.17,
+        "currency": "KRW"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "JPY=X": {
+      "name": "USD/JPY",
+      "group": "fx",
+      "instrument_type": "fx",
+      "unit": "JPY_per_USD",
+      "series_id": "YAHOO:chart:JPY=X:fx:JPY_per_USD:regularMarketPrice",
+      "snapshot": {
+        "value": 157.787,
+        "as_of": "2026-10-27T06:50:52Z",
+        "day_change_pct": 0.203217,
+        "previous_close": 157.467,
+        "currency": "JPY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "CNY=X": {
+      "name": "USD/CNY",
+      "group": "fx",
+      "instrument_type": "fx",
+      "unit": "CNY_per_USD",
+      "series_id": "YAHOO:chart:CNY=X:fx:CNY_per_USD:regularMarketPrice",
+      "snapshot": {
+        "value": 6.6672,
+        "as_of": "2026-10-27T06:50:28Z",
+        "day_change_pct": 0.118631,
+        "previous_close": 6.6593,
+        "currency": "CNY"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:50:28Z",
+        "last_value": 6.6672
+      }
+    },
+    "EURUSD=X": {
+      "name": "EUR/USD",
+      "group": "fx",
+      "instrument_type": "fx",
+      "unit": "USD_per_EUR",
+      "series_id": "YAHOO:chart:EURUSD=X:fx:USD_per_EUR:regularMarketPrice",
+      "snapshot": {
+        "value": 1.1164,
+        "as_of": "2026-10-27T06:50:43Z",
+        "day_change_pct": -0.13418,
+        "previous_close": 1.1179,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "JPYKRW=X": {
+      "name": "JPY/KRW",
+      "group": "fx",
+      "instrument_type": "fx",
+      "unit": "KRW_per_JPY",
+      "series_id": "YAHOO:chart:JPYKRW=X:fx:KRW_per_JPY:regularMarketPrice",
+      "snapshot": {
+        "value": 8.376,
+        "as_of": "2026-10-27T06:46:43Z",
+        "day_change_pct": -0.20255,
+        "previous_close": 8.393,
+        "currency": "KRW"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:46:43Z",
+        "last_value": 8.376
+      }
+    },
+    "NQ=F": {
+      "name": "E-mini Nasdaq 100 futures",
+      "group": "futures",
+      "instrument_type": "futures",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:NQ=F:futures:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 29346.5,
+        "as_of": "2026-10-27T06:40:53Z",
+        "day_change_pct": -0.308283,
+        "previous_close": 29437.25,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:40:53Z",
+        "last_value": 29346.5,
+        "contract_verified": false,
+        "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
+      }
+    },
+    "ES=F": {
+      "name": "E-mini S&P 500 futures",
+      "group": "futures",
+      "instrument_type": "futures",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:ES=F:futures:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 7711.5,
+        "as_of": "2026-10-27T06:40:52Z",
+        "day_change_pct": -0.038888,
+        "previous_close": 7714.5,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:40:52Z",
+        "last_value": 7711.5,
+        "contract_verified": false,
+        "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
+      }
+    },
+    "CL=F": {
+      "name": "WTI crude oil futures",
+      "group": "commodities",
+      "instrument_type": "futures",
+      "unit": "USD_per_barrel",
+      "series_id": "YAHOO:chart:CL=F:futures:USD_per_barrel:regularMarketPrice",
+      "snapshot": {
+        "value": 101.48,
+        "as_of": "2026-10-27T06:40:55Z",
+        "day_change_pct": -0.275157,
+        "previous_close": 101.76,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:40:55Z",
+        "last_value": 101.48,
+        "contract_verified": false,
+        "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
+      }
+    },
+    "GC=F": {
+      "name": "Gold futures",
+      "group": "commodities",
+      "instrument_type": "futures",
+      "unit": "USD_per_troy_ounce",
+      "series_id": "YAHOO:chart:GC=F:futures:USD_per_troy_ounce:regularMarketPrice",
+      "snapshot": {
+        "value": 4013.5,
+        "as_of": "2026-10-27T06:40:57Z",
+        "day_change_pct": -0.616581,
+        "previous_close": 4038.4,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:40:57Z",
+        "last_value": 4013.5,
+        "contract_verified": false,
+        "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
+      }
+    },
+    "HG=F": {
+      "name": "Copper futures",
+      "group": "commodities",
+      "instrument_type": "futures",
+      "unit": "USD_per_pound",
+      "series_id": "YAHOO:chart:HG=F:futures:USD_per_pound:regularMarketPrice",
+      "snapshot": {
+        "value": 6.56,
+        "as_of": "2026-10-27T06:40:55Z",
+        "day_change_pct": 0.275145,
+        "previous_close": 6.542,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:40:55Z",
+        "last_value": 6.56,
+        "contract_verified": false,
+        "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
+      }
+    },
+    "NG=F": {
+      "name": "Natural gas futures",
+      "group": "commodities",
+      "instrument_type": "futures",
+      "unit": "USD_per_MMBtu",
+      "series_id": "YAHOO:chart:NG=F:futures:USD_per_MMBtu:regularMarketPrice",
+      "snapshot": {
+        "value": 3.035,
+        "as_of": "2026-10-27T06:40:47Z",
+        "day_change_pct": 0.430179,
+        "previous_close": 3.022,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-10-27T06:40:47Z",
+        "last_value": 3.035,
+        "contract_verified": false,
+        "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
+      }
+    },
+    "^VIX": {
+      "name": "CBOE VIX",
+      "group": "volatility",
+      "instrument_type": "index",
+      "unit": "index_points",
+      "series_id": "YAHOO:chart:^VIX:index:index_points:regularMarketPrice",
+      "snapshot": {
+        "value": 18.39,
+        "as_of": "2026-10-26T20:15:01Z",
+        "day_change_pct": -5.449871,
+        "previous_close": 19.45,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "EWY": {
+      "name": "한국 주식",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:EWY:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 152.72,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.965225,
+        "previous_close": 151.26,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "SOXX": {
+      "name": "반도체",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:SOXX:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 491.83,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 2.850272,
+        "previous_close": 478.2,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "KWEB": {
+      "name": "중국 인터넷",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:KWEB:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 23.2,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.259291,
+        "previous_close": 23.14,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "XLF": {
+      "name": "금융",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:XLF:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 56.02,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.214669,
+        "previous_close": 55.9,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "XLI": {
+      "name": "산업재",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:XLI:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 166.96,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 1.421455,
+        "previous_close": 164.62,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "XLY": {
+      "name": "경기소비재",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:XLY:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 114.26,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 1.025641,
+        "previous_close": 113.1,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "XLP": {
+      "name": "필수소비재",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:XLP:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 87.96,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": -0.339905,
+        "previous_close": 88.26,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "XLE": {
+      "name": "에너지",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:XLE:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 69.64,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.447137,
+        "previous_close": 69.33,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "MAGS": {
+      "name": "M7(빅테크)",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:MAGS:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 70.7,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.899101,
+        "previous_close": 70.07,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "QTUP": {
+      "name": "양자컴퓨팅",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:QTUP:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 11.49,
+        "as_of": "2026-10-26T19:59:52Z",
+        "day_change_pct": -0.948276,
+        "previous_close": 11.6,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "WARP": {
+      "name": "우주산업",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:WARP:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 17.915,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 1.472671,
+        "previous_close": 17.655,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "JOUL": {
+      "name": "전력인프라",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:JOUL:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 19.82,
+        "as_of": "2026-10-26T19:55:47Z",
+        "day_change_pct": 1.944244,
+        "previous_close": 19.442,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "LYTE": {
+      "name": "AI 광통신·포토닉스",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:LYTE:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 18.86,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 3.740374,
+        "previous_close": 18.18,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "NLR": {
+      "name": "원전·SMR 밸류체인",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:NLR:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 91.06,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.752379,
+        "previous_close": 90.38,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "XBI": {
+      "name": "바이오테크",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:XBI:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 150.47,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.621907,
+        "previous_close": 149.54,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "HUMN": {
+      "name": "휴머노이드",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:HUMN:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 28.09,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 2.518248,
+        "previous_close": 27.4,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "COPX": {
+      "name": "구리광산",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:COPX:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 73.81,
+        "as_of": "2026-10-26T20:00:00Z",
+        "day_change_pct": 0.985087,
+        "previous_close": 73.09,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    },
+    "CIBR": {
+      "name": "사이버보안",
+      "group": "etf",
+      "instrument_type": "ETF",
+      "unit": "share_price",
+      "series_id": "YAHOO:chart:CIBR:ETF:share_price:regularMarketPrice",
+      "snapshot": {
+        "value": 108.43,
+        "as_of": "2026-10-26T20:00:01Z",
+        "day_change_pct": 2.176781,
+        "previous_close": 106.12,
+        "currency": "USD"
+      },
+      "path": {
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
+      }
+    }
+  }
+}
