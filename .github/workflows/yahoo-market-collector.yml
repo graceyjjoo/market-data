@@ -1,0 +1,123 @@
+name: yahoo-market-collector
+
+on:
+  schedule:
+    - cron: '10 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'yahoo_market_collector.py'
+      - 'yahoo_store.py'
+      - '.github/workflows/yahoo-market-collector.yml'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: yahoo-market-collector
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      STORE: market/yahoo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Self-test
+        run: |
+          python -m py_compile yahoo_market_collector.py yahoo_store.py
+          python yahoo_store.py --selftest
+
+      - name: Find unpublished recovery captures
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          R="$RUNNER_TEMP/recovery"; mkdir -p "$R"; : > "$R/ids.txt"
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" \
+            --jq '[.artifacts[] | select(.expired==false) | select(.name|startswith("yahoo-recovery-"))] | sort_by(.created_at) | .[] | "\(.id)"' > "$R/list.txt"
+          while read -r id; do
+            [ -z "$id" ] && continue
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$id/zip" > "$R/$id.zip"
+            unzip -o -q "$R/$id.zip" -d "$R/$id" && echo "$id" >> "$R/ids.txt"
+          done < "$R/list.txt"
+          echo "recovery artifacts found: $(wc -l < "$R/ids.txt")"
+
+      - name: Fetch Yahoo
+        run: |
+          python yahoo_market_collector.py --output-dir "$RUNNER_TEMP/capture" \
+            --timeout 8 --attempts 2 --delay 0.8 --access-wait-seconds 15
+
+      - name: Ingest recovery captures (no Yahoo re-fetch)
+        run: |
+          R="$RUNNER_TEMP/recovery"
+          [ -f "$R/ids.txt" ] || exit 0
+          while read -r id; do
+            for f in "$R/$id"/*.csv; do
+              [ -f "$f" ] || continue
+              python yahoo_store.py --csv "$f" --store "$STORE" || echo "::warning::recovery file $f could not be ingested"
+            done
+          done < "$R/ids.txt"
+
+      - name: Ingest current capture
+        run: python yahoo_store.py --csv "$RUNNER_TEMP/capture/yahoo_market_latest.csv" --store "$STORE"
+
+      - name: Validate, derive, audit
+        run: |
+          python yahoo_store.py --validate --store "$STORE"
+          python yahoo_store.py --derive --store "$STORE"
+          python yahoo_store.py --audit --store "$STORE"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$STORE"
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "yahoo capture $(date -u +%Y-%m-%dT%H:%MZ)"
+          pushed=0
+          for i in 1 2 3; do
+            if git pull --rebase -q origin main && git push -q origin HEAD:main; then pushed=1; break; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          [ "$pushed" = 1 ] || { echo "::error::push failed"; exit 1; }
+
+      - name: Verify remote readback
+        run: |
+          git fetch -q origin main
+          [ "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" ] || { echo "::error::remote HEAD differs"; exit 1; }
+          git diff --quiet origin/main -- "$STORE" || { echo "::error::remote content differs"; exit 1; }
+          echo "remote readback OK $(git rev-parse --short HEAD)"
+
+      - name: Delete consumed recovery artifacts
+        if: success()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          R="$RUNNER_TEMP/recovery"
+          [ -f "$R/ids.txt" ] || exit 0
+          while read -r id; do
+            [ -n "$id" ] && gh api -X DELETE "repos/$GITHUB_REPOSITORY/actions/artifacts/$id"
+          done < "$R/ids.txt"
+
+      - name: Keep capture for recovery
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yahoo-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/capture/yahoo_market_latest.csv
+          retention-days: 30
+          if-no-files-found: ignore
