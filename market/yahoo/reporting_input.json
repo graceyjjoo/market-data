@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261029T010023Z-gh40797693890-1",
-  "reference_time": "2026-10-29T01:00:23Z",
+  "source_run_id": "20261029T015938Z-gh40803680225-1",
+  "reference_time": "2026-10-29T01:59:38Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -837,8 +837,8 @@
       "window_start": "2026-10-28T21:30:00Z",
       "window_end": "2026-10-29T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261029T010023Z-gh40797693890-1",
-      "last_collection_before_cutoff_gap_minutes": 509.6,
+      "last_collection_before_cutoff": "20261029T015938Z-gh40803680225-1",
+      "last_collection_before_cutoff_gap_minutes": 450.4,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -847,16 +847,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 6012.44,
             "start_as_of": "2026-10-28T11:05:40Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6045.04,
-            "end_as_of": "2026-10-29T00:40:20Z",
-            "span_minutes": 814.7,
-            "change_pct": 0.5422,
+            "end_value": 5862.31,
+            "end_as_of": "2026-10-29T01:39:30Z",
+            "span_minutes": 873.8,
+            "change_pct": -2.497,
             "sampled_high": 6045.04,
-            "sampled_low": 6012.44
+            "sampled_low": 5862.31
           }
         },
         "^KQ11": {
@@ -865,16 +865,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 771.28,
             "start_as_of": "2026-10-28T11:05:40Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 757.69,
-            "end_as_of": "2026-10-29T00:40:20Z",
-            "span_minutes": 814.7,
-            "change_pct": -1.762,
+            "end_value": 745.08,
+            "end_as_of": "2026-10-29T01:39:30Z",
+            "span_minutes": 873.8,
+            "change_pct": -3.397,
             "sampled_high": 771.28,
-            "sampled_low": 757.69
+            "sampled_low": 745.08
           }
         },
         "^GSPC": {
@@ -938,14 +938,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 63954.19,
             "start_as_of": "2026-10-28T06:45:03Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 64576.74,
-            "end_as_of": "2026-10-29T00:45:25Z",
-            "span_minutes": 1080.4,
-            "change_pct": 0.9734,
+            "end_value": 64143.41,
+            "end_as_of": "2026-10-29T01:44:40Z",
+            "span_minutes": 1139.6,
+            "change_pct": 0.2959,
             "sampled_high": 64576.74,
             "sampled_low": 63954.19
           }
@@ -954,55 +954,90 @@
           "name": "Hang Seng",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-28T08:08:46Z",
-            "last_value": 23094.83
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 23094.83,
+            "start_as_of": "2026-10-28T08:08:46Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 23125.33,
+            "end_as_of": "2026-10-29T01:44:44Z",
+            "span_minutes": 1056.0,
+            "change_pct": 0.1321,
+            "sampled_high": 23125.33,
+            "sampled_low": 23094.83
           }
         },
         "HSTECH.HK": {
           "name": "Hang Seng TECH",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-28T08:08:46Z",
-            "last_value": 3853.72
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3853.72,
+            "start_as_of": "2026-10-28T08:08:46Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3786.83,
+            "end_as_of": "2026-10-29T01:44:46Z",
+            "span_minutes": 1056.0,
+            "change_pct": -1.7357,
+            "sampled_high": 3853.72,
+            "sampled_low": 3786.83
           }
         },
         "000300.SS": {
           "name": "CSI 300",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-28T07:00:34Z",
-            "last_value": 4083.87
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 4083.87,
+            "start_as_of": "2026-10-28T07:00:34Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4042.91,
+            "end_as_of": "2026-10-29T01:44:40Z",
+            "span_minutes": 1124.1,
+            "change_pct": -1.003,
+            "sampled_high": 4083.87,
+            "sampled_low": 4042.91
           }
         },
         "000001.SS": {
           "name": "Shanghai Composite",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-28T07:00:34Z",
-            "last_value": 3681.469
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3681.469,
+            "start_as_of": "2026-10-28T07:00:34Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3654.67,
+            "end_as_of": "2026-10-29T01:44:40Z",
+            "span_minutes": 1124.1,
+            "change_pct": -0.7279,
+            "sampled_high": 3681.469,
+            "sampled_low": 3654.67
           }
         },
         "399001.SZ": {
           "name": "Shenzhen Component",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-28T08:29:40Z",
-            "last_value": 11473.181
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 11473.181,
+            "start_as_of": "2026-10-28T08:29:40Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 11253.498,
+            "end_as_of": "2026-10-29T01:44:49Z",
+            "span_minutes": 1035.2,
+            "change_pct": -1.9148,
+            "sampled_high": 11473.181,
+            "sampled_low": 11253.498
           }
         },
         "1306.T": {
@@ -1011,16 +1046,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 420.0,
             "start_as_of": "2026-10-28T06:30:00Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 419.8,
-            "end_as_of": "2026-10-29T00:45:11Z",
-            "span_minutes": 1095.2,
-            "change_pct": -0.0476,
+            "end_value": 418.8,
+            "end_as_of": "2026-10-29T01:44:42Z",
+            "span_minutes": 1154.7,
+            "change_pct": -0.2857,
             "sampled_high": 420.0,
-            "sampled_low": 419.8
+            "sampled_low": 418.8
           }
         },
         "^IRX": {
@@ -1073,16 +1108,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 1342.41,
             "start_as_of": "2026-10-28T20:49:19Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1341.59,
-            "end_as_of": "2026-10-28T23:41:02Z",
-            "span_minutes": 171.7,
-            "change_pct": -0.0611,
+            "end_value": 1335.39,
+            "end_as_of": "2026-10-29T01:00:39Z",
+            "span_minutes": 251.3,
+            "change_pct": -0.5229,
             "sampled_high": 1342.41,
-            "sampled_low": 1341.59
+            "sampled_low": 1335.39
           }
         },
         "JPY=X": {
@@ -1091,15 +1126,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 157.798,
             "start_as_of": "2026-10-28T20:49:29Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 157.721,
-            "end_as_of": "2026-10-28T23:41:02Z",
-            "span_minutes": 171.6,
-            "change_pct": -0.0488,
-            "sampled_high": 157.798,
+            "end_value": 157.938,
+            "end_as_of": "2026-10-29T01:00:40Z",
+            "span_minutes": 251.2,
+            "change_pct": 0.0887,
+            "sampled_high": 157.938,
             "sampled_low": 157.721
           }
         },
@@ -1145,16 +1180,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 8.485,
             "start_as_of": "2026-10-28T20:49:28Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.433,
-            "end_as_of": "2026-10-29T00:56:44Z",
-            "span_minutes": 247.3,
-            "change_pct": -0.6128,
+            "end_value": 8.424,
+            "end_as_of": "2026-10-29T01:56:45Z",
+            "span_minutes": 307.3,
+            "change_pct": -0.7189,
             "sampled_high": 8.487,
-            "sampled_low": 8.433
+            "sampled_low": 8.424
           }
         },
         "NQ=F": {
@@ -1163,16 +1198,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 29756.25,
             "start_as_of": "2026-10-28T20:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 29761.5,
-            "end_as_of": "2026-10-29T00:50:43Z",
-            "span_minutes": 230.7,
-            "change_pct": 0.0176,
+            "end_value": 29582.25,
+            "end_as_of": "2026-10-29T01:49:59Z",
+            "span_minutes": 290.0,
+            "change_pct": -0.5848,
             "sampled_high": 29761.5,
-            "sampled_low": 29642.75
+            "sampled_low": 29582.25
           }
         },
         "ES=F": {
@@ -1181,14 +1216,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 7760.75,
             "start_as_of": "2026-10-28T20:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7765.5,
-            "end_as_of": "2026-10-29T00:50:42Z",
-            "span_minutes": 230.7,
-            "change_pct": 0.0612,
+            "end_value": 7752.25,
+            "end_as_of": "2026-10-29T01:49:59Z",
+            "span_minutes": 290.0,
+            "change_pct": -0.1095,
             "sampled_high": 7765.5,
             "sampled_low": 7747.0
           }
@@ -1199,15 +1234,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 101.94,
             "start_as_of": "2026-10-28T20:59:58Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 102.0,
-            "end_as_of": "2026-10-29T00:50:32Z",
-            "span_minutes": 230.6,
-            "change_pct": 0.0589,
-            "sampled_high": 102.0,
+            "end_value": 102.01,
+            "end_as_of": "2026-10-29T01:50:01Z",
+            "span_minutes": 290.1,
+            "change_pct": 0.0687,
+            "sampled_high": 102.01,
             "sampled_low": 101.94
           }
         },
@@ -1217,14 +1252,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 4081.2,
             "start_as_of": "2026-10-28T20:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4051.4,
-            "end_as_of": "2026-10-29T00:50:45Z",
-            "span_minutes": 230.8,
-            "change_pct": -0.7302,
+            "end_value": 4068.2,
+            "end_as_of": "2026-10-29T01:50:01Z",
+            "span_minutes": 290.0,
+            "change_pct": -0.3185,
             "sampled_high": 4081.2,
             "sampled_low": 4051.4
           }
@@ -1235,16 +1270,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.6825,
             "start_as_of": "2026-10-28T20:59:55Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.679,
-            "end_as_of": "2026-10-29T00:50:07Z",
-            "span_minutes": 230.2,
-            "change_pct": -0.0524,
+            "end_value": 6.651,
+            "end_as_of": "2026-10-29T01:49:54Z",
+            "span_minutes": 290.0,
+            "change_pct": -0.4714,
             "sampled_high": 6.6825,
-            "sampled_low": 6.677
+            "sampled_low": 6.651
           }
         },
         "NG=F": {
@@ -1253,14 +1288,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 3.029,
             "start_as_of": "2026-10-28T20:59:48Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3.014,
-            "end_as_of": "2026-10-29T00:49:37Z",
-            "span_minutes": 229.8,
-            "change_pct": -0.4952,
+            "end_value": 3.029,
+            "end_as_of": "2026-10-29T01:50:05Z",
+            "span_minutes": 290.3,
+            "change_pct": 0.0,
             "sampled_high": 3.029,
             "sampled_low": 3.009
           }
