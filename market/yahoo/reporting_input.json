@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261030T214400Z-gh41133179331-1",
-  "reference_time": "2026-10-30T21:44:00Z",
+  "source_run_id": "20261030T224357Z-gh41140023556-1",
+  "reference_time": "2026-10-30T22:43:57Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -837,8 +837,8 @@
       "window_start": "2026-10-30T21:30:00Z",
       "window_end": "2026-10-31T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261030T214400Z-gh41133179331-1",
-      "last_collection_before_cutoff_gap_minutes": 706.0,
+      "last_collection_before_cutoff": "20261030T224357Z-gh41140023556-1",
+      "last_collection_before_cutoff_gap_minutes": 646.0,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -1043,11 +1043,18 @@
           "name": "USD/KRW",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:59:56Z",
-            "last_value": 1333.44
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 1333.44,
+            "start_as_of": "2026-10-30T20:59:56Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 1333.44,
+            "end_as_of": "2026-10-30T22:08:10Z",
+            "span_minutes": 68.2,
+            "change_pct": 0.0,
+            "sampled_high": 1333.44,
+            "sampled_low": 1333.44
           }
         },
         "JPY=X": {
@@ -1067,14 +1074,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 6.6533,
             "start_as_of": "2026-10-30T19:45:00Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6449,
-            "end_as_of": "2026-10-30T21:32:14Z",
-            "span_minutes": 107.2,
-            "change_pct": -0.1263,
+            "end_value": 6.6533,
+            "end_as_of": "2026-10-30T22:08:10Z",
+            "span_minutes": 143.2,
+            "change_pct": 0.0,
             "sampled_high": 6.6533,
             "sampled_low": 6.6449
           }
