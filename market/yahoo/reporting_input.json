@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261030T010215Z-gh40983385687-1",
-  "reference_time": "2026-10-30T01:02:15Z",
+  "source_run_id": "20261030T020134Z-gh40989240592-1",
+  "reference_time": "2026-10-30T02:01:34Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -837,8 +837,8 @@
       "window_start": "2026-10-29T21:30:00Z",
       "window_end": "2026-10-30T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261030T010215Z-gh40983385687-1",
-      "last_collection_before_cutoff_gap_minutes": 507.8,
+      "last_collection_before_cutoff": "20261030T020134Z-gh40989240592-1",
+      "last_collection_before_cutoff_gap_minutes": 448.4,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -847,16 +847,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 5937.66,
             "start_as_of": "2026-10-29T11:05:40Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 5703.08,
-            "end_as_of": "2026-10-30T00:42:10Z",
-            "span_minutes": 816.5,
-            "change_pct": -3.9507,
+            "end_value": 5652.73,
+            "end_as_of": "2026-10-30T01:41:30Z",
+            "span_minutes": 875.8,
+            "change_pct": -4.7987,
             "sampled_high": 5937.66,
-            "sampled_low": 5703.08
+            "sampled_low": 5652.73
           }
         },
         "^KQ11": {
@@ -865,16 +865,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 753.23,
             "start_as_of": "2026-10-29T11:05:40Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 735.1,
-            "end_as_of": "2026-10-30T00:42:10Z",
-            "span_minutes": 816.5,
-            "change_pct": -2.407,
+            "end_value": 726.59,
+            "end_as_of": "2026-10-30T01:41:30Z",
+            "span_minutes": 875.8,
+            "change_pct": -3.5368,
             "sampled_high": 753.23,
-            "sampled_low": 735.1
+            "sampled_low": 726.59
           }
         },
         "^GSPC": {
@@ -938,71 +938,106 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 64659.47,
             "start_as_of": "2026-10-29T06:45:03Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 63390.67,
-            "end_as_of": "2026-10-30T00:47:20Z",
-            "span_minutes": 1082.3,
-            "change_pct": -1.9623,
+            "end_value": 62872.06,
+            "end_as_of": "2026-10-30T01:46:40Z",
+            "span_minutes": 1141.6,
+            "change_pct": -2.7643,
             "sampled_high": 64659.47,
-            "sampled_low": 63390.67
+            "sampled_low": 62872.06
           }
         },
         "^HSI": {
           "name": "Hang Seng",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-29T08:08:46Z",
-            "last_value": 22958.65
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 22958.65,
+            "start_as_of": "2026-10-29T08:08:46Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 23115.28,
+            "end_as_of": "2026-10-30T01:46:40Z",
+            "span_minutes": 1057.9,
+            "change_pct": 0.6822,
+            "sampled_high": 23115.28,
+            "sampled_low": 22958.65
           }
         },
         "HSTECH.HK": {
           "name": "Hang Seng TECH",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-29T08:08:46Z",
-            "last_value": 3744.14
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3744.14,
+            "start_as_of": "2026-10-29T08:08:46Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3761.56,
+            "end_as_of": "2026-10-30T01:46:42Z",
+            "span_minutes": 1057.9,
+            "change_pct": 0.4653,
+            "sampled_high": 3761.56,
+            "sampled_low": 3744.14
           }
         },
         "000300.SS": {
           "name": "CSI 300",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-29T07:00:34Z",
-            "last_value": 4041.838
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 4041.838,
+            "start_as_of": "2026-10-29T07:00:34Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3990.907,
+            "end_as_of": "2026-10-30T01:46:40Z",
+            "span_minutes": 1126.1,
+            "change_pct": -1.2601,
+            "sampled_high": 4041.838,
+            "sampled_low": 3990.907
           }
         },
         "000001.SS": {
           "name": "Shanghai Composite",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-29T07:00:34Z",
-            "last_value": 3651.434
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3651.434,
+            "start_as_of": "2026-10-29T07:00:34Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3611.0144,
+            "end_as_of": "2026-10-30T01:46:45Z",
+            "span_minutes": 1126.2,
+            "change_pct": -1.107,
+            "sampled_high": 3651.434,
+            "sampled_low": 3611.0144
           }
         },
         "399001.SZ": {
           "name": "Shenzhen Component",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-29T08:29:16Z",
-            "last_value": 11138.198
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 11138.198,
+            "start_as_of": "2026-10-29T08:29:16Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 10931.347,
+            "end_as_of": "2026-10-30T01:46:43Z",
+            "span_minutes": 1037.5,
+            "change_pct": -1.8571,
+            "sampled_high": 11138.198,
+            "sampled_low": 10931.347
           }
         },
         "1306.T": {
@@ -1011,16 +1046,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 421.3,
             "start_as_of": "2026-10-29T06:30:00Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 419.0,
-            "end_as_of": "2026-10-30T00:47:24Z",
-            "span_minutes": 1097.4,
-            "change_pct": -0.5459,
+            "end_value": 415.3,
+            "end_as_of": "2026-10-30T01:46:44Z",
+            "span_minutes": 1156.7,
+            "change_pct": -1.4242,
             "sampled_high": 421.3,
-            "sampled_low": 419.0
+            "sampled_low": 415.3
           }
         },
         "^IRX": {
@@ -1073,16 +1108,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 1339.5,
             "start_as_of": "2026-10-29T20:50:40Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1338.88,
-            "end_as_of": "2026-10-29T23:43:56Z",
-            "span_minutes": 173.3,
-            "change_pct": -0.0463,
+            "end_value": 1337.98,
+            "end_as_of": "2026-10-30T01:02:30Z",
+            "span_minutes": 251.8,
+            "change_pct": -0.1135,
             "sampled_high": 1339.5,
-            "sampled_low": 1338.63
+            "sampled_low": 1337.98
           }
         },
         "JPY=X": {
@@ -1091,16 +1126,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 157.675,
             "start_as_of": "2026-10-29T20:50:42Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 157.79,
-            "end_as_of": "2026-10-29T23:43:57Z",
-            "span_minutes": 173.2,
-            "change_pct": 0.0729,
+            "end_value": 157.375,
+            "end_as_of": "2026-10-30T01:02:30Z",
+            "span_minutes": 251.8,
+            "change_pct": -0.1903,
             "sampled_high": 157.79,
-            "sampled_low": 157.662
+            "sampled_low": 157.375
           }
         },
         "CNY=X": {
@@ -1163,16 +1198,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 29218.25,
             "start_as_of": "2026-10-29T20:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 28983.75,
-            "end_as_of": "2026-10-30T00:52:32Z",
-            "span_minutes": 232.6,
-            "change_pct": -0.8026,
+            "end_value": 28834.5,
+            "end_as_of": "2026-10-30T01:51:57Z",
+            "span_minutes": 292.0,
+            "change_pct": -1.3134,
             "sampled_high": 29218.25,
-            "sampled_low": 28983.75
+            "sampled_low": 28834.5
           }
         },
         "ES=F": {
@@ -1181,16 +1216,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 7710.0,
             "start_as_of": "2026-10-29T20:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7694.0,
-            "end_as_of": "2026-10-30T00:52:34Z",
-            "span_minutes": 232.6,
-            "change_pct": -0.2075,
+            "end_value": 7666.25,
+            "end_as_of": "2026-10-30T01:51:56Z",
+            "span_minutes": 291.9,
+            "change_pct": -0.5674,
             "sampled_high": 7710.0,
-            "sampled_low": 7694.0
+            "sampled_low": 7666.25
           }
         },
         "CL=F": {
@@ -1199,15 +1234,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 102.86,
             "start_as_of": "2026-10-29T20:59:57Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 102.62,
-            "end_as_of": "2026-10-30T00:52:32Z",
-            "span_minutes": 232.6,
-            "change_pct": -0.2333,
-            "sampled_high": 102.9,
+            "end_value": 104.78,
+            "end_as_of": "2026-10-30T01:51:59Z",
+            "span_minutes": 292.0,
+            "change_pct": 1.8666,
+            "sampled_high": 104.78,
             "sampled_low": 102.62
           }
         },
@@ -1217,16 +1252,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 4033.3,
             "start_as_of": "2026-10-29T20:59:58Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4025.3,
-            "end_as_of": "2026-10-30T00:52:36Z",
-            "span_minutes": 232.6,
-            "change_pct": -0.1983,
+            "end_value": 4010.6,
+            "end_as_of": "2026-10-30T01:52:01Z",
+            "span_minutes": 292.1,
+            "change_pct": -0.5628,
             "sampled_high": 4033.4,
-            "sampled_low": 4025.3
+            "sampled_low": 4010.6
           }
         },
         "HG=F": {
@@ -1235,16 +1270,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.5895,
             "start_as_of": "2026-10-29T20:59:30Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.568,
-            "end_as_of": "2026-10-30T00:52:34Z",
-            "span_minutes": 233.1,
-            "change_pct": -0.3263,
+            "end_value": 6.56,
+            "end_as_of": "2026-10-30T01:51:21Z",
+            "span_minutes": 291.9,
+            "change_pct": -0.4477,
             "sampled_high": 6.5895,
-            "sampled_low": 6.568
+            "sampled_low": 6.56
           }
         },
         "NG=F": {
@@ -1253,14 +1288,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 2.905,
             "start_as_of": "2026-10-29T20:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 2.893,
-            "end_as_of": "2026-10-30T00:52:39Z",
-            "span_minutes": 232.7,
-            "change_pct": -0.4131,
+            "end_value": 2.901,
+            "end_as_of": "2026-10-30T01:52:03Z",
+            "span_minutes": 292.1,
+            "change_pct": -0.1377,
             "sampled_high": 2.905,
             "sampled_low": 2.893
           }
