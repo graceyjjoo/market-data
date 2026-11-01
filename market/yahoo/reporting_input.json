@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261101T224127Z-gh41358383539-1",
-  "reference_time": "2026-11-01T22:41:27Z",
+  "source_run_id": "20261101T233940Z-gh41363176890-1",
+  "reference_time": "2026-11-01T23:39:40Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -564,8 +564,8 @@
       "window_start": "2026-11-01T21:30:00Z",
       "window_end": "2026-11-02T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261101T224127Z-gh41358383539-1",
-      "last_collection_before_cutoff_gap_minutes": 648.5,
+      "last_collection_before_cutoff": "20261101T233940Z-gh41363176890-1",
+      "last_collection_before_cutoff_gap_minutes": 590.3,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -770,22 +770,36 @@
           "name": "USD/KRW",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-01T21:25:03Z",
-            "last_value": 1333.44
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 1333.44,
+            "start_as_of": "2026-11-01T21:25:03Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 1332.65,
+            "end_as_of": "2026-11-01T22:41:41Z",
+            "span_minutes": 76.6,
+            "change_pct": -0.0592,
+            "sampled_high": 1333.44,
+            "sampled_low": 1332.65
           }
         },
         "JPY=X": {
           "name": "USD/JPY",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:59:33Z",
-            "last_value": 157.519
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 157.519,
+            "start_as_of": "2026-10-30T20:59:33Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 157.467,
+            "end_as_of": "2026-11-01T22:41:33Z",
+            "span_minutes": 2982.0,
+            "change_pct": -0.033,
+            "sampled_high": 157.519,
+            "sampled_low": 157.467
           }
         },
         "CNY=X": {
@@ -794,13 +808,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 6.6449,
             "start_as_of": "2026-11-01T16:04:34Z",
             "start_is_pre_window_baseline": true,
             "end_value": 6.6449,
-            "end_as_of": "2026-11-01T21:32:17Z",
-            "span_minutes": 327.7,
+            "end_as_of": "2026-11-01T23:20:07Z",
+            "span_minutes": 435.6,
             "change_pct": 0.0,
             "sampled_high": 6.6449,
             "sampled_low": 6.6449
@@ -810,11 +824,18 @@
           "name": "EUR/USD",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T21:29:43Z",
-            "last_value": 1.1166
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 2,
+            "start_value": 1.1166,
+            "start_as_of": "2026-10-30T21:29:43Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 1.1162,
+            "end_as_of": "2026-11-01T23:39:25Z",
+            "span_minutes": 3009.7,
+            "change_pct": -0.0358,
+            "sampled_high": 1.1166,
+            "sampled_low": 1.1159
           }
         },
         "JPYKRW=X": {
@@ -823,82 +844,124 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 8.441,
             "start_as_of": "2026-10-30T21:29:29Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.439,
-            "end_as_of": "2026-11-01T22:39:29Z",
-            "span_minutes": 2950.0,
-            "change_pct": -0.0237,
+            "end_value": 8.433,
+            "end_as_of": "2026-11-01T23:39:25Z",
+            "span_minutes": 3009.9,
+            "change_pct": -0.0948,
             "sampled_high": 8.441,
-            "sampled_low": 8.439
+            "sampled_low": 8.433
           }
         },
         "NQ=F": {
           "name": "E-mini Nasdaq 100 futures",
           "group": "futures",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T21:00:00Z",
-            "last_value": 28534.0
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 28534.0,
+            "start_as_of": "2026-10-30T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 28630.25,
+            "end_as_of": "2026-11-01T23:29:59Z",
+            "span_minutes": 3030.0,
+            "change_pct": 0.3373,
+            "sampled_high": 28630.25,
+            "sampled_low": 28534.0
           }
         },
         "ES=F": {
           "name": "E-mini S&P 500 futures",
           "group": "futures",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T21:00:00Z",
-            "last_value": 7614.0
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 7614.0,
+            "start_as_of": "2026-10-30T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 7632.25,
+            "end_as_of": "2026-11-01T23:29:59Z",
+            "span_minutes": 3030.0,
+            "change_pct": 0.2397,
+            "sampled_high": 7632.25,
+            "sampled_low": 7614.0
           }
         },
         "CL=F": {
           "name": "WTI crude oil futures",
           "group": "commodities",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:59:59Z",
-            "last_value": 104.12
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 104.12,
+            "start_as_of": "2026-10-30T20:59:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 102.39,
+            "end_as_of": "2026-11-01T23:30:01Z",
+            "span_minutes": 3030.0,
+            "change_pct": -1.6615,
+            "sampled_high": 104.12,
+            "sampled_low": 102.39
           }
         },
         "GC=F": {
           "name": "Gold futures",
           "group": "commodities",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:59:59Z",
-            "last_value": 3898.9
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3898.9,
+            "start_as_of": "2026-10-30T20:59:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3907.8,
+            "end_as_of": "2026-11-01T23:30:00Z",
+            "span_minutes": 3030.0,
+            "change_pct": 0.2283,
+            "sampled_high": 3907.8,
+            "sampled_low": 3898.9
           }
         },
         "HG=F": {
           "name": "Copper futures",
           "group": "commodities",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:59:59Z",
-            "last_value": 6.482
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 6.482,
+            "start_as_of": "2026-10-30T20:59:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 6.508,
+            "end_as_of": "2026-11-01T23:30:00Z",
+            "span_minutes": 3030.0,
+            "change_pct": 0.4011,
+            "sampled_high": 6.508,
+            "sampled_low": 6.482
           }
         },
         "NG=F": {
           "name": "Natural gas futures",
           "group": "commodities",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:59:59Z",
-            "last_value": 2.898
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 2.898,
+            "start_as_of": "2026-10-30T20:59:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 2.899,
+            "end_as_of": "2026-11-01T23:30:02Z",
+            "span_minutes": 3030.1,
+            "change_pct": 0.0345,
+            "sampled_high": 2.899,
+            "sampled_low": 2.898
           }
         },
         "^VIX": {
