@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261101T025328Z-gh41266978044-1",
-  "reference_time": "2026-11-01T02:53:28Z",
-  "window_start": "2026-11-01T01:23:28Z",
-  "window_end": "2026-11-01T02:53:28Z",
+  "source_run_id": "20261101T035509Z-gh41271024488-1",
+  "reference_time": "2026-11-01T03:55:09Z",
+  "window_start": "2026-11-01T02:25:09Z",
+  "window_end": "2026-11-01T03:55:09Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -394,18 +394,25 @@
       "unit": "CNY_per_USD",
       "series_id": "YAHOO:chart:CNY=X:fx:CNY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 6.6449,
-        "as_of": "2026-11-01T02:32:44Z",
-        "day_change_pct": -0.234217,
+        "value": 6.654,
+        "as_of": "2026-11-01T03:30:51Z",
+        "day_change_pct": -0.09759,
         "previous_close": 6.6605,
         "currency": "CNY"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-01T02:32:44Z",
-        "last_value": 6.6449
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 6.6449,
+        "start_as_of": "2026-11-01T02:32:44Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 6.654,
+        "end_as_of": "2026-11-01T03:30:51Z",
+        "span_minutes": 58.1,
+        "change_pct": 0.1369,
+        "sampled_high": 6.654,
+        "sampled_low": 6.6449
       }
     },
     "EURUSD=X": {
