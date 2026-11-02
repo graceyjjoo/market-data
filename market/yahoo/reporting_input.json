@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261102T131219Z-gh41450891741-1",
-  "reference_time": "2026-11-02T13:12:19Z",
+  "source_run_id": "20261102T150001Z-gh41467236939-1",
+  "reference_time": "2026-11-02T15:00:01Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -697,8 +697,8 @@
       "window_start": "2026-11-02T09:30:00Z",
       "window_end": "2026-11-02T21:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261102T131219Z-gh41450891741-1",
-      "last_collection_before_cutoff_gap_minutes": 497.7,
+      "last_collection_before_cutoff": "20261102T150001Z-gh41467236939-1",
+      "last_collection_before_cutoff_gap_minutes": 390.0,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -741,55 +741,90 @@
           "name": "S&P 500",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:47:43Z",
-            "last_value": 7580.07
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 7580.07,
+            "start_as_of": "2026-10-30T20:47:43Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 7625.69,
+            "end_as_of": "2026-11-02T14:53:37Z",
+            "span_minutes": 3965.9,
+            "change_pct": 0.6018,
+            "sampled_high": 7625.69,
+            "sampled_low": 7580.07
           }
         },
         "^NDX": {
           "name": "Nasdaq 100",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T21:15:59Z",
-            "last_value": 28384.846
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 28384.846,
+            "start_as_of": "2026-10-30T21:15:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 28561.014,
+            "end_as_of": "2026-11-02T14:53:18Z",
+            "span_minutes": 3937.3,
+            "change_pct": 0.6206,
+            "sampled_high": 28561.014,
+            "sampled_low": 28384.846
           }
         },
         "^SOX": {
           "name": "PHLX Semiconductor Index",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T21:15:59Z",
-            "last_value": 10688.8
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 10688.8,
+            "start_as_of": "2026-10-30T21:15:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 10702.301,
+            "end_as_of": "2026-11-02T14:53:25Z",
+            "span_minutes": 3937.4,
+            "change_pct": 0.1263,
+            "sampled_high": 10702.301,
+            "sampled_low": 10688.8
           }
         },
         "^RUT": {
           "name": "Russell 2000",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:30:05Z",
-            "last_value": 2811.844
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 2811.844,
+            "start_as_of": "2026-10-30T20:30:05Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 2829.034,
+            "end_as_of": "2026-11-02T14:36:00Z",
+            "span_minutes": 3965.9,
+            "change_pct": 0.6113,
+            "sampled_high": 2829.034,
+            "sampled_low": 2811.844
           }
         },
         "^IXIC": {
           "name": "Nasdaq Composite",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T21:15:59Z",
-            "last_value": 25436.998
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 25436.998,
+            "start_as_of": "2026-10-30T21:15:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 25641.291,
+            "end_as_of": "2026-11-02T14:53:22Z",
+            "span_minutes": 3937.4,
+            "change_pct": 0.8031,
+            "sampled_high": 25641.291,
+            "sampled_low": 25436.998
           }
         },
         "^N225": {
@@ -873,44 +908,72 @@
           "name": "US 13-week Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T18:59:54Z",
-            "last_value": 3.973
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3.973,
+            "start_as_of": "2026-10-30T18:59:54Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3.998,
+            "end_as_of": "2026-11-02T14:35:51Z",
+            "span_minutes": 4055.9,
+            "change_pct": 0.6292,
+            "sampled_high": 3.998,
+            "sampled_low": 3.973
           }
         },
         "^FVX": {
           "name": "US 5-year Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T18:59:54Z",
-            "last_value": 4.721
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 4.721,
+            "start_as_of": "2026-10-30T18:59:54Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4.702,
+            "end_as_of": "2026-11-02T14:35:51Z",
+            "span_minutes": 4055.9,
+            "change_pct": -0.4025,
+            "sampled_high": 4.721,
+            "sampled_low": 4.702
           }
         },
         "^TNX": {
           "name": "US 10-year Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T18:59:54Z",
-            "last_value": 4.929
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 4.929,
+            "start_as_of": "2026-10-30T18:59:54Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4.896,
+            "end_as_of": "2026-11-02T14:35:51Z",
+            "span_minutes": 4055.9,
+            "change_pct": -0.6695,
+            "sampled_high": 4.929,
+            "sampled_low": 4.896
           }
         },
         "^TYX": {
           "name": "US 30-year Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T18:59:54Z",
-            "last_value": 5.309
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 5.309,
+            "start_as_of": "2026-10-30T18:59:54Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 5.264,
+            "end_as_of": "2026-11-02T14:35:51Z",
+            "span_minutes": 4055.9,
+            "change_pct": -0.8476,
+            "sampled_high": 5.309,
+            "sampled_low": 5.264
           }
         },
         "KRW=X": {
@@ -919,15 +982,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 4,
             "start_value": 1340.24,
             "start_as_of": "2026-11-02T09:09:04Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1342.22,
-            "end_as_of": "2026-11-02T11:58:30Z",
-            "span_minutes": 169.4,
-            "change_pct": 0.1477,
-            "sampled_high": 1342.22,
+            "end_value": 1342.21,
+            "end_as_of": "2026-11-02T14:50:54Z",
+            "span_minutes": 341.8,
+            "change_pct": 0.147,
+            "sampled_high": 1342.63,
             "sampled_low": 1340.24
           }
         },
@@ -937,14 +1000,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 4,
             "start_value": 157.652,
             "start_as_of": "2026-11-02T09:09:12Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 157.932,
-            "end_as_of": "2026-11-02T11:58:38Z",
-            "span_minutes": 169.4,
-            "change_pct": 0.1776,
+            "end_value": 157.666,
+            "end_as_of": "2026-11-02T14:51:02Z",
+            "span_minutes": 341.8,
+            "change_pct": 0.0089,
             "sampled_high": 157.95,
             "sampled_low": 157.652
           }
@@ -955,15 +1018,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.645,
             "start_as_of": "2026-11-02T09:08:51Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6367,
-            "end_as_of": "2026-11-02T13:08:44Z",
-            "span_minutes": 239.9,
-            "change_pct": -0.1249,
-            "sampled_high": 6.645,
+            "end_value": 6.6481,
+            "end_as_of": "2026-11-02T14:49:24Z",
+            "span_minutes": 340.6,
+            "change_pct": 0.0467,
+            "sampled_high": 6.6481,
             "sampled_low": 6.636
           }
         },
@@ -973,14 +1036,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 4,
             "start_value": 1.1238,
             "start_as_of": "2026-11-02T09:08:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.121,
-            "end_as_of": "2026-11-02T11:58:26Z",
-            "span_minutes": 170.0,
-            "change_pct": -0.2492,
+            "end_value": 1.122,
+            "end_as_of": "2026-11-02T14:50:29Z",
+            "span_minutes": 342.0,
+            "change_pct": -0.1602,
             "sampled_high": 1.1238,
             "sampled_low": 1.121
           }
@@ -991,15 +1054,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 8.487,
             "start_as_of": "2026-11-02T09:04:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.484,
-            "end_as_of": "2026-11-02T13:09:27Z",
-            "span_minutes": 245.0,
-            "change_pct": -0.0353,
-            "sampled_high": 8.487,
+            "end_value": 8.489,
+            "end_as_of": "2026-11-02T14:49:29Z",
+            "span_minutes": 345.0,
+            "change_pct": 0.0236,
+            "sampled_high": 8.489,
             "sampled_low": 8.469
           }
         },
@@ -1009,14 +1072,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 28724.25,
             "start_as_of": "2026-11-02T08:59:15Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 28691.25,
-            "end_as_of": "2026-11-02T13:02:38Z",
-            "span_minutes": 243.4,
-            "change_pct": -0.1149,
+            "end_value": 28700.75,
+            "end_as_of": "2026-11-02T14:40:58Z",
+            "span_minutes": 341.7,
+            "change_pct": -0.0818,
             "sampled_high": 28768.5,
             "sampled_low": 28691.25
           }
@@ -1027,14 +1090,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 7639.0,
             "start_as_of": "2026-11-02T08:59:15Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7636.75,
-            "end_as_of": "2026-11-02T13:02:38Z",
-            "span_minutes": 243.4,
-            "change_pct": -0.0295,
+            "end_value": 7647.0,
+            "end_as_of": "2026-11-02T14:41:02Z",
+            "span_minutes": 341.8,
+            "change_pct": 0.1047,
             "sampled_high": 7651.0,
             "sampled_low": 7636.75
           }
@@ -1045,16 +1108,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 100.2,
             "start_as_of": "2026-11-02T08:59:16Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 99.57,
-            "end_as_of": "2026-11-02T13:02:40Z",
-            "span_minutes": 243.4,
-            "change_pct": -0.6287,
+            "end_value": 97.3,
+            "end_as_of": "2026-11-02T14:41:00Z",
+            "span_minutes": 341.7,
+            "change_pct": -2.8942,
             "sampled_high": 100.2,
-            "sampled_low": 99.44
+            "sampled_low": 97.3
           }
         },
         "GC=F": {
@@ -1063,15 +1126,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 3906.5,
             "start_as_of": "2026-11-02T08:59:18Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3906.4,
-            "end_as_of": "2026-11-02T13:02:35Z",
-            "span_minutes": 243.3,
-            "change_pct": -0.0026,
-            "sampled_high": 3914.2,
+            "end_value": 3969.6,
+            "end_as_of": "2026-11-02T14:41:01Z",
+            "span_minutes": 341.7,
+            "change_pct": 1.6153,
+            "sampled_high": 3969.6,
             "sampled_low": 3905.9
           }
         },
@@ -1081,14 +1144,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.543,
             "start_as_of": "2026-11-02T08:59:13Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.507,
-            "end_as_of": "2026-11-02T13:02:37Z",
-            "span_minutes": 243.4,
-            "change_pct": -0.5502,
+            "end_value": 6.543,
+            "end_as_of": "2026-11-02T14:40:57Z",
+            "span_minutes": 341.7,
+            "change_pct": 0.0,
             "sampled_high": 6.543,
             "sampled_low": 6.507
           }
@@ -1099,15 +1162,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 2.904,
             "start_as_of": "2026-11-02T08:59:18Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 2.935,
-            "end_as_of": "2026-11-02T13:02:44Z",
-            "span_minutes": 243.4,
-            "change_pct": 1.0675,
-            "sampled_high": 2.936,
+            "end_value": 2.943,
+            "end_as_of": "2026-11-02T14:41:00Z",
+            "span_minutes": 341.7,
+            "change_pct": 1.343,
+            "sampled_high": 2.943,
             "sampled_low": 2.904
           }
         },
@@ -1117,14 +1180,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 19.08,
             "start_as_of": "2026-11-02T08:54:16Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 19.38,
-            "end_as_of": "2026-11-02T12:57:31Z",
-            "span_minutes": 243.2,
-            "change_pct": 1.5723,
+            "end_value": 19.07,
+            "end_as_of": "2026-11-02T14:36:01Z",
+            "span_minutes": 341.8,
+            "change_pct": -0.0524,
             "sampled_high": 19.38,
             "sampled_low": 18.89
           }
@@ -1133,121 +1196,198 @@
           "name": "한국 주식",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 152.89
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 152.89,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 157.445,
+            "end_as_of": "2026-11-02T14:53:35Z",
+            "span_minutes": 4013.6,
+            "change_pct": 2.9793,
+            "sampled_high": 157.445,
+            "sampled_low": 152.89
           }
         },
         "SOXX": {
           "name": "반도체",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 471.51
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 471.51,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 472.035,
+            "end_as_of": "2026-11-02T14:53:36Z",
+            "span_minutes": 4013.6,
+            "change_pct": 0.1113,
+            "sampled_high": 472.035,
+            "sampled_low": 471.51
           }
         },
         "KWEB": {
           "name": "중국 인터넷",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 22.74
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 22.74,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 23.495,
+            "end_as_of": "2026-11-02T14:53:29Z",
+            "span_minutes": 4013.5,
+            "change_pct": 3.3201,
+            "sampled_high": 23.495,
+            "sampled_low": 22.74
           }
         },
         "XLF": {
           "name": "금융",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 56.51
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 56.51,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 57.3,
+            "end_as_of": "2026-11-02T14:53:35Z",
+            "span_minutes": 4013.6,
+            "change_pct": 1.398,
+            "sampled_high": 57.3,
+            "sampled_low": 56.51
           }
         },
         "XLI": {
           "name": "산업재",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 167.4
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 167.4,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 169.83,
+            "end_as_of": "2026-11-02T14:53:38Z",
+            "span_minutes": 4013.6,
+            "change_pct": 1.4516,
+            "sampled_high": 169.83,
+            "sampled_low": 167.4
           }
         },
         "XLY": {
           "name": "경기소비재",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 115.38
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 115.38,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 118.07,
+            "end_as_of": "2026-11-02T14:53:38Z",
+            "span_minutes": 4013.6,
+            "change_pct": 2.3314,
+            "sampled_high": 118.07,
+            "sampled_low": 115.38
           }
         },
         "XLP": {
           "name": "필수소비재",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 89.42
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 89.42,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 90.445,
+            "end_as_of": "2026-11-02T14:53:37Z",
+            "span_minutes": 4013.6,
+            "change_pct": 1.1463,
+            "sampled_high": 90.445,
+            "sampled_low": 89.42
           }
         },
         "XLE": {
           "name": "에너지",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 70.02
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 70.02,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 68.12,
+            "end_as_of": "2026-11-02T14:53:36Z",
+            "span_minutes": 4013.6,
+            "change_pct": -2.7135,
+            "sampled_high": 70.02,
+            "sampled_low": 68.12
           }
         },
         "MAGS": {
           "name": "M7(빅테크)",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 68.48
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 68.48,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 69.25,
+            "end_as_of": "2026-11-02T14:53:35Z",
+            "span_minutes": 4013.6,
+            "change_pct": 1.1244,
+            "sampled_high": 69.25,
+            "sampled_low": 68.48
           }
         },
         "QTUP": {
           "name": "양자컴퓨팅",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:01Z",
-            "last_value": 11.23
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 11.23,
+            "start_as_of": "2026-10-30T20:00:01Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 11.19,
+            "end_as_of": "2026-11-02T14:43:58Z",
+            "span_minutes": 4003.9,
+            "change_pct": -0.3562,
+            "sampled_high": 11.23,
+            "sampled_low": 11.19
           }
         },
         "WARP": {
           "name": "우주산업",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 17.82
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 17.82,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 17.83,
+            "end_as_of": "2026-11-02T14:52:48Z",
+            "span_minutes": 4012.8,
+            "change_pct": 0.0561,
+            "sampled_high": 17.83,
+            "sampled_low": 17.82
           }
         },
         "JOUL": {
@@ -1265,66 +1405,108 @@
           "name": "AI 광통신·포토닉스",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 17.48
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 17.48,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 16.785,
+            "end_as_of": "2026-11-02T14:53:25Z",
+            "span_minutes": 4013.4,
+            "change_pct": -3.976,
+            "sampled_high": 17.48,
+            "sampled_low": 16.785
           }
         },
         "NLR": {
           "name": "원전·SMR 밸류체인",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 91.75
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 91.75,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 93.13,
+            "end_as_of": "2026-11-02T14:53:16Z",
+            "span_minutes": 4013.3,
+            "change_pct": 1.5041,
+            "sampled_high": 93.13,
+            "sampled_low": 91.75
           }
         },
         "XBI": {
           "name": "바이오테크",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 155.98
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 155.98,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 155.51,
+            "end_as_of": "2026-11-02T14:53:37Z",
+            "span_minutes": 4013.6,
+            "change_pct": -0.3013,
+            "sampled_high": 155.98,
+            "sampled_low": 155.51
           }
         },
         "HUMN": {
           "name": "휴머노이드",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T19:58:53Z",
-            "last_value": 26.79
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 26.79,
+            "start_as_of": "2026-10-30T19:58:53Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 27.5,
+            "end_as_of": "2026-11-02T14:47:58Z",
+            "span_minutes": 4009.1,
+            "change_pct": 2.6502,
+            "sampled_high": 27.5,
+            "sampled_low": 26.79
           }
         },
         "COPX": {
           "name": "구리광산",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:00Z",
-            "last_value": 71.96
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 71.96,
+            "start_as_of": "2026-10-30T20:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 73.8,
+            "end_as_of": "2026-11-02T14:53:23Z",
+            "span_minutes": 4013.4,
+            "change_pct": 2.557,
+            "sampled_high": 73.8,
+            "sampled_low": 71.96
           }
         },
         "CIBR": {
           "name": "사이버보안",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-10-30T20:00:01Z",
-            "last_value": 101.03
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 101.03,
+            "start_as_of": "2026-10-30T20:00:01Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 98.82,
+            "end_as_of": "2026-11-02T14:53:28Z",
+            "span_minutes": 4013.4,
+            "change_pct": -2.1875,
+            "sampled_high": 101.03,
+            "sampled_low": 98.82
           }
         }
       }
