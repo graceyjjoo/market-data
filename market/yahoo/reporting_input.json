@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261103T130634Z-gh41641388977-1",
-  "reference_time": "2026-11-03T13:06:34Z",
+  "source_run_id": "20261103T142257Z-gh41653100401-1",
+  "reference_time": "2026-11-03T14:22:57Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -718,8 +718,8 @@
       "window_start": "2026-11-03T09:30:00Z",
       "window_end": "2026-11-03T21:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261103T130634Z-gh41641388977-1",
-      "last_collection_before_cutoff_gap_minutes": 503.4,
+      "last_collection_before_cutoff": "20261103T142257Z-gh41653100401-1",
+      "last_collection_before_cutoff_gap_minutes": 427.1,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -894,44 +894,72 @@
           "name": "US 13-week Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-02T19:59:51Z",
-            "last_value": 3.982
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3.982,
+            "start_as_of": "2026-11-02T19:59:51Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4.025,
+            "end_as_of": "2026-11-03T14:08:05Z",
+            "span_minutes": 1088.2,
+            "change_pct": 1.0799,
+            "sampled_high": 4.025,
+            "sampled_low": 3.982
           }
         },
         "^FVX": {
           "name": "US 5-year Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-02T19:59:51Z",
-            "last_value": 4.693
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 4.693,
+            "start_as_of": "2026-11-02T19:59:51Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4.716,
+            "end_as_of": "2026-11-03T14:08:05Z",
+            "span_minutes": 1088.2,
+            "change_pct": 0.4901,
+            "sampled_high": 4.716,
+            "sampled_low": 4.693
           }
         },
         "^TNX": {
           "name": "US 10-year Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-02T19:59:51Z",
-            "last_value": 4.894
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 4.894,
+            "start_as_of": "2026-11-02T19:59:51Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4.925,
+            "end_as_of": "2026-11-03T14:08:05Z",
+            "span_minutes": 1088.2,
+            "change_pct": 0.6334,
+            "sampled_high": 4.925,
+            "sampled_low": 4.894
           }
         },
         "^TYX": {
           "name": "US 30-year Treasury yield (Yahoo proxy)",
           "group": "rates",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-02T19:59:51Z",
-            "last_value": 5.269
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 5.269,
+            "start_as_of": "2026-11-02T19:59:51Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 5.3,
+            "end_as_of": "2026-11-03T14:08:05Z",
+            "span_minutes": 1088.2,
+            "change_pct": 0.5883,
+            "sampled_high": 5.3,
+            "sampled_low": 5.269
           }
         },
         "KRW=X": {
@@ -940,14 +968,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 1344.31,
             "start_as_of": "2026-11-03T08:58:10Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1344.98,
-            "end_as_of": "2026-11-03T11:54:19Z",
-            "span_minutes": 176.2,
-            "change_pct": 0.0498,
+            "end_value": 1344.5,
+            "end_as_of": "2026-11-03T13:06:44Z",
+            "span_minutes": 248.6,
+            "change_pct": 0.0141,
             "sampled_high": 1344.98,
             "sampled_low": 1343.69
           }
@@ -958,15 +986,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 157.962,
             "start_as_of": "2026-11-03T08:58:21Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 158.271,
-            "end_as_of": "2026-11-03T11:54:20Z",
-            "span_minutes": 176.0,
-            "change_pct": 0.1956,
-            "sampled_high": 158.271,
+            "end_value": 158.274,
+            "end_as_of": "2026-11-03T13:06:49Z",
+            "span_minutes": 248.5,
+            "change_pct": 0.1975,
+            "sampled_high": 158.274,
             "sampled_low": 157.962
           }
         },
@@ -976,16 +1004,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 6.6711,
             "start_as_of": "2026-11-03T08:58:09Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6607,
-            "end_as_of": "2026-11-03T13:00:14Z",
-            "span_minutes": 242.1,
-            "change_pct": -0.1559,
+            "end_value": 6.6588,
+            "end_as_of": "2026-11-03T14:20:29Z",
+            "span_minutes": 322.3,
+            "change_pct": -0.1844,
             "sampled_high": 6.6711,
-            "sampled_low": 6.6607
+            "sampled_low": 6.6588
           }
         },
         "EURUSD=X": {
@@ -994,14 +1022,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 1.1197,
             "start_as_of": "2026-11-03T08:57:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.1182,
-            "end_as_of": "2026-11-03T13:06:27Z",
-            "span_minutes": 249.0,
-            "change_pct": -0.134,
+            "end_value": 1.1192,
+            "end_as_of": "2026-11-03T14:22:28Z",
+            "span_minutes": 325.0,
+            "change_pct": -0.0447,
             "sampled_high": 1.1197,
             "sampled_low": 1.1181
           }
@@ -1012,16 +1040,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 8.489,
             "start_as_of": "2026-11-03T08:54:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.474,
-            "end_as_of": "2026-11-03T13:04:27Z",
-            "span_minutes": 250.0,
-            "change_pct": -0.1767,
+            "end_value": 8.465,
+            "end_as_of": "2026-11-03T14:19:28Z",
+            "span_minutes": 325.0,
+            "change_pct": -0.2827,
             "sampled_high": 8.489,
-            "sampled_low": 8.474
+            "sampled_low": 8.465
           }
         },
         "NQ=F": {
@@ -1030,15 +1058,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 28127.5,
             "start_as_of": "2026-11-03T08:48:25Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 28231.0,
-            "end_as_of": "2026-11-03T12:56:53Z",
-            "span_minutes": 248.5,
-            "change_pct": 0.368,
-            "sampled_high": 28231.0,
+            "end_value": 28322.5,
+            "end_as_of": "2026-11-03T14:13:17Z",
+            "span_minutes": 324.9,
+            "change_pct": 0.6933,
+            "sampled_high": 28322.5,
             "sampled_low": 28127.5
           }
         },
@@ -1048,15 +1076,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 7556.25,
             "start_as_of": "2026-11-03T08:48:23Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7569.25,
-            "end_as_of": "2026-11-03T12:56:53Z",
-            "span_minutes": 248.5,
-            "change_pct": 0.172,
-            "sampled_high": 7570.5,
+            "end_value": 7582.0,
+            "end_as_of": "2026-11-03T14:13:19Z",
+            "span_minutes": 324.9,
+            "change_pct": 0.3408,
+            "sampled_high": 7582.0,
             "sampled_low": 7556.25
           }
         },
@@ -1066,16 +1094,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 98.14,
             "start_as_of": "2026-11-03T08:48:26Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 97.02,
-            "end_as_of": "2026-11-03T12:56:46Z",
-            "span_minutes": 248.3,
-            "change_pct": -1.1412,
+            "end_value": 95.59,
+            "end_as_of": "2026-11-03T14:13:11Z",
+            "span_minutes": 324.8,
+            "change_pct": -2.5983,
             "sampled_high": 98.52,
-            "sampled_low": 97.02
+            "sampled_low": 95.59
           }
         },
         "GC=F": {
@@ -1084,15 +1112,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 3911.6,
             "start_as_of": "2026-11-03T08:48:26Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3937.8,
-            "end_as_of": "2026-11-03T12:56:45Z",
-            "span_minutes": 248.3,
-            "change_pct": 0.6698,
-            "sampled_high": 3937.8,
+            "end_value": 3959.6,
+            "end_as_of": "2026-11-03T14:13:10Z",
+            "span_minutes": 324.7,
+            "change_pct": 1.2271,
+            "sampled_high": 3959.6,
             "sampled_low": 3911.6
           }
         },
@@ -1102,15 +1130,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 6.3355,
             "start_as_of": "2026-11-03T08:48:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.4035,
-            "end_as_of": "2026-11-03T12:56:56Z",
-            "span_minutes": 248.5,
-            "change_pct": 1.0733,
-            "sampled_high": 6.4035,
+            "end_value": 6.434,
+            "end_as_of": "2026-11-03T14:13:19Z",
+            "span_minutes": 324.9,
+            "change_pct": 1.5547,
+            "sampled_high": 6.434,
             "sampled_low": 6.3355
           }
         },
@@ -1120,15 +1148,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 2.897,
             "start_as_of": "2026-11-03T08:48:24Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 2.893,
-            "end_as_of": "2026-11-03T12:56:36Z",
-            "span_minutes": 248.2,
-            "change_pct": -0.1381,
-            "sampled_high": 2.9,
+            "end_value": 2.907,
+            "end_as_of": "2026-11-03T14:13:15Z",
+            "span_minutes": 324.9,
+            "change_pct": 0.3452,
+            "sampled_high": 2.907,
             "sampled_low": 2.893
           }
         },
@@ -1138,16 +1166,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 21.83,
             "start_as_of": "2026-11-03T08:43:31Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 21.37,
-            "end_as_of": "2026-11-03T12:51:46Z",
-            "span_minutes": 248.2,
-            "change_pct": -2.1072,
+            "end_value": 21.06,
+            "end_as_of": "2026-11-03T14:08:16Z",
+            "span_minutes": 324.8,
+            "change_pct": -3.5273,
             "sampled_high": 21.83,
-            "sampled_low": 21.31
+            "sampled_low": 21.06
           }
         },
         "EWY": {
