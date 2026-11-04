@@ -25,6 +25,11 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 
+try:  # P2 보강 모듈 (없으면 보강 없이 동작)
+    import enrich as enrich_mod
+except ImportError:  # pragma: no cover
+    enrich_mod = None
+
 KST = timezone(timedelta(hours=9))
 BASE_URL = "https://query1.finance.yahoo.com/v8/finance/chart/"
 HEADERS = {
@@ -348,7 +353,7 @@ def evaluate(sym: str, mem: dict, ind: dict, p: dict, levels: list, st: dict,
         if lval is None and lname == "200SMA" and s200 is not None:
             lval = s200
         if lval is not None and c < lval:
-            tag = "" if vx >= vm else " (거래량 미동반)"
+            tag = "" if vx >= vm else "(미동반)"
             breakdown = ev("BREAKDOWN", f"단두대→이탈 {lname} {fmt_px(lval, market)} 하회 · {vtxt}{tag}",
                            lname, lval, extra=2)
     if breakdown:
@@ -498,12 +503,12 @@ def sort_key(e):
 
 
 # ============================================================== text
-def event_line(e: dict, market: str) -> str:
+def event_line(e: dict, market: str, with_extra: bool = True) -> str:
     lab = TYPES[e["type"]]["label"]
     if e["type"] == "THEME":
         return f"[{lab}] {e['reason']}"
     px = fmt_px(e["close"], market)
-    return f"[{lab}] {e['name']} {px} ({e['chg_pct']:+.1f}%) · {e['reason']} · {TIER_LABEL[e['tier']]}"
+    return f"[{lab}] {e['name']} {px} ({e['chg_pct']:+.1f}%) · {e['reason']}{e.get('extra', '') if with_extra else ''} · {TIER_LABEL[e['tier']]}"
 
 
 def core_summary(universe: dict, events: list[dict], st: dict) -> str:
@@ -538,7 +543,8 @@ def fit_lines(head: list[str], lines: list[str], budget: int) -> list[str]:
 
 
 def render_section(market: str, mcfg: dict, session: str, now_utc: datetime, universe: dict,
-                   events: list[dict], st: dict, failed: dict, stale: list[str], budget: int) -> str:
+                   events: list[dict], st: dict, failed: dict, stale: list[str], budget: int,
+                   extra_tail: list[str] | None = None) -> str:
     gen = now_utc.astimezone(KST).strftime("%m/%d %H:%M")
     head = [f"## {market} {session} 종가 · 생성 {gen} KST (마감 후 배치, 실시간 아님)",
             core_summary(universe, events, st)]
@@ -547,7 +553,7 @@ def render_section(market: str, mcfg: dict, session: str, now_utc: datetime, uni
     if wg:
         head.append("Watch 단두대: " + ", ".join(wg))
     main = [e for e in events if TYPES[e["type"]]["fam"] != "info"]
-    lines = [f"{k}) {event_line(e, market)}" for k, e in enumerate(main, 1)]
+    lines = [f"{k}) {event_line(e, market, with_extra=False)}" for k, e in enumerate(main, 1)]
     if not lines:
         lines = ["신규 시그널 없음"]
     failed_ev = [e for e in events if e["type"] == "BREAKOUT_FAILED"]
@@ -557,6 +563,7 @@ def render_section(market: str, mcfg: dict, session: str, now_utc: datetime, uni
     miss = [f"{s}({c})" for s, c in failed.items()] + [f"{s}(지연)" for s in stale]
     if miss:
         tail.append("데이터 미확보: " + ", ".join(miss[:8]) + (f" 외 {len(miss) - 8}" if len(miss) > 8 else ""))
+    tail += extra_tail or []
     tail_bytes = sum(len((x + "\n").encode()) for x in tail)
     body = fit_lines(head, lines, budget - tail_bytes)
     return "\n".join(body + tail) + "\n"
@@ -564,7 +571,7 @@ def render_section(market: str, mcfg: dict, session: str, now_utc: datetime, uni
 
 def render_digest(parts: dict, max_bytes: int) -> str:
     head = "# 룰루루 digest (AI는 이 파일만 읽는다)\n"
-    foot = "\n채권·옵션·뉴스: 미확보 (P2 예정)\n"
+    foot = ""
     body = "".join(parts.get(m, f"## {m}\n아직 실행 기록 없음\n") for m in ("US", "KR"))
     text = head + body + foot
     while len(text.encode()) > max_bytes and body:
@@ -696,7 +703,8 @@ def append_jsonl(path, rows):
 
 # ============================================================== run
 def run(market: str, cfg: dict, out: str, now_utc: datetime | None = None, fetcher=yahoo_daily,
-        sleep=time.sleep, dry_run: bool = False, do_push: bool = True, digest_url: str = "") -> dict:
+        sleep=time.sleep, dry_run: bool = False, do_push: bool = True, digest_url: str = "",
+        do_enrich: bool = True, enrich_fn=None) -> dict:
     now_utc = now_utc or datetime.now(timezone.utc)
     p = params_of(cfg)
     mcfg = cfg["markets"][market]
@@ -756,9 +764,37 @@ def run(market: str, cfg: dict, out: str, now_utc: datetime | None = None, fetch
         e["run_id"] = run_id
     fails = {s: c for s, c in failed.items() if s != bench}
 
+    # ---- P2 보강 (미장: Core + 시그널 종목)
+    enr = {"tickers": {}, "credit": {}, "sources": {}}
+    targets = []
+    for sym in [e["symbol"] for e in events if e["type"] != "THEME"] + \
+               [s for s, m in universe.items() if m["tier"] == "core"]:
+        if sym in data and sym not in targets:
+            targets.append(sym)
+    fn = enrich_fn or (enrich_mod.enrich if enrich_mod else None)
+    if do_enrich and fn:
+        try:
+            enr = fn(market, targets, session, now_utc)
+        except Exception as exc:  # 보강 실패가 시그널을 막지 않도록
+            enr["sources"] = {"all": f"미확보({type(exc).__name__})"}
+    extra_tail = []
+    if enrich_mod:
+        for e in events:
+            info = enr.get("tickers", {}).get(e["symbol"], {})
+            e["extra"] = enrich_mod.suffix(info, session, market)
+            er = info.get("earnings")
+            if e["type"] == "GAP" and er and session - timedelta(days=1) <= date.fromisoformat(er["date"]) <= session:
+                e["reason"] = e["reason"].replace("(실적 여부 미확인)", "(실적 발표 직후)")
+        if market == "US":
+            extra_tail = [enrich_mod.credit_line(enr), enrich_mod.sources_line(enr)]
+        else:
+            extra_tail = ["보강: 국장 옵션·공시·뉴스·실적 미확보(소스 없음)"]
+    log["enrich"] = enr.get("sources")
+
     parts = read_json(os.path.join(out, "digest_parts.json"), {})
-    budget = (p["digest_max_bytes"] - 160) // 2
-    parts[market] = render_section(market, mcfg, session.isoformat(), now_utc, universe, events, st, fails, stale, budget)
+    budget = (p["digest_max_bytes"] - 60) // 2
+    parts[market] = render_section(market, mcfg, session.isoformat(), now_utc, universe, events, st, fails, stale,
+                                   budget, extra_tail)
     digest = render_digest(parts, p["digest_max_bytes"])
     brief = render_brief(market, session.isoformat(), events, p["brief_max"])
     pushable = [e for e in events if TYPES[e["type"]]["fam"] != "info"]
@@ -789,11 +825,146 @@ def run(market: str, cfg: dict, out: str, now_utc: datetime | None = None, fetch
     sc = read_json(sc_path, {})
     sc[market] = {"as_of_session": session.isoformat(), "by_type": scorecard(ledger, market, inds, bench_ind, p)}
     write_text(sc_path, json.dumps(sc, ensure_ascii=False, indent=1, sort_keys=True))
+    write_bars(out, data)
+    try:
+        write_chart(out, market, universe, events, st, inds, cfg, enr, parts[market], session, now_utc, bench,
+                    mcfg, bench_ind)
+    except Exception as exc:  # 차트 데이터 실패가 시그널·푸시·장부를 막지 않도록
+        log["chart_data"] = f"failed:{type(exc).__name__}:{exc}"[:200]
+        print(f"::warning::chart_data 생성 실패 {exc}", file=sys.stderr)
     log.update(status="ok", push=push_status)
     append_jsonl(os.path.join(out, "run_log.jsonl"), [log])
     print(f"[{market}] session={session} fetched={len(data)}/{len(symbols)} failed={len(failed)} "
           f"stale={len(stale)} events={len(pushable)} push={push_status} digest={log['digest_bytes']}B")
     return log
+
+
+def write_chart(out, market, universe, events, st, inds, cfg, enr, section, session, now_utc, bench, mcfg, bench_ind):
+    cd_path = os.path.join(out, "chart_data.json")
+    cd = read_json(cd_path, {})
+    bname = mcfg.get("benchmark_name", bench)
+    part, ainput = chart_part(market, universe, events, st, inds, cfg, enr, section, session, now_utc,
+                              bench=(bench, bname, bench_ind))
+    cd.setdefault("markets", {})[market] = part
+    write_text(os.path.join(out, f"analysis_input_{market.lower()}.md"),
+               f"# 룰루루 분석 입력 {market} {session} (Claude가 analysis.json 작성 시 읽음)\n\n" + ainput + "\n")
+    cd["generated_kst"] = now_utc.astimezone(KST).isoformat(timespec="seconds")
+    cd["note"] = "룰루루 차트 데이터 (Core + 당일 시그널 종목). 투자 자문 아님."
+    write_text(cd_path, json.dumps(cd, ensure_ascii=False, separators=(",", ":")))
+
+
+# ============================================================== P3 chart data
+def _r(x):
+    if x is None:
+        return None
+    return round(x, 4) if abs(x) < 10 else round(x, 2)
+
+
+def write_bars(out: str, data: dict) -> None:
+    """모든 종목의 일봉(2년)을 bars/{심볼}.csv로 저장 — 다른 대화창의 수시 분석용."""
+    for sym, d in data.items():
+        safe = sym.replace("^", "_").replace("/", "_")
+        lines = ["date,open,high,low,close,volume"] + [
+            f"{b[0].isoformat()},{_r(b[1])},{_r(b[2])},{_r(b[3])},{_r(b[4])},{int(b[5])}" for b in d["bars"]]
+        write_text(os.path.join(out, "bars", f"{safe}.csv"), "\n".join(lines) + "\n")
+
+
+def chart_part(market, universe, events, st, inds, cfg, enr, section, session, now_utc, bench=None, nbars=170):
+    """LIVE 아티팩트용 데이터. 기존 룰루루 아티팩트(SPEC/DATA) 구조와 같은 도형 형식(spec_auto)을 함께 만든다."""
+    import patterns as pat
+    order = []
+    for e in events:
+        if e["type"] != "THEME" and e["symbol"] in inds and e["symbol"] not in order:
+            order.append(e["symbol"])
+    sig_set = set(order)
+    order += [s for s, m in universe.items() if m["tier"] == "core" and s in inds and s not in order]
+    pool = dict(inds)
+    mems = dict(universe)
+    if bench:  # 지수(벤치마크)도 맨 앞에
+        bsym, bname, bind = bench
+        pool[bsym] = bind
+        mems[bsym] = {"symbol": bsym, "name": bname, "tier": "index", "theme": "지수"}
+        order = [bsym] + order
+    kr = market == "KR"
+    items, lines_in = [], []
+    for sym in order:
+        ind, mem = pool[sym], mems[sym]
+        k = max(0, len(ind["c"]) - nbars)
+        info = enr.get("tickers", {}).get(sym, {})
+        levels = [dict(lv, source="수동") for lv in cfg.get("levels", {}).get(sym, [])]
+        g = st.get("guillotine", {}).get(sym)
+        if g:
+            levels.append({"name": f"단두대 기준 {g['level_name']}", "price": g["level"], "kind": "guillotine",
+                           "source": "시그널"})
+        b = st.get("breakout", {}).get(sym)
+        if b:
+            levels.append({"name": f"돌파 기준 {b['level_name']} ({b['day1']}~)", "price": b["level"],
+                           "kind": "breakout", "source": "시그널"})
+        op = info.get("options") or {}
+        for key, nm in (("call_wall", "콜월"), ("put_wall", "풋월"), ("max_pain", "맥스페인")):
+            if op.get(key):
+                levels.append({"name": nm, "price": op[key], "kind": key, "source": "CBOE"})
+        m, sg = pat.macd(ind["c"])
+        sc = pat.scan(ind)
+        item = {
+            "symbol": sym, "name": mem["name"], "tier": mem["tier"], "theme": mem["theme"],
+            "signal": sym in sig_set,
+            "signals": [{"type": e["type"], "label": TYPES[e["type"]]["label"], "reason": e["reason"],
+                         "extra": e.get("extra", ""), "level": e.get("level")}
+                        for e in events if e["symbol"] == sym],
+            "last": {"c": _r(ind["c"][-1]), "chg": round((ind["c"][-1] / ind["c"][-2] - 1) * 100, 2),
+                     "atr": _r(ind["atr"][-1])},
+            "t": [d.isoformat() for d in ind["dates"][k:]],
+            "o": [_r(x) for x in ind["o"][k:]], "h": [_r(x) for x in ind["h"][k:]],
+            "l": [_r(x) for x in ind["l"][k:]], "c": [_r(x) for x in ind["c"][k:]],
+            "v": [int(x) for x in ind["v"][k:]],
+            "e50": [_r(x) for x in ind["ema50"][k:]], "s200": [_r(x) for x in ind["sma200"][k:]],
+            "macd": [_r(x) for x in m[k:]], "sig": [_r(x) for x in sg[k:]],
+            "vbp": pat.vbp(ind, nbars),
+            "levels": levels, "patterns": cfg.get("patterns", {}).get(sym, []),
+            "enrich": info, "scan": sc["cands"], "pivots": sc["pivots"],
+        }
+        item["spec_auto"] = pat.spec_auto(item, ind, sc, kr, item["t"][max(0, len(item["t"]) - 150)])
+        items.append(item)
+        lines_in.append(analysis_line(item, ind, kr))
+    return ({"session": session.isoformat(), "generated_kst": now_utc.astimezone(KST).isoformat(timespec="seconds"),
+             "digest": section, "core_summary": core_summary(universe, events, st),
+             "themes": [e["reason"] for e in events if e["type"] == "THEME"],
+             "credit": enr.get("credit", {}), "sources": enr.get("sources", {}), "items": items},
+            "\n".join(lines_in))
+
+
+def analysis_line(item, ind, kr) -> str:
+    """Claude가 분석 카드(analysis.json)를 쓸 때 읽는 종목별 요약 (원봉 대신 이것만 읽는다)."""
+    f = lambda x: "–" if x is None else (f"{x:,.0f}" if kr else f"{x:,.2f}")
+    L = item["last"]
+    out = [f"### {item['symbol']} {item['name']} ({item['tier']}·{item['theme']}) {item['t'][-1]} "
+           f"C {f(L['c'])} ({L['chg']:+.2f}%) ATR {f(L['atr'])} | 50EMA {f(ind['ema50'][-1])} "
+           f"200SMA {f(ind['sma200'][-1])} | 55일 고 {f(max(ind['h'][-56:-1]))} 저 {f(min(ind['l'][-56:-1]))} | "
+           f"거래량 {ind['v'][-1] / (sum(ind['v'][-21:-1]) / 20 or 1):.2f}×"]
+    for s in item["signals"]:
+        out.append(f"시그널: [{s['label']}] {s['reason']}{s.get('extra') or ''}")
+    out.append("피벗: " + " · ".join(f"{p[0][5:]} {p[2]} {f(p[1])}" for p in item["pivots"]))
+    for x in item["scan"]:
+        out.append(f"스캔: {x['kind']} {x['st']} {x['score']:.2f} 앵커 "
+                   + " / ".join(f"{a[0][5:]} {f(a[1])}" for a in x["anchors"])
+                   + (f" 기준 {f(x.get('neck'))}" if x.get("neck") else "")
+                   + (f" 목표 {f(x.get('target'))}" if x.get("target") else ""))
+    fb = item["spec_auto"]["ov"]["fib"]
+    out.append(f"피보 기준: {fb['a'][0]} {f(fb['a'][1])} → {fb['b'][0]} {f(fb['b'][1])}")
+    e = item.get("enrich") or {}
+    op, er = e.get("options") or {}, e.get("earnings")
+    extra = []
+    if op:
+        extra.append(f"콜월 {op.get('call_wall')}/풋월 {op.get('put_wall')} 맥스페인 {op.get('max_pain')} "
+                     f"IV {op.get('atm_iv_pct')}% 기대변동 ±{op.get('exp_move_pct')}%")
+    if er:
+        extra.append(f"실적 {er['date']} {er.get('time', '')}")
+    if e.get("filings"):
+        extra.append("공시 " + "; ".join(e["filings"]))
+    if extra:
+        out.append("보강: " + " · ".join(extra))
+    return "\n".join(out)
 
 
 # ============================================================== selftest
@@ -947,12 +1118,27 @@ def selftest() -> int:
 
     with tempfile.TemporaryDirectory() as tmp:
         now = datetime(2026, 6, 30, 21, 30, tzinfo=timezone.utc)
-        l1 = run("US", cfg, tmp, now, fetcher=fake, sleep=lambda s: None, do_push=False)
-        l2 = run("US", cfg, tmp, now, fetcher=fake, sleep=lambda s: None, do_push=False)
+        fake_enr = lambda m, syms, ses, n: {"tickers": {s: {"options": {"call_wall": 120, "put_wall": 90, "max_pain": 100},
+                                                                   "earnings": {"date": ses.isoformat(), "time": "장후"}}
+                                                               for s in syms},
+                                            "credit": {"hy": {"value_pct": 2.9, "chg_1w_bp": 12.0}},
+                                            "sources": {"options": "ok", "edgar": "ok", "news": "ok", "earnings": "ok",
+                                                        "credit": "ok"}}
+        l1 = run("US", cfg, tmp, now, fetcher=fake, sleep=lambda s: None, do_push=False, enrich_fn=fake_enr)
+        l2 = run("US", cfg, tmp, now, fetcher=fake, sleep=lambda s: None, do_push=False, enrich_fn=fake_enr)
         check(l1.get("status") == "ok", f"run1 {l1}")
         check(l2.get("status") == "no_new_session", f"run2 {l2}")
-        for f in ("digest.md", "brief_0700.md", "state_us.json", "scorecard.json", "run_log.jsonl"):
+        for f in ("digest.md", "brief_0700.md", "state_us.json", "scorecard.json", "run_log.jsonl",
+                  "chart_data.json", "bars/SPY.csv", "bars/AAA.csv"):
             check(os.path.exists(os.path.join(tmp, f)), f"missing {f}")
+        cdj = read_json(os.path.join(tmp, "chart_data.json"), {})
+        it = cdj["markets"]["US"]["items"]
+        check(it and it[0]["symbol"] == "SPY" and len(it[1]["c"]) == 170 and "spec_auto" in it[1], "chart_data items")
+        check(os.path.exists(os.path.join(tmp, "analysis_input_us.md")), "analysis_input")
+        check("HY 2.90%" in open(os.path.join(tmp, "digest.md"), encoding="utf-8").read(), "credit line in digest")
+    if enrich_mod:
+        for msg in enrich_mod.selftest():
+            errors.append("enrich: " + msg)
 
     if errors:
         print("SELFTEST FAIL")
@@ -970,6 +1156,7 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default="market/signals")
     ap.add_argument("--dry-run", action="store_true", help="저장·발송 없이 결과만 출력")
     ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--no-enrich", action="store_true", help="P2 보강(옵션·신용·공시·뉴스·실적) 생략")
     ap.add_argument("--selftest", action="store_true")
     ap.add_argument("--test-push", action="store_true", help="텔레그램 연결 확인용 메시지 1건만 보내고 끝")
     a = ap.parse_args(argv)
@@ -985,7 +1172,8 @@ def main(argv=None) -> int:
     url = ""
     if os.environ.get("GITHUB_REPOSITORY"):
         url = f"{os.environ.get('GITHUB_SERVER_URL', 'https://github.com')}/{os.environ['GITHUB_REPOSITORY']}/blob/main/{a.out}/digest.md"
-    log = run(a.market, cfg, a.out, dry_run=a.dry_run, do_push=not a.no_push, digest_url=url)
+    log = run(a.market, cfg, a.out, dry_run=a.dry_run, do_push=not a.no_push, digest_url=url,
+              do_enrich=not a.no_enrich)
     return 0 if log.get("status") in ("ok", "no_new_session", "dry_run") else 1
 
 
