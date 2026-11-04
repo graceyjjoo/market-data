@@ -576,14 +576,14 @@ def render_digest(parts: dict, max_bytes: int) -> str:
 def render_brief(market: str, session: str, events: list[dict], n: int) -> str:
     slot = "0700" if market == "US" else "1900"
     main = [e for e in events if TYPES[e["type"]]["fam"] != "info"][:n]
-    lines = [f"룰루루 {market} {session} 종가 기준 시그널 ({'06:30' if market == 'US' else '18:10'} 배치) — {slot} 브리핑용"]
+    lines = [f"룰루루 {market} {session} 종가 기준 시그널 ({'06:30' if market == 'US' else '18:25'} 배치) — {slot} 브리핑용"]
     lines += [f"- {event_line(e, market)}" for e in main] or ["- 신규 시그널 없음"]
     return "\n".join(lines) + "\n"
 
 
 def telegram_text(market: str, mcfg: dict, session: str, events: list[dict], n: int, digest_url: str) -> str:
     main = [e for e in events if TYPES[e["type"]]["fam"] != "info"]
-    when = "06:30" if market == "US" else "18:10"
+    when = "06:30" if market == "US" else "18:25"
     lines = [f"룰루루 {mcfg.get('label', market)} {session} 종가 · {when} 배치(실시간 아님)"]
     lines += [event_line(e, market) for e in main[:n]]
     if len(main) > n:
