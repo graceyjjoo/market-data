@@ -1,0 +1,110 @@
+name: lululu-screener
+
+# 룰루루 시그널 (일봉, 마감 후 배치). 기존 yahoo-market-collector(매시 :10)와 완전히 분리.
+# - US: 21:30 UTC 월~금 = 06:30 KST 화~토 (미장 마감 후)
+# - KR: 09:25 UTC 월~금 = 18:25 KST 월~금 (시간외 단일가 18:00 종료 후, 19:00 브리핑 전)
+# GitHub 예약 실행은 수 분~수십 분 늦을 수 있다. 휴장일은 스크립트가 '새 세션 없음'으로 건너뛴다.
+on:
+  schedule:
+    - cron: '30 21 * * 1-5'
+    - cron: '25 9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      market:
+        description: 'US 또는 KR'
+        required: true
+        default: 'US'
+        type: choice
+        options: ['US', 'KR']
+      dry_run:
+        description: '저장·발송 없이 결과만 로그에 출력'
+        required: false
+        default: true
+        type: boolean
+      test_push:
+        description: 'Telegram 연결 테스트 메시지만 보내기 (다른 작업 안 함)'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lululu-screener
+  cancel-in-progress: false
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Pick market
+        id: pick
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "market=${{ inputs.market }}" >> "$GITHUB_OUTPUT"
+            echo "dry=${{ inputs.dry_run }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "30 21 * * 1-5" ]; then
+            echo "market=US" >> "$GITHUB_OUTPUT"; echo "dry=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "market=KR" >> "$GITHUB_OUTPUT"; echo "dry=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Self-test and config check
+        run: |
+          python -m py_compile screener.py
+          python screener.py --selftest
+          python -c "import screener as s; c=s.load_config('config/universe.json'); print({m: len(s.build_universe(c, m)) for m in c['markets']})"
+
+      - name: Telegram test only
+        if: github.event_name == 'workflow_dispatch' && inputs.test_push
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python screener.py --test-push
+
+      - name: Screen (${{ steps.pick.outputs.market }})
+        if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.test_push) }}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          if [ "${{ steps.pick.outputs.dry }}" = "true" ]; then
+            python screener.py --market "${{ steps.pick.outputs.market }}" --config config/universe.json --out market/signals --dry-run
+          else
+            python screener.py --market "${{ steps.pick.outputs.market }}" --config config/universe.json --out market/signals
+          fi
+
+      - name: Commit and push (market/signals only)
+        if: steps.pick.outputs.dry != 'true' && !(github.event_name == 'workflow_dispatch' && inputs.test_push)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market/signals
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit -q -m "lululu ${{ steps.pick.outputs.market }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          pushed=0
+          for i in 1 2 3; do
+            if git pull --rebase -q origin main && git push -q origin HEAD:main; then pushed=1; break; fi
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+          done
+          [ "$pushed" = 1 ] || { echo "::error::push failed"; exit 1; }
+
+      - name: Verify remote readback
+        if: steps.pick.outputs.dry != 'true' && !(github.event_name == 'workflow_dispatch' && inputs.test_push)
+        run: |
+          git fetch -q origin main
+          git diff --quiet origin/main -- market/signals || { echo "::error::remote content differs"; exit 1; }
+          echo "remote readback OK $(git rev-parse --short origin/main)"
