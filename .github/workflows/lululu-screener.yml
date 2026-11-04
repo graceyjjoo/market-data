@@ -61,7 +61,7 @@ jobs:
 
       - name: Self-test and config check
         run: |
-          python -m py_compile screener.py
+          python -m py_compile screener.py enrich.py patterns.py
           python screener.py --selftest
           python -c "import screener as s; c=s.load_config('config/universe.json'); print({m: len(s.build_universe(c, m)) for m in c['markets']})"
 
@@ -79,6 +79,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         run: |
           if [ "${{ steps.pick.outputs.dry }}" = "true" ]; then
             python screener.py --market "${{ steps.pick.outputs.market }}" --config config/universe.json --out market/signals --dry-run
