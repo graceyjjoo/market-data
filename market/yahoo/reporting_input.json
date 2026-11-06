@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261105T234931Z-gh42132298445-1",
-  "reference_time": "2026-11-05T23:49:31Z",
+  "source_run_id": "20261106T011249Z-gh42142285368-1",
+  "reference_time": "2026-11-06T01:12:49Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -837,30 +837,44 @@
       "window_start": "2026-11-05T21:30:00Z",
       "window_end": "2026-11-06T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261105T234931Z-gh42132298445-1",
-      "last_collection_before_cutoff_gap_minutes": 580.5,
+      "last_collection_before_cutoff": "20261106T011249Z-gh42142285368-1",
+      "last_collection_before_cutoff_gap_minutes": 497.2,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
           "name": "KOSPI",
           "group": "korea",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T11:05:40Z",
-            "last_value": 5383.8
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 5383.8,
+            "start_as_of": "2026-11-05T11:05:40Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4968.26,
+            "end_as_of": "2026-11-06T00:52:40Z",
+            "span_minutes": 827.0,
+            "change_pct": -7.7183,
+            "sampled_high": 5383.8,
+            "sampled_low": 4968.26
           }
         },
         "^KQ11": {
           "name": "KOSDAQ",
           "group": "korea",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T11:05:40Z",
-            "last_value": 678.41
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 678.41,
+            "start_as_of": "2026-11-05T11:05:40Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 633.2,
+            "end_as_of": "2026-11-06T00:52:40Z",
+            "span_minutes": 827.0,
+            "change_pct": -6.6641,
+            "sampled_high": 678.41,
+            "sampled_low": 633.2
           }
         },
         "^GSPC": {
@@ -957,11 +971,18 @@
           "name": "Nikkei 225",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T06:45:03Z",
-            "last_value": 61077.9
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 61077.9,
+            "start_as_of": "2026-11-05T06:45:03Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 57146.17,
+            "end_as_of": "2026-11-06T00:57:50Z",
+            "span_minutes": 1092.8,
+            "change_pct": -6.4372,
+            "sampled_high": 61077.9,
+            "sampled_low": 57146.17
           }
         },
         "^HSI": {
@@ -1023,11 +1044,18 @@
           "name": "TOPIX ETF proxy (not spot index)",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T06:30:00Z",
-            "last_value": 415.6
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 415.6,
+            "start_as_of": "2026-11-05T06:30:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 392.4,
+            "end_as_of": "2026-11-06T00:57:56Z",
+            "span_minutes": 1107.9,
+            "change_pct": -5.5823,
+            "sampled_high": 415.6,
+            "sampled_low": 392.4
           }
         },
         "^IRX": {
@@ -1080,14 +1108,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 1355.83,
             "start_as_of": "2026-11-05T20:55:03Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1356.68,
-            "end_as_of": "2026-11-05T22:52:05Z",
-            "span_minutes": 117.0,
-            "change_pct": 0.0627,
+            "end_value": 1356.34,
+            "end_as_of": "2026-11-05T23:49:48Z",
+            "span_minutes": 174.8,
+            "change_pct": 0.0376,
             "sampled_high": 1357.44,
             "sampled_low": 1355.83
           }
@@ -1098,16 +1126,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 157.78,
             "start_as_of": "2026-11-05T20:55:13Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 157.665,
-            "end_as_of": "2026-11-05T22:54:08Z",
-            "span_minutes": 118.9,
-            "change_pct": -0.0729,
+            "end_value": 157.415,
+            "end_as_of": "2026-11-05T23:49:49Z",
+            "span_minutes": 174.6,
+            "change_pct": -0.2313,
             "sampled_high": 157.78,
-            "sampled_low": 157.665
+            "sampled_low": 157.415
           }
         },
         "CNY=X": {
@@ -1116,13 +1144,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.6675,
             "start_as_of": "2026-11-05T20:11:44Z",
             "start_is_pre_window_baseline": true,
             "end_value": 6.6583,
-            "end_as_of": "2026-11-05T23:20:15Z",
-            "span_minutes": 188.5,
+            "end_as_of": "2026-11-06T00:08:48Z",
+            "span_minutes": 237.1,
             "change_pct": -0.138,
             "sampled_high": 6.6675,
             "sampled_low": 6.6583
@@ -1134,14 +1162,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 1.1225,
             "start_as_of": "2026-11-05T20:54:28Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.1231,
-            "end_as_of": "2026-11-05T23:49:27Z",
-            "span_minutes": 175.0,
-            "change_pct": 0.0535,
+            "end_value": 1.1221,
+            "end_as_of": "2026-11-06T01:12:28Z",
+            "span_minutes": 258.0,
+            "change_pct": -0.0356,
             "sampled_high": 1.1231,
             "sampled_low": 1.1221
           }
@@ -1152,14 +1180,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 8.571,
             "start_as_of": "2026-11-05T20:54:28Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.598,
-            "end_as_of": "2026-11-05T23:49:27Z",
-            "span_minutes": 175.0,
-            "change_pct": 0.315,
+            "end_value": 8.574,
+            "end_as_of": "2026-11-06T01:09:28Z",
+            "span_minutes": 255.0,
+            "change_pct": 0.035,
             "sampled_high": 8.598,
             "sampled_low": 8.571
           }
@@ -1170,15 +1198,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 26840.5,
             "start_as_of": "2026-11-05T20:45:14Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 26491.5,
-            "end_as_of": "2026-11-05T23:39:53Z",
-            "span_minutes": 174.7,
-            "change_pct": -1.3003,
-            "sampled_high": 26840.5,
+            "end_value": 26874.75,
+            "end_as_of": "2026-11-06T01:02:59Z",
+            "span_minutes": 257.8,
+            "change_pct": 0.1276,
+            "sampled_high": 26874.75,
             "sampled_low": 26491.5
           }
         },
@@ -1188,14 +1216,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 7393.0,
             "start_as_of": "2026-11-05T20:45:20Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7332.75,
-            "end_as_of": "2026-11-05T23:39:52Z",
-            "span_minutes": 174.5,
-            "change_pct": -0.815,
+            "end_value": 7389.5,
+            "end_as_of": "2026-11-06T01:03:00Z",
+            "span_minutes": 257.7,
+            "change_pct": -0.0473,
             "sampled_high": 7393.0,
             "sampled_low": 7332.75
           }
@@ -1206,14 +1234,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 90.75,
             "start_as_of": "2026-11-05T20:45:16Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 91.36,
-            "end_as_of": "2026-11-05T23:39:48Z",
-            "span_minutes": 174.5,
-            "change_pct": 0.6722,
+            "end_value": 91.02,
+            "end_as_of": "2026-11-06T01:03:08Z",
+            "span_minutes": 257.9,
+            "change_pct": 0.2975,
             "sampled_high": 91.36,
             "sampled_low": 90.75
           }
@@ -1224,14 +1252,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 4110.5,
             "start_as_of": "2026-11-05T20:45:16Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4097.8,
-            "end_as_of": "2026-11-05T23:39:56Z",
-            "span_minutes": 174.7,
-            "change_pct": -0.309,
+            "end_value": 4104.9,
+            "end_as_of": "2026-11-06T01:03:10Z",
+            "span_minutes": 257.9,
+            "change_pct": -0.1362,
             "sampled_high": 4110.5,
             "sampled_low": 4097.2
           }
@@ -1242,15 +1270,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.212,
             "start_as_of": "2026-11-05T20:45:15Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.224,
-            "end_as_of": "2026-11-05T23:39:20Z",
-            "span_minutes": 174.1,
-            "change_pct": 0.1932,
-            "sampled_high": 6.224,
+            "end_value": 6.261,
+            "end_as_of": "2026-11-06T01:03:12Z",
+            "span_minutes": 257.9,
+            "change_pct": 0.7888,
+            "sampled_high": 6.261,
             "sampled_low": 6.198
           }
         },
@@ -1260,14 +1288,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 2.947,
             "start_as_of": "2026-11-05T20:45:11Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 2.952,
-            "end_as_of": "2026-11-05T23:38:16Z",
-            "span_minutes": 173.1,
-            "change_pct": 0.1697,
+            "end_value": 2.943,
+            "end_as_of": "2026-11-06T01:02:53Z",
+            "span_minutes": 257.7,
+            "change_pct": -0.1357,
             "sampled_high": 2.952,
             "sampled_low": 2.933
           }
