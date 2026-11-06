@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261106T142537Z-gh42233790296-1",
-  "reference_time": "2026-11-06T14:25:37Z",
+  "source_run_id": "20261106T155440Z-gh42247394659-1",
+  "reference_time": "2026-11-06T15:54:40Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -732,8 +732,8 @@
       "window_start": "2026-11-06T09:30:00Z",
       "window_end": "2026-11-06T21:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261106T142537Z-gh42233790296-1",
-      "last_collection_before_cutoff_gap_minutes": 424.4,
+      "last_collection_before_cutoff": "20261106T155440Z-gh42247394659-1",
+      "last_collection_before_cutoff_gap_minutes": 335.3,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -776,44 +776,72 @@
           "name": "S&P 500",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T21:34:08Z",
-            "last_value": 7353.73
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 7353.73,
+            "start_as_of": "2026-11-05T21:34:08Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 7426.99,
+            "end_as_of": "2026-11-06T15:54:38Z",
+            "span_minutes": 1100.5,
+            "change_pct": 0.9962,
+            "sampled_high": 7426.99,
+            "sampled_low": 7353.73
           }
         },
         "^NDX": {
           "name": "Nasdaq 100",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T22:15:59Z",
-            "last_value": 26629.809
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 26629.809,
+            "start_as_of": "2026-11-05T22:15:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 27149.643,
+            "end_as_of": "2026-11-06T15:54:35Z",
+            "span_minutes": 1058.6,
+            "change_pct": 1.9521,
+            "sampled_high": 27149.643,
+            "sampled_low": 26629.809
           }
         },
         "^SOX": {
           "name": "PHLX Semiconductor Index",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T22:15:59Z",
-            "last_value": 9011.138
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 9011.138,
+            "start_as_of": "2026-11-05T22:15:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 9384.327,
+            "end_as_of": "2026-11-06T15:54:40Z",
+            "span_minutes": 1058.7,
+            "change_pct": 4.1414,
+            "sampled_high": 9384.327,
+            "sampled_low": 9011.138
           }
         },
         "^RUT": {
           "name": "Russell 2000",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T21:30:03Z",
-            "last_value": 2729.887
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 2729.887,
+            "start_as_of": "2026-11-05T21:30:03Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 2733.8533,
+            "end_as_of": "2026-11-06T15:39:40Z",
+            "span_minutes": 1089.6,
+            "change_pct": 0.1453,
+            "sampled_high": 2733.8533,
+            "sampled_low": 2729.887
           }
         },
         "^IXIC": {
@@ -910,15 +938,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 3.987,
             "start_as_of": "2026-11-05T19:59:54Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4.0,
-            "end_as_of": "2026-11-06T14:10:46Z",
-            "span_minutes": 1090.9,
-            "change_pct": 0.3261,
-            "sampled_high": 4.0,
+            "end_value": 4.003,
+            "end_as_of": "2026-11-06T15:39:46Z",
+            "span_minutes": 1179.9,
+            "change_pct": 0.4013,
+            "sampled_high": 4.003,
             "sampled_low": 3.987
           }
         },
@@ -928,13 +956,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 4.608,
             "start_as_of": "2026-11-05T19:59:54Z",
             "start_is_pre_window_baseline": true,
             "end_value": 4.65,
-            "end_as_of": "2026-11-06T14:10:46Z",
-            "span_minutes": 1090.9,
+            "end_as_of": "2026-11-06T15:39:46Z",
+            "span_minutes": 1179.9,
             "change_pct": 0.9115,
             "sampled_high": 4.65,
             "sampled_low": 4.608
@@ -946,14 +974,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 4.837,
             "start_as_of": "2026-11-05T19:59:54Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4.868,
-            "end_as_of": "2026-11-06T14:10:46Z",
-            "span_minutes": 1090.9,
-            "change_pct": 0.6409,
+            "end_value": 4.855,
+            "end_as_of": "2026-11-06T15:39:46Z",
+            "span_minutes": 1179.9,
+            "change_pct": 0.3721,
             "sampled_high": 4.868,
             "sampled_low": 4.837
           }
@@ -964,14 +992,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 5.251,
             "start_as_of": "2026-11-05T19:59:54Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 5.272,
-            "end_as_of": "2026-11-06T14:10:46Z",
-            "span_minutes": 1090.9,
-            "change_pct": 0.3999,
+            "end_value": 5.253,
+            "end_as_of": "2026-11-06T15:39:46Z",
+            "span_minutes": 1179.9,
+            "change_pct": 0.0381,
             "sampled_high": 5.272,
             "sampled_low": 5.251
           }
@@ -982,15 +1010,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 1354.38,
             "start_as_of": "2026-11-06T09:01:50Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1358.57,
-            "end_as_of": "2026-11-06T13:09:36Z",
-            "span_minutes": 247.8,
-            "change_pct": 0.3094,
-            "sampled_high": 1358.57,
+            "end_value": 1363.88,
+            "end_as_of": "2026-11-06T14:25:53Z",
+            "span_minutes": 324.1,
+            "change_pct": 0.7014,
+            "sampled_high": 1363.88,
             "sampled_low": 1351.93
           }
         },
@@ -1000,15 +1028,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 158.167,
             "start_as_of": "2026-11-06T09:02:00Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 158.33,
-            "end_as_of": "2026-11-06T13:09:40Z",
-            "span_minutes": 247.7,
-            "change_pct": 0.1031,
-            "sampled_high": 158.353,
+            "end_value": 158.415,
+            "end_as_of": "2026-11-06T14:25:54Z",
+            "span_minutes": 323.9,
+            "change_pct": 0.1568,
+            "sampled_high": 158.415,
             "sampled_low": 158.167
           }
         },
@@ -1018,14 +1046,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 6.6696,
             "start_as_of": "2026-11-06T09:01:32Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6718,
-            "end_as_of": "2026-11-06T14:24:52Z",
-            "span_minutes": 323.3,
-            "change_pct": 0.033,
+            "end_value": 6.6648,
+            "end_as_of": "2026-11-06T15:52:33Z",
+            "span_minutes": 411.0,
+            "change_pct": -0.072,
             "sampled_high": 6.6718,
             "sampled_low": 6.6603
           }
@@ -1036,14 +1064,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 1.1182,
             "start_as_of": "2026-11-06T09:01:28Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.1136,
-            "end_as_of": "2026-11-06T14:25:28Z",
-            "span_minutes": 324.0,
-            "change_pct": -0.4114,
+            "end_value": 1.1152,
+            "end_as_of": "2026-11-06T15:54:25Z",
+            "span_minutes": 412.9,
+            "change_pct": -0.2683,
             "sampled_high": 1.1182,
             "sampled_low": 1.1136
           }
@@ -1054,14 +1082,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 8.543,
             "start_as_of": "2026-11-06T08:59:28Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.591,
-            "end_as_of": "2026-11-06T14:24:28Z",
-            "span_minutes": 325.0,
-            "change_pct": 0.5619,
+            "end_value": 8.58,
+            "end_as_of": "2026-11-06T15:54:25Z",
+            "span_minutes": 414.9,
+            "change_pct": 0.4331,
             "sampled_high": 8.591,
             "sampled_low": 8.516
           }
@@ -1072,14 +1100,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 27053.25,
             "start_as_of": "2026-11-06T08:52:03Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 27135.75,
-            "end_as_of": "2026-11-06T14:15:58Z",
-            "span_minutes": 323.9,
-            "change_pct": 0.305,
+            "end_value": 27159.5,
+            "end_as_of": "2026-11-06T15:44:59Z",
+            "span_minutes": 412.9,
+            "change_pct": 0.3927,
             "sampled_high": 27172.25,
             "sampled_low": 27053.25
           }
@@ -1090,15 +1118,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 7398.75,
             "start_as_of": "2026-11-06T08:52:03Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7390.25,
-            "end_as_of": "2026-11-06T14:15:59Z",
-            "span_minutes": 323.9,
-            "change_pct": -0.1149,
-            "sampled_high": 7414.0,
+            "end_value": 7433.75,
+            "end_as_of": "2026-11-06T15:44:59Z",
+            "span_minutes": 412.9,
+            "change_pct": 0.4731,
+            "sampled_high": 7433.75,
             "sampled_low": 7388.75
           }
         },
@@ -1108,14 +1136,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 89.94,
             "start_as_of": "2026-11-06T08:52:02Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 90.77,
-            "end_as_of": "2026-11-06T14:15:59Z",
-            "span_minutes": 323.9,
-            "change_pct": 0.9228,
+            "end_value": 90.31,
+            "end_as_of": "2026-11-06T15:45:01Z",
+            "span_minutes": 413.0,
+            "change_pct": 0.4114,
             "sampled_high": 90.77,
             "sampled_low": 89.24
           }
@@ -1126,14 +1154,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 4080.4,
             "start_as_of": "2026-11-06T08:52:04Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4042.4,
-            "end_as_of": "2026-11-06T14:16:01Z",
-            "span_minutes": 323.9,
-            "change_pct": -0.9313,
+            "end_value": 4059.9,
+            "end_as_of": "2026-11-06T15:44:52Z",
+            "span_minutes": 412.8,
+            "change_pct": -0.5024,
             "sampled_high": 4085.0,
             "sampled_low": 4042.4
           }
@@ -1144,14 +1172,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 6.253,
             "start_as_of": "2026-11-06T08:51:49Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.234,
-            "end_as_of": "2026-11-06T14:16:02Z",
-            "span_minutes": 324.2,
-            "change_pct": -0.3039,
+            "end_value": 6.255,
+            "end_as_of": "2026-11-06T15:45:02Z",
+            "span_minutes": 413.2,
+            "change_pct": 0.032,
             "sampled_high": 6.266,
             "sampled_low": 6.234
           }
@@ -1162,16 +1190,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 3.008,
             "start_as_of": "2026-11-06T08:51:55Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 2.972,
-            "end_as_of": "2026-11-06T14:16:03Z",
-            "span_minutes": 324.1,
-            "change_pct": -1.1968,
+            "end_value": 2.924,
+            "end_as_of": "2026-11-06T15:45:02Z",
+            "span_minutes": 413.1,
+            "change_pct": -2.7926,
             "sampled_high": 3.008,
-            "sampled_low": 2.972
+            "sampled_low": 2.924
           }
         },
         "^VIX": {
@@ -1180,16 +1208,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 4,
+            "n_quotes_in_window": 5,
             "start_value": 26.77,
             "start_as_of": "2026-11-06T08:47:01Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 26.73,
-            "end_as_of": "2026-11-06T14:10:46Z",
-            "span_minutes": 323.8,
-            "change_pct": -0.1494,
+            "end_value": 25.03,
+            "end_as_of": "2026-11-06T15:40:01Z",
+            "span_minutes": 413.0,
+            "change_pct": -6.4998,
             "sampled_high": 27.41,
-            "sampled_low": 25.75
+            "sampled_low": 25.03
           }
         },
         "EWY": {
@@ -1295,33 +1323,54 @@
           "name": "양자컴퓨팅",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T21:00:00Z",
-            "last_value": 9.55
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 9.55,
+            "start_as_of": "2026-11-05T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 10.3,
+            "end_as_of": "2026-11-06T15:54:09Z",
+            "span_minutes": 1134.2,
+            "change_pct": 7.8534,
+            "sampled_high": 10.3,
+            "sampled_low": 9.55
           }
         },
         "WARP": {
           "name": "우주산업",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T21:00:00Z",
-            "last_value": 15.725
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 15.725,
+            "start_as_of": "2026-11-05T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 16.406,
+            "end_as_of": "2026-11-06T15:41:38Z",
+            "span_minutes": 1121.6,
+            "change_pct": 4.3307,
+            "sampled_high": 16.406,
+            "sampled_low": 15.725
           }
         },
         "JOUL": {
           "name": "전력인프라",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T20:37:55Z",
-            "last_value": 17.9575
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 17.9575,
+            "start_as_of": "2026-11-05T20:37:55Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 18.54,
+            "end_as_of": "2026-11-06T14:53:43Z",
+            "span_minutes": 1095.8,
+            "change_pct": 3.2438,
+            "sampled_high": 18.54,
+            "sampled_low": 17.9575
           }
         },
         "LYTE": {
@@ -1339,11 +1388,18 @@
           "name": "원전·SMR 밸류체인",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T21:00:00Z",
-            "last_value": 84.71
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 84.71,
+            "start_as_of": "2026-11-05T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 87.57,
+            "end_as_of": "2026-11-06T15:54:37Z",
+            "span_minutes": 1134.6,
+            "change_pct": 3.3762,
+            "sampled_high": 87.57,
+            "sampled_low": 84.71
           }
         },
         "XBI": {
@@ -1361,11 +1417,18 @@
           "name": "휴머노이드",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-05T21:00:00Z",
-            "last_value": 26.52
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 26.52,
+            "start_as_of": "2026-11-05T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 26.42,
+            "end_as_of": "2026-11-06T15:41:05Z",
+            "span_minutes": 1121.1,
+            "change_pct": -0.3771,
+            "sampled_high": 26.52,
+            "sampled_low": 26.42
           }
         },
         "COPX": {
