@@ -6,8 +6,8 @@ name: lululu-screener
 # GitHub 예약 실행은 수 분~수십 분 늦을 수 있다. 휴장일은 스크립트가 '새 세션 없음'으로 건너뛴다.
 on:
   schedule:
-    - cron: '30 21 * * 1-5'
-    - cron: '25 9 * * 1-5'
+    - cron: '12 21 * * 1-5'
+    - cron: '07 9 * * 1-5'
   workflow_dispatch:
     inputs:
       market:
@@ -53,7 +53,7 @@ jobs:
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "market=${{ inputs.market }}" >> "$GITHUB_OUTPUT"
             echo "dry=${{ inputs.dry_run }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "30 21 * * 1-5" ]; then
+          elif [ "${{ github.event.schedule }}" = "12 21 * * 1-5" ]; then
             echo "market=US" >> "$GITHUB_OUTPUT"; echo "dry=false" >> "$GITHUB_OUTPUT"
           else
             echo "market=KR" >> "$GITHUB_OUTPUT"; echo "dry=false" >> "$GITHUB_OUTPUT"
