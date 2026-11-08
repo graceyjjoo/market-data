@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261108T184957Z-gh42511934890-1",
-  "reference_time": "2026-11-08T18:49:57Z",
-  "window_start": "2026-11-08T17:19:57Z",
-  "window_end": "2026-11-08T18:49:57Z",
+  "source_run_id": "20261108T194919Z-gh42516941295-1",
+  "reference_time": "2026-11-08T19:49:19Z",
+  "window_start": "2026-11-08T18:19:19Z",
+  "window_end": "2026-11-08T19:49:19Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -377,16 +377,18 @@
       "unit": "JPY_per_USD",
       "series_id": "YAHOO:chart:JPY=X:fx:JPY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 158.384,
-        "as_of": "2026-11-08T18:50:00Z",
-        "day_change_pct": 0.463677,
+        "value": 158.368,
+        "as_of": "2026-11-08T19:49:30Z",
+        "day_change_pct": 0.453528,
         "previous_close": 157.653,
         "currency": "JPY"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-08T18:50:00Z",
+        "last_value": 158.384
       }
     },
     "CNY=X": {
@@ -415,16 +417,18 @@
       "unit": "USD_per_EUR",
       "series_id": "YAHOO:chart:EURUSD=X:fx:USD_per_EUR:regularMarketPrice",
       "snapshot": {
-        "value": 1.1143,
-        "as_of": "2026-11-06T22:29:32Z",
-        "day_change_pct": -0.668568,
+        "value": 1.1138,
+        "as_of": "2026-11-08T19:48:31Z",
+        "day_change_pct": -0.71314,
         "previous_close": 1.1218,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-08T19:48:31Z",
+        "last_value": 1.1138
       }
     },
     "JPYKRW=X": {
