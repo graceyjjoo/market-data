@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261108T164459Z-gh42501454166-1",
-  "reference_time": "2026-11-08T16:44:59Z",
-  "window_start": "2026-11-08T15:14:59Z",
-  "window_end": "2026-11-08T16:44:59Z",
+  "source_run_id": "20261108T174219Z-gh42506272966-1",
+  "reference_time": "2026-11-08T17:42:19Z",
+  "window_start": "2026-11-08T16:12:19Z",
+  "window_end": "2026-11-08T17:42:19Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -402,10 +402,8 @@
       },
       "path": {
         "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-08T16:04:52Z",
-        "last_value": 6.6648
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
       }
     },
     "EURUSD=X": {
