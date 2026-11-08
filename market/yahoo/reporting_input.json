@@ -1,17 +1,17 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261108T085758Z-gh42465126800-1",
-  "reference_time": "2026-11-08T08:57:58Z",
+  "source_run_id": "20261108T095145Z-gh42468952381-1",
+  "reference_time": "2026-11-08T09:51:45Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
-      "report": "morning",
-      "report_time_kst": "07:00",
-      "window_start": "2026-11-07T09:30:00Z",
-      "window_end": "2026-11-07T21:30:00Z",
+      "report": "evening",
+      "report_time_kst": "19:00",
+      "window_start": "2026-11-07T21:30:00Z",
+      "window_end": "2026-11-08T09:30:00Z",
       "cutoff_reached_at_collection": true,
-      "last_collection_before_cutoff": "20261107T204335Z-gh42412418085-1",
-      "last_collection_before_cutoff_gap_minutes": 46.4,
+      "last_collection_before_cutoff": "20261108T085758Z-gh42465126800-1",
+      "last_collection_before_cutoff_gap_minutes": 32.0,
       "note": null,
       "instruments": {
         "^KS11": {
@@ -229,13 +229,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 158.425,
-            "start_as_of": "2026-11-07T05:21:16Z",
+            "start_as_of": "2026-11-07T21:25:20Z",
             "start_is_pre_window_baseline": true,
             "end_value": 158.425,
-            "end_as_of": "2026-11-07T21:25:20Z",
-            "span_minutes": 964.1,
+            "end_as_of": "2026-11-08T05:21:16Z",
+            "span_minutes": 475.9,
             "change_pct": 0.0,
             "sampled_high": 158.425,
             "sampled_low": 158.425
@@ -247,14 +247,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
-            "start_value": 6.671,
-            "start_as_of": "2026-11-07T03:30:49Z",
+            "n_quotes_in_window": 2,
+            "start_value": 6.6648,
+            "start_as_of": "2026-11-07T16:04:25Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6648,
-            "end_as_of": "2026-11-07T16:04:25Z",
-            "span_minutes": 753.6,
-            "change_pct": -0.0929,
+            "end_value": 6.671,
+            "end_as_of": "2026-11-08T03:30:53Z",
+            "span_minutes": 686.5,
+            "change_pct": 0.093,
             "sampled_high": 6.671,
             "sampled_low": 6.6648
           }
@@ -559,13 +559,13 @@
       }
     },
     {
-      "report": "evening",
-      "report_time_kst": "19:00",
-      "window_start": "2026-11-07T21:30:00Z",
-      "window_end": "2026-11-08T09:30:00Z",
+      "report": "morning",
+      "report_time_kst": "07:00",
+      "window_start": "2026-11-08T09:30:00Z",
+      "window_end": "2026-11-08T21:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261108T085758Z-gh42465126800-1",
-      "last_collection_before_cutoff_gap_minutes": 32.0,
+      "last_collection_before_cutoff": "20261108T095145Z-gh42468952381-1",
+      "last_collection_before_cutoff_gap_minutes": 698.2,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -781,36 +781,22 @@
           "name": "USD/JPY",
           "group": "fx",
           "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 3,
-            "start_value": 158.425,
-            "start_as_of": "2026-11-07T21:25:20Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 158.425,
-            "end_as_of": "2026-11-08T05:21:16Z",
-            "span_minutes": 475.9,
-            "change_pct": 0.0,
-            "sampled_high": 158.425,
-            "sampled_low": 158.425
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-08T05:21:16Z",
+            "last_value": 158.425
           }
         },
         "CNY=X": {
           "name": "USD/CNY",
           "group": "fx",
           "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 2,
-            "start_value": 6.6648,
-            "start_as_of": "2026-11-07T16:04:25Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 6.671,
-            "end_as_of": "2026-11-08T03:30:53Z",
-            "span_minutes": 686.5,
-            "change_pct": 0.093,
-            "sampled_high": 6.671,
-            "sampled_low": 6.6648
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-08T03:30:53Z",
+            "last_value": 6.671
           }
         },
         "EURUSD=X": {
