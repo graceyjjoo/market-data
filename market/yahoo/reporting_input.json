@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261108T144616Z-gh42491420648-1",
-  "reference_time": "2026-11-08T14:46:16Z",
+  "source_run_id": "20261108T154234Z-gh42496165226-1",
+  "reference_time": "2026-11-08T15:42:34Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -564,8 +564,8 @@
       "window_start": "2026-11-08T09:30:00Z",
       "window_end": "2026-11-08T21:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261108T144616Z-gh42491420648-1",
-      "last_collection_before_cutoff_gap_minutes": 403.7,
+      "last_collection_before_cutoff": "20261108T154234Z-gh42496165226-1",
+      "last_collection_before_cutoff_gap_minutes": 347.4,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -770,11 +770,18 @@
           "name": "USD/KRW",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-06T21:59:58Z",
-            "last_value": 1363.65
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 1363.65,
+            "start_as_of": "2026-11-06T21:59:58Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 1363.65,
+            "end_as_of": "2026-11-08T15:00:26Z",
+            "span_minutes": 2460.5,
+            "change_pct": 0.0,
+            "sampled_high": 1363.65,
+            "sampled_low": 1363.65
           }
         },
         "JPY=X": {
@@ -792,11 +799,18 @@
           "name": "USD/CNY",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-08T03:30:53Z",
-            "last_value": 6.671
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 6.671,
+            "start_as_of": "2026-11-08T03:30:53Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 6.6755,
+            "end_as_of": "2026-11-08T14:59:59Z",
+            "span_minutes": 689.1,
+            "change_pct": 0.0675,
+            "sampled_high": 6.6755,
+            "sampled_low": 6.671
           }
         },
         "EURUSD=X": {

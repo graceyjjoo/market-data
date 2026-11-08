@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261108T144616Z-gh42491420648-1",
-  "reference_time": "2026-11-08T14:46:16Z",
-  "window_start": "2026-11-08T13:16:16Z",
-  "window_end": "2026-11-08T14:46:16Z",
+  "source_run_id": "20261108T154234Z-gh42496165226-1",
+  "reference_time": "2026-11-08T15:42:34Z",
+  "window_start": "2026-11-08T14:12:34Z",
+  "window_end": "2026-11-08T15:42:34Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -357,15 +357,17 @@
       "series_id": "YAHOO:chart:KRW=X:fx:KRW_per_USD:regularMarketPrice",
       "snapshot": {
         "value": 1363.65,
-        "as_of": "2026-11-06T21:59:58Z",
+        "as_of": "2026-11-08T15:00:26Z",
         "day_change_pct": 0.513754,
         "previous_close": 1356.68,
         "currency": "KRW"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-08T15:00:26Z",
+        "last_value": 1363.65
       }
     },
     "JPY=X": {
@@ -394,16 +396,18 @@
       "unit": "CNY_per_USD",
       "series_id": "YAHOO:chart:CNY=X:fx:CNY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 6.671,
-        "as_of": "2026-11-08T03:30:53Z",
-        "day_change_pct": 0.190739,
+        "value": 6.6755,
+        "as_of": "2026-11-08T14:59:59Z",
+        "day_change_pct": 0.258324,
         "previous_close": 6.6583,
         "currency": "CNY"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-08T14:59:59Z",
+        "last_value": 6.6755
       }
     },
     "EURUSD=X": {
