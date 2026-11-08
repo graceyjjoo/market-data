@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261108T214156Z-gh42526489691-1",
-  "reference_time": "2026-11-08T21:41:56Z",
-  "window_start": "2026-11-08T20:11:56Z",
-  "window_end": "2026-11-08T21:41:56Z",
+  "source_run_id": "20261108T224323Z-gh42531631216-1",
+  "reference_time": "2026-11-08T22:43:23Z",
+  "window_start": "2026-11-08T21:13:23Z",
+  "window_end": "2026-11-08T22:43:23Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -356,9 +356,9 @@
       "unit": "KRW_per_USD",
       "series_id": "YAHOO:chart:KRW=X:fx:KRW_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 1363.37,
-        "as_of": "2026-11-08T18:19:31Z",
-        "day_change_pct": 0.493116,
+        "value": 1363.27,
+        "as_of": "2026-11-08T22:43:37Z",
+        "day_change_pct": 0.485745,
         "previous_close": 1356.68,
         "currency": "KRW"
       },
@@ -375,9 +375,9 @@
       "unit": "JPY_per_USD",
       "series_id": "YAHOO:chart:JPY=X:fx:JPY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 158.28,
-        "as_of": "2026-11-08T21:42:00Z",
-        "day_change_pct": 0.397709,
+        "value": 158.359,
+        "as_of": "2026-11-08T22:43:39Z",
+        "day_change_pct": 0.447819,
         "previous_close": 157.653,
         "currency": "JPY"
       },
@@ -385,8 +385,8 @@
         "path_available": false,
         "reason": "single_quote_only",
         "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-08T20:29:30Z",
-        "last_value": 158.329
+        "last_as_of": "2026-11-08T21:42:00Z",
+        "last_value": 158.28
       }
     },
     "CNY=X": {
@@ -418,17 +418,15 @@
       "series_id": "YAHOO:chart:EURUSD=X:fx:USD_per_EUR:regularMarketPrice",
       "snapshot": {
         "value": 1.1142,
-        "as_of": "2026-11-08T20:29:32Z",
+        "as_of": "2026-11-08T22:43:29Z",
         "day_change_pct": -0.677483,
         "previous_close": 1.1218,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-08T20:29:32Z",
-        "last_value": 1.1142
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
       }
     },
     "JPYKRW=X": {
@@ -438,16 +436,18 @@
       "unit": "KRW_per_JPY",
       "series_id": "YAHOO:chart:JPYKRW=X:fx:KRW_per_JPY:regularMarketPrice",
       "snapshot": {
-        "value": 8.586,
-        "as_of": "2026-11-08T18:46:30Z",
-        "day_change_pct": 0.046609,
+        "value": 8.585,
+        "as_of": "2026-11-08T22:41:29Z",
+        "day_change_pct": 0.034957,
         "previous_close": 8.582,
         "currency": "KRW"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-08T22:41:29Z",
+        "last_value": 8.585
       }
     },
     "NQ=F": {
