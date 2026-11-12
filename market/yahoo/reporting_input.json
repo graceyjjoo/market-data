@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261112T215219Z-gh43314457520-1",
-  "reference_time": "2026-11-12T21:52:19Z",
+  "source_run_id": "20261112T225314Z-gh43323979831-1",
+  "reference_time": "2026-11-12T22:53:14Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -837,8 +837,8 @@
       "window_start": "2026-11-12T21:30:00Z",
       "window_end": "2026-11-13T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261112T215219Z-gh43314457520-1",
-      "last_collection_before_cutoff_gap_minutes": 697.7,
+      "last_collection_before_cutoff": "20261112T225314Z-gh43323979831-1",
+      "last_collection_before_cutoff_gap_minutes": 636.8,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -867,11 +867,18 @@
           "name": "S&P 500",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-12T21:20:01Z",
-            "last_value": 7592.4
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 7592.4,
+            "start_as_of": "2026-11-12T21:20:01Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 7592.4,
+            "end_as_of": "2026-11-12T21:58:23Z",
+            "span_minutes": 38.4,
+            "change_pct": 0.0,
+            "sampled_high": 7592.4,
+            "sampled_low": 7592.4
           }
         },
         "^NDX": {
@@ -880,13 +887,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 28241.764,
             "start_as_of": "2026-11-12T20:55:31Z",
             "start_is_pre_window_baseline": true,
             "end_value": 28289.188,
-            "end_as_of": "2026-11-12T21:52:18Z",
-            "span_minutes": 56.8,
+            "end_as_of": "2026-11-12T22:15:59Z",
+            "span_minutes": 80.5,
             "change_pct": 0.1679,
             "sampled_high": 28289.188,
             "sampled_low": 28241.764
@@ -896,11 +903,18 @@
           "name": "PHLX Semiconductor Index",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-12T20:55:33Z",
-            "last_value": 10464.554
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 2,
+            "start_value": 10464.554,
+            "start_as_of": "2026-11-12T20:55:33Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 10506.674,
+            "end_as_of": "2026-11-12T22:15:59Z",
+            "span_minutes": 80.4,
+            "change_pct": 0.4025,
+            "sampled_high": 10506.674,
+            "sampled_low": 10464.554
           }
         },
         "^RUT": {
@@ -925,11 +939,18 @@
           "name": "Nasdaq Composite",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-12T20:55:34Z",
-            "last_value": 25328.69
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 2,
+            "start_value": 25328.69,
+            "start_as_of": "2026-11-12T20:55:34Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 25366.094,
+            "end_as_of": "2026-11-12T22:15:59Z",
+            "span_minutes": 80.4,
+            "change_pct": 0.1477,
+            "sampled_high": 25366.094,
+            "sampled_low": 25328.69
           }
         },
         "^N225": {
@@ -1057,22 +1078,36 @@
           "name": "USD/KRW",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-12T20:55:49Z",
-            "last_value": 1334.95
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 1334.95,
+            "start_as_of": "2026-11-12T20:55:49Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 1334.59,
+            "end_as_of": "2026-11-12T21:52:33Z",
+            "span_minutes": 56.7,
+            "change_pct": -0.027,
+            "sampled_high": 1334.95,
+            "sampled_low": 1334.59
           }
         },
         "JPY=X": {
           "name": "USD/JPY",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-12T20:55:42Z",
-            "last_value": 159.882
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 159.882,
+            "start_as_of": "2026-11-12T20:55:42Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 159.835,
+            "end_as_of": "2026-11-12T21:52:32Z",
+            "span_minutes": 56.8,
+            "change_pct": -0.0294,
+            "sampled_high": 159.882,
+            "sampled_low": 159.835
           }
         },
         "CNY=X": {
@@ -1081,13 +1116,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 6.6699,
             "start_as_of": "2026-11-12T20:16:12Z",
             "start_is_pre_window_baseline": true,
             "end_value": 6.6626,
-            "end_as_of": "2026-11-12T21:32:21Z",
-            "span_minutes": 76.2,
+            "end_as_of": "2026-11-12T22:44:12Z",
+            "span_minutes": 148.0,
             "change_pct": -0.1094,
             "sampled_high": 6.6699,
             "sampled_low": 6.6626
@@ -1097,11 +1132,18 @@
           "name": "EUR/USD",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-12T20:55:32Z",
-            "last_value": 1.1059
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 1.1059,
+            "start_as_of": "2026-11-12T20:55:32Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 1.1057,
+            "end_as_of": "2026-11-12T21:52:33Z",
+            "span_minutes": 57.0,
+            "change_pct": -0.0181,
+            "sampled_high": 1.1059,
+            "sampled_low": 1.1057
           }
         },
         "JPYKRW=X": {
@@ -1110,16 +1152,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 8.328,
             "start_as_of": "2026-11-12T20:51:32Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.329,
-            "end_as_of": "2026-11-12T21:51:33Z",
-            "span_minutes": 60.0,
-            "change_pct": 0.012,
+            "end_value": 8.326,
+            "end_as_of": "2026-11-12T22:51:30Z",
+            "span_minutes": 120.0,
+            "change_pct": -0.024,
             "sampled_high": 8.329,
-            "sampled_low": 8.328
+            "sampled_low": 8.326
           }
         },
         "NQ=F": {
@@ -1128,14 +1170,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 28344.75,
             "start_as_of": "2026-11-12T20:45:57Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 28417.0,
-            "end_as_of": "2026-11-12T21:42:35Z",
-            "span_minutes": 56.6,
-            "change_pct": 0.2549,
+            "end_value": 28401.5,
+            "end_as_of": "2026-11-12T21:59:59Z",
+            "span_minutes": 74.0,
+            "change_pct": 0.2002,
             "sampled_high": 28417.0,
             "sampled_low": 28344.75
           }
@@ -1146,15 +1188,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 7611.5,
             "start_as_of": "2026-11-12T20:45:53Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7621.5,
-            "end_as_of": "2026-11-12T21:42:37Z",
-            "span_minutes": 56.7,
-            "change_pct": 0.1314,
-            "sampled_high": 7621.5,
+            "end_value": 7621.75,
+            "end_as_of": "2026-11-12T21:59:59Z",
+            "span_minutes": 74.1,
+            "change_pct": 0.1347,
+            "sampled_high": 7621.75,
             "sampled_low": 7611.5
           }
         },
@@ -1164,14 +1206,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 88.99,
             "start_as_of": "2026-11-12T20:45:56Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 88.69,
-            "end_as_of": "2026-11-12T21:42:33Z",
-            "span_minutes": 56.6,
-            "change_pct": -0.3371,
+            "end_value": 88.7,
+            "end_as_of": "2026-11-12T22:00:00Z",
+            "span_minutes": 74.1,
+            "change_pct": -0.3259,
             "sampled_high": 88.99,
             "sampled_low": 88.69
           }
@@ -1182,14 +1224,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 3882.8,
             "start_as_of": "2026-11-12T20:45:56Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3879.2,
-            "end_as_of": "2026-11-12T21:42:37Z",
-            "span_minutes": 56.7,
-            "change_pct": -0.0927,
+            "end_value": 3881.7,
+            "end_as_of": "2026-11-12T21:59:59Z",
+            "span_minutes": 74.0,
+            "change_pct": -0.0283,
             "sampled_high": 3882.8,
             "sampled_low": 3879.2
           }
@@ -1200,15 +1242,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 6.187,
             "start_as_of": "2026-11-12T20:45:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.187,
-            "end_as_of": "2026-11-12T21:42:32Z",
-            "span_minutes": 57.1,
-            "change_pct": 0.0,
-            "sampled_high": 6.187,
+            "end_value": 6.193,
+            "end_as_of": "2026-11-12T21:59:59Z",
+            "span_minutes": 74.5,
+            "change_pct": 0.097,
+            "sampled_high": 6.193,
             "sampled_low": 6.187
           }
         },
@@ -1218,14 +1260,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 3.339,
             "start_as_of": "2026-11-12T20:45:50Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3.364,
-            "end_as_of": "2026-11-12T21:42:42Z",
-            "span_minutes": 56.9,
-            "change_pct": 0.7487,
+            "end_value": 3.361,
+            "end_as_of": "2026-11-12T21:59:59Z",
+            "span_minutes": 74.2,
+            "change_pct": 0.6589,
             "sampled_high": 3.364,
             "sampled_low": 3.339
           }
