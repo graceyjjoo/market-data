@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261115T194907Z-gh43754521792-1",
-  "reference_time": "2026-11-15T19:49:07Z",
-  "window_start": "2026-11-15T18:19:07Z",
-  "window_end": "2026-11-15T19:49:07Z",
+  "source_run_id": "20261115T204520Z-gh43759823423-1",
+  "reference_time": "2026-11-15T20:45:20Z",
+  "window_start": "2026-11-15T19:15:20Z",
+  "window_end": "2026-11-15T20:45:20Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -364,10 +364,8 @@
       },
       "path": {
         "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-15T18:24:55Z",
-        "last_value": 1334.98
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
       }
     },
     "JPY=X": {
@@ -377,9 +375,9 @@
       "unit": "JPY_per_USD",
       "series_id": "YAHOO:chart:JPY=X:fx:JPY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 159.576,
-        "as_of": "2026-11-15T19:49:00Z",
-        "day_change_pct": -0.166414,
+        "value": 159.545,
+        "as_of": "2026-11-15T20:14:30Z",
+        "day_change_pct": -0.185808,
         "previous_close": 159.842,
         "currency": "JPY"
       },
@@ -387,15 +385,15 @@
         "path_available": true,
         "reason": null,
         "n_quotes_in_window": 2,
-        "start_value": 159.586,
-        "start_as_of": "2026-11-15T18:51:00Z",
+        "start_value": 159.576,
+        "start_as_of": "2026-11-15T19:49:00Z",
         "start_is_pre_window_baseline": false,
-        "end_value": 159.576,
-        "end_as_of": "2026-11-15T19:49:00Z",
-        "span_minutes": 58.0,
-        "change_pct": -0.0063,
-        "sampled_high": 159.586,
-        "sampled_low": 159.576
+        "end_value": 159.545,
+        "end_as_of": "2026-11-15T20:14:30Z",
+        "span_minutes": 25.5,
+        "change_pct": -0.0194,
+        "sampled_high": 159.576,
+        "sampled_low": 159.545
       }
     },
     "CNY=X": {
@@ -413,10 +411,8 @@
       },
       "path": {
         "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-15T18:24:55Z",
-        "last_value": 6.6705
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
       }
     },
     "EURUSD=X": {
@@ -427,17 +423,24 @@
       "series_id": "YAHOO:chart:EURUSD=X:fx:USD_per_EUR:regularMarketPrice",
       "snapshot": {
         "value": 1.1031,
-        "as_of": "2026-11-15T19:48:45Z",
+        "as_of": "2026-11-15T20:01:45Z",
         "day_change_pct": -0.253187,
         "previous_close": 1.1059,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-15T19:48:45Z",
-        "last_value": 1.1031
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 1.1031,
+        "start_as_of": "2026-11-15T19:48:45Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 1.1031,
+        "end_as_of": "2026-11-15T20:01:45Z",
+        "span_minutes": 13.0,
+        "change_pct": 0.0,
+        "sampled_high": 1.1031,
+        "sampled_low": 1.1031
       }
     },
     "JPYKRW=X": {
@@ -454,18 +457,9 @@
         "currency": "KRW"
       },
       "path": {
-        "path_available": true,
-        "reason": null,
-        "n_quotes_in_window": 2,
-        "start_value": 8.342,
-        "start_as_of": "2026-11-15T18:46:44Z",
-        "start_is_pre_window_baseline": false,
-        "end_value": 8.341,
-        "end_as_of": "2026-11-15T18:51:44Z",
-        "span_minutes": 5.0,
-        "change_pct": -0.012,
-        "sampled_high": 8.342,
-        "sampled_low": 8.341
+        "path_available": false,
+        "reason": "no_new_recent_path_quotes",
+        "n_quotes_in_window": 0
       }
     },
     "NQ=F": {
