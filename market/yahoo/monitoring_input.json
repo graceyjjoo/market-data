@@ -1,9 +1,9 @@
 {
   "schema_id": "market-yahoo-monitoring-v1",
-  "source_run_id": "20261117T190707Z-gh44155047747-1",
-  "reference_time": "2026-11-17T19:07:07Z",
-  "window_start": "2026-11-17T17:37:07Z",
-  "window_end": "2026-11-17T19:07:07Z",
+  "source_run_id": "20261117T201401Z-gh44167081502-1",
+  "reference_time": "2026-11-17T20:14:01Z",
+  "window_start": "2026-11-17T18:44:01Z",
+  "window_end": "2026-11-17T20:14:01Z",
   "window_basis": "source as_of (not capture time)",
   "rule": "path_available=false means no measurable path; do NOT read it as 0% change",
   "instruments": {
@@ -52,9 +52,9 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:^GSPC:index:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 7328.96,
-        "as_of": "2026-11-17T19:07:07Z",
-        "day_change_pct": -1.18154,
+        "value": 7309.94,
+        "as_of": "2026-11-17T20:14:02Z",
+        "day_change_pct": -1.437992,
         "previous_close": 7416.59,
         "currency": "USD"
       },
@@ -73,9 +73,9 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:^NDX:index:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 26895.354,
-        "as_of": "2026-11-17T19:07:07Z",
-        "day_change_pct": -1.109668,
+        "value": 26810.365,
+        "as_of": "2026-11-17T20:14:03Z",
+        "day_change_pct": -1.42216,
         "previous_close": 27197.152,
         "currency": "USD"
       },
@@ -94,16 +94,18 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:^SOX:index:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 9532.329,
-        "as_of": "2026-11-17T19:07:09Z",
-        "day_change_pct": -0.81496,
+        "value": 9470.233,
+        "as_of": "2026-11-17T20:14:03Z",
+        "day_change_pct": -1.461077,
         "previous_close": 9610.652,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:09Z",
+        "last_value": 9532.329
       }
     },
     "^RUT": {
@@ -113,18 +115,25 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:^RUT:index:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 2712.5408,
-        "as_of": "2026-11-17T18:52:10Z",
-        "day_change_pct": -1.108314,
+        "value": 2701.6155,
+        "as_of": "2026-11-17T19:59:00Z",
+        "day_change_pct": -1.50662,
         "previous_close": 2742.9412,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:10Z",
-        "last_value": 2712.5408
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 2712.5408,
+        "start_as_of": "2026-11-17T18:52:10Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 2701.6155,
+        "end_as_of": "2026-11-17T19:59:00Z",
+        "span_minutes": 66.8,
+        "change_pct": -0.4028,
+        "sampled_high": 2712.5408,
+        "sampled_low": 2701.6155
       }
     },
     "^IXIC": {
@@ -134,16 +143,18 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:^IXIC:index:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 24249.258,
-        "as_of": "2026-11-17T19:07:10Z",
-        "day_change_pct": -1.062842,
+        "value": 24187.84,
+        "as_of": "2026-11-17T20:14:06Z",
+        "day_change_pct": -1.313428,
         "previous_close": 24509.758,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:10Z",
+        "last_value": 24249.258
       }
     },
     "^N225": {
@@ -286,18 +297,25 @@
       "unit": "percent",
       "series_id": "YAHOO:chart:^IRX:government_yield:percent:regularMarketPrice",
       "snapshot": {
-        "value": 4.143,
-        "as_of": "2026-11-17T18:52:13Z",
-        "day_change_pct": 0.436364,
+        "value": 4.138,
+        "as_of": "2026-11-17T19:59:03Z",
+        "day_change_pct": 0.315152,
         "previous_close": 4.125,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:13Z",
-        "last_value": 4.143
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 4.143,
+        "start_as_of": "2026-11-17T18:52:13Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 4.138,
+        "end_as_of": "2026-11-17T19:59:03Z",
+        "span_minutes": 66.8,
+        "change_pct": -0.1207,
+        "sampled_high": 4.143,
+        "sampled_low": 4.138
       }
     },
     "^FVX": {
@@ -307,18 +325,25 @@
       "unit": "percent",
       "series_id": "YAHOO:chart:^FVX:government_yield:percent:regularMarketPrice",
       "snapshot": {
-        "value": 4.9,
-        "as_of": "2026-11-17T18:52:13Z",
-        "day_change_pct": -0.70922,
+        "value": 4.904,
+        "as_of": "2026-11-17T19:59:03Z",
+        "day_change_pct": -0.628166,
         "previous_close": 4.935,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:13Z",
-        "last_value": 4.9
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 4.9,
+        "start_as_of": "2026-11-17T18:52:13Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 4.904,
+        "end_as_of": "2026-11-17T19:59:03Z",
+        "span_minutes": 66.8,
+        "change_pct": 0.0816,
+        "sampled_high": 4.904,
+        "sampled_low": 4.9
       }
     },
     "^TNX": {
@@ -328,18 +353,25 @@
       "unit": "percent",
       "series_id": "YAHOO:chart:^TNX:government_yield:percent:regularMarketPrice",
       "snapshot": {
-        "value": 5.101,
-        "as_of": "2026-11-17T18:52:13Z",
-        "day_change_pct": -0.390549,
+        "value": 5.105,
+        "as_of": "2026-11-17T19:59:03Z",
+        "day_change_pct": -0.312439,
         "previous_close": 5.121,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:13Z",
-        "last_value": 5.101
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 5.101,
+        "start_as_of": "2026-11-17T18:52:13Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 5.105,
+        "end_as_of": "2026-11-17T19:59:03Z",
+        "span_minutes": 66.8,
+        "change_pct": 0.0784,
+        "sampled_high": 5.105,
+        "sampled_low": 5.101
       }
     },
     "^TYX": {
@@ -349,18 +381,25 @@
       "unit": "percent",
       "series_id": "YAHOO:chart:^TYX:government_yield:percent:regularMarketPrice",
       "snapshot": {
-        "value": 5.456,
-        "as_of": "2026-11-17T18:52:13Z",
-        "day_change_pct": -0.201207,
+        "value": 5.461,
+        "as_of": "2026-11-17T19:59:13Z",
+        "day_change_pct": -0.109749,
         "previous_close": 5.467,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:13Z",
-        "last_value": 5.456
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 5.456,
+        "start_as_of": "2026-11-17T18:52:13Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 5.461,
+        "end_as_of": "2026-11-17T19:59:13Z",
+        "span_minutes": 67.0,
+        "change_pct": 0.0916,
+        "sampled_high": 5.461,
+        "sampled_low": 5.456
       }
     },
     "KRW=X": {
@@ -370,16 +409,18 @@
       "unit": "KRW_per_USD",
       "series_id": "YAHOO:chart:KRW=X:fx:KRW_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 1335.38,
-        "as_of": "2026-11-17T19:07:21Z",
-        "day_change_pct": -0.032939,
+        "value": 1335.04,
+        "as_of": "2026-11-17T20:14:11Z",
+        "day_change_pct": -0.058391,
         "previous_close": 1335.82,
         "currency": "KRW"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:21Z",
+        "last_value": 1335.38
       }
     },
     "JPY=X": {
@@ -389,16 +430,18 @@
       "unit": "JPY_per_USD",
       "series_id": "YAHOO:chart:JPY=X:fx:JPY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 159.324,
-        "as_of": "2026-11-17T19:07:22Z",
-        "day_change_pct": -0.042662,
+        "value": 159.348,
+        "as_of": "2026-11-17T20:14:17Z",
+        "day_change_pct": -0.027605,
         "previous_close": 159.392,
         "currency": "JPY"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:22Z",
+        "last_value": 159.324
       }
     },
     "CNY=X": {
@@ -408,18 +451,25 @@
       "unit": "CNY_per_USD",
       "series_id": "YAHOO:chart:CNY=X:fx:CNY_per_USD:regularMarketPrice",
       "snapshot": {
-        "value": 6.6553,
-        "as_of": "2026-11-17T18:52:09Z",
-        "day_change_pct": 0.02104,
+        "value": 6.6659,
+        "as_of": "2026-11-17T19:41:05Z",
+        "day_change_pct": 0.180345,
         "previous_close": 6.6539,
         "currency": "CNY"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:09Z",
-        "last_value": 6.6553
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 6.6553,
+        "start_as_of": "2026-11-17T18:52:09Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 6.6659,
+        "end_as_of": "2026-11-17T19:41:05Z",
+        "span_minutes": 48.9,
+        "change_pct": 0.1593,
+        "sampled_high": 6.6659,
+        "sampled_low": 6.6553
       }
     },
     "EURUSD=X": {
@@ -429,18 +479,25 @@
       "unit": "USD_per_EUR",
       "series_id": "YAHOO:chart:EURUSD=X:fx:USD_per_EUR:regularMarketPrice",
       "snapshot": {
-        "value": 1.1014,
-        "as_of": "2026-11-17T19:06:45Z",
-        "day_change_pct": 0.154588,
+        "value": 1.1008,
+        "as_of": "2026-11-17T20:13:46Z",
+        "day_change_pct": 0.100027,
         "previous_close": 1.0997,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T19:06:45Z",
-        "last_value": 1.1014
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 1.1014,
+        "start_as_of": "2026-11-17T19:06:45Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 1.1008,
+        "end_as_of": "2026-11-17T20:13:46Z",
+        "span_minutes": 67.0,
+        "change_pct": -0.0545,
+        "sampled_high": 1.1014,
+        "sampled_low": 1.1008
       }
     },
     "JPYKRW=X": {
@@ -450,18 +507,25 @@
       "unit": "KRW_per_JPY",
       "series_id": "YAHOO:chart:JPYKRW=X:fx:KRW_per_JPY:regularMarketPrice",
       "snapshot": {
-        "value": 8.359,
-        "as_of": "2026-11-17T19:06:45Z",
-        "day_change_pct": 0.047876,
+        "value": 8.357,
+        "as_of": "2026-11-17T20:11:46Z",
+        "day_change_pct": 0.023938,
         "previous_close": 8.355,
         "currency": "KRW"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T19:06:45Z",
-        "last_value": 8.359
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 8.359,
+        "start_as_of": "2026-11-17T19:06:45Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 8.357,
+        "end_as_of": "2026-11-17T20:11:46Z",
+        "span_minutes": 65.0,
+        "change_pct": -0.0239,
+        "sampled_high": 8.359,
+        "sampled_low": 8.357
       }
     },
     "NQ=F": {
@@ -471,18 +535,25 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:NQ=F:futures:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 26978.0,
-        "as_of": "2026-11-17T18:57:25Z",
-        "day_change_pct": -1.122442,
+        "value": 26889.75,
+        "as_of": "2026-11-17T20:04:19Z",
+        "day_change_pct": -1.445889,
         "previous_close": 27284.25,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:57:25Z",
-        "last_value": 26978.0,
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 26978.0,
+        "start_as_of": "2026-11-17T18:57:25Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 26889.75,
+        "end_as_of": "2026-11-17T20:04:19Z",
+        "span_minutes": 66.9,
+        "change_pct": -0.3271,
+        "sampled_high": 26978.0,
+        "sampled_low": 26889.75,
         "contract_verified": false,
         "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
       }
@@ -494,18 +565,25 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:ES=F:futures:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 7350.5,
-        "as_of": "2026-11-17T18:57:27Z",
-        "day_change_pct": -1.189676,
+        "value": 7329.25,
+        "as_of": "2026-11-17T20:04:21Z",
+        "day_change_pct": -1.475333,
         "previous_close": 7439.0,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:57:27Z",
-        "last_value": 7350.5,
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 7350.5,
+        "start_as_of": "2026-11-17T18:57:27Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 7329.25,
+        "end_as_of": "2026-11-17T20:04:21Z",
+        "span_minutes": 66.9,
+        "change_pct": -0.2891,
+        "sampled_high": 7350.5,
+        "sampled_low": 7329.25,
         "contract_verified": false,
         "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
       }
@@ -517,18 +595,25 @@
       "unit": "USD_per_barrel",
       "series_id": "YAHOO:chart:CL=F:futures:USD_per_barrel:regularMarketPrice",
       "snapshot": {
-        "value": 86.53,
-        "as_of": "2026-11-17T18:57:27Z",
-        "day_change_pct": 0.944937,
+        "value": 85.35,
+        "as_of": "2026-11-17T20:04:20Z",
+        "day_change_pct": -0.431638,
         "previous_close": 85.72,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:57:27Z",
-        "last_value": 86.53,
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 86.53,
+        "start_as_of": "2026-11-17T18:57:27Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 85.35,
+        "end_as_of": "2026-11-17T20:04:20Z",
+        "span_minutes": 66.9,
+        "change_pct": -1.3637,
+        "sampled_high": 86.53,
+        "sampled_low": 85.35,
         "contract_verified": false,
         "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
       }
@@ -540,18 +625,25 @@
       "unit": "USD_per_troy_ounce",
       "series_id": "YAHOO:chart:GC=F:futures:USD_per_troy_ounce:regularMarketPrice",
       "snapshot": {
-        "value": 3859.0,
-        "as_of": "2026-11-17T18:57:10Z",
-        "day_change_pct": 0.155723,
+        "value": 3849.6,
+        "as_of": "2026-11-17T20:04:19Z",
+        "day_change_pct": -0.088243,
         "previous_close": 3853.0,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:57:10Z",
-        "last_value": 3859.0,
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 3859.0,
+        "start_as_of": "2026-11-17T18:57:10Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 3849.6,
+        "end_as_of": "2026-11-17T20:04:19Z",
+        "span_minutes": 67.2,
+        "change_pct": -0.2436,
+        "sampled_high": 3859.0,
+        "sampled_low": 3849.6,
         "contract_verified": false,
         "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
       }
@@ -563,18 +655,25 @@
       "unit": "USD_per_pound",
       "series_id": "YAHOO:chart:HG=F:futures:USD_per_pound:regularMarketPrice",
       "snapshot": {
-        "value": 5.9945,
-        "as_of": "2026-11-17T18:57:26Z",
-        "day_change_pct": -0.216396,
+        "value": 5.974,
+        "as_of": "2026-11-17T20:04:09Z",
+        "day_change_pct": -0.557636,
         "previous_close": 6.0075,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:57:26Z",
-        "last_value": 5.9945,
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 5.9945,
+        "start_as_of": "2026-11-17T18:57:26Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 5.974,
+        "end_as_of": "2026-11-17T20:04:09Z",
+        "span_minutes": 66.7,
+        "change_pct": -0.342,
+        "sampled_high": 5.9945,
+        "sampled_low": 5.974,
         "contract_verified": false,
         "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
       }
@@ -586,18 +685,25 @@
       "unit": "USD_per_MMBtu",
       "series_id": "YAHOO:chart:NG=F:futures:USD_per_MMBtu:regularMarketPrice",
       "snapshot": {
-        "value": 3.204,
-        "as_of": "2026-11-17T18:57:30Z",
-        "day_change_pct": 2.626521,
+        "value": 3.192,
+        "as_of": "2026-11-17T20:04:25Z",
+        "day_change_pct": 2.242152,
         "previous_close": 3.122,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:57:30Z",
-        "last_value": 3.204,
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 3.204,
+        "start_as_of": "2026-11-17T18:57:30Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 3.192,
+        "end_as_of": "2026-11-17T20:04:25Z",
+        "span_minutes": 66.9,
+        "change_pct": -0.3745,
+        "sampled_high": 3.204,
+        "sampled_low": 3.192,
         "contract_verified": false,
         "contract_note": "Yahoo continuous futures symbol; contract roll not verified"
       }
@@ -609,18 +715,25 @@
       "unit": "index_points",
       "series_id": "YAHOO:chart:^VIX:index:index_points:regularMarketPrice",
       "snapshot": {
-        "value": 26.04,
-        "as_of": "2026-11-17T18:52:16Z",
-        "day_change_pct": 13.662156,
+        "value": 26.79,
+        "as_of": "2026-11-17T19:59:16Z",
+        "day_change_pct": 16.935836,
         "previous_close": 22.91,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:52:16Z",
-        "last_value": 26.04
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 26.04,
+        "start_as_of": "2026-11-17T18:52:16Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 26.79,
+        "end_as_of": "2026-11-17T19:59:16Z",
+        "span_minutes": 67.0,
+        "change_pct": 2.8802,
+        "sampled_high": 26.79,
+        "sampled_low": 26.04
       }
     },
     "EWY": {
@@ -630,16 +743,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:EWY:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 134.575,
-        "as_of": "2026-11-17T19:07:31Z",
-        "day_change_pct": -1.446357,
+        "value": 134.36,
+        "as_of": "2026-11-17T20:14:24Z",
+        "day_change_pct": -1.603808,
         "previous_close": 136.55,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:31Z",
+        "last_value": 134.575
       }
     },
     "SOXX": {
@@ -649,16 +764,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:SOXX:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 139.745,
-        "as_of": "2026-11-17T19:07:33Z",
-        "day_change_pct": -1.04447,
+        "value": 138.92,
+        "as_of": "2026-11-17T20:14:27Z",
+        "day_change_pct": -1.628664,
         "previous_close": 141.22,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:33Z",
+        "last_value": 139.745
       }
     },
     "KWEB": {
@@ -668,9 +785,9 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:KWEB:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 22.165,
-        "as_of": "2026-11-17T19:06:51Z",
-        "day_change_pct": -1.750887,
+        "value": 22.095,
+        "as_of": "2026-11-17T20:14:22Z",
+        "day_change_pct": -2.06117,
         "previous_close": 22.56,
         "currency": "USD"
       },
@@ -689,16 +806,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:XLF:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 57.215,
-        "as_of": "2026-11-17T19:07:31Z",
-        "day_change_pct": -1.658646,
+        "value": 57.125,
+        "as_of": "2026-11-17T20:14:23Z",
+        "day_change_pct": -1.813338,
         "previous_close": 58.18,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:31Z",
+        "last_value": 57.215
       }
     },
     "XLI": {
@@ -708,16 +827,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:XLI:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 164.58,
-        "as_of": "2026-11-17T19:07:33Z",
-        "day_change_pct": -0.651938,
+        "value": 164.03,
+        "as_of": "2026-11-17T20:14:28Z",
+        "day_change_pct": -0.983943,
         "previous_close": 165.66,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:33Z",
+        "last_value": 164.58
       }
     },
     "XLY": {
@@ -727,16 +848,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:XLY:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 117.11,
-        "as_of": "2026-11-17T19:07:29Z",
-        "day_change_pct": -0.880237,
+        "value": 116.88,
+        "as_of": "2026-11-17T20:14:28Z",
+        "day_change_pct": -1.074905,
         "previous_close": 118.15,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:29Z",
+        "last_value": 117.11
       }
     },
     "XLP": {
@@ -746,16 +869,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:XLP:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 91.815,
-        "as_of": "2026-11-17T19:07:36Z",
-        "day_change_pct": -0.847732,
+        "value": 91.54,
+        "as_of": "2026-11-17T20:14:26Z",
+        "day_change_pct": -1.144708,
         "previous_close": 92.6,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:36Z",
+        "last_value": 91.815
       }
     },
     "XLE": {
@@ -765,16 +890,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:XLE:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 63.41,
-        "as_of": "2026-11-17T19:07:34Z",
-        "day_change_pct": -0.439629,
+        "value": 63.21,
+        "as_of": "2026-11-17T20:14:32Z",
+        "day_change_pct": -0.75365,
         "previous_close": 63.69,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:34Z",
+        "last_value": 63.41
       }
     },
     "MAGS": {
@@ -784,16 +911,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:MAGS:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 66.275,
-        "as_of": "2026-11-17T19:07:32Z",
-        "day_change_pct": -0.993427,
+        "value": 66.195,
+        "as_of": "2026-11-17T20:14:23Z",
+        "day_change_pct": -1.112937,
         "previous_close": 66.94,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:32Z",
+        "last_value": 66.275
       }
     },
     "QTUP": {
@@ -803,18 +932,25 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:QTUP:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 8.64,
-        "as_of": "2026-11-17T18:44:11Z",
-        "day_change_pct": -5.263158,
+        "value": 8.71,
+        "as_of": "2026-11-17T20:03:51Z",
+        "day_change_pct": -4.495614,
         "previous_close": 9.12,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:44:11Z",
-        "last_value": 8.64
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 8.64,
+        "start_as_of": "2026-11-17T18:44:11Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 8.71,
+        "end_as_of": "2026-11-17T20:03:51Z",
+        "span_minutes": 79.7,
+        "change_pct": 0.8102,
+        "sampled_high": 8.71,
+        "sampled_low": 8.64
       }
     },
     "WARP": {
@@ -824,18 +960,25 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:WARP:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 17.58,
-        "as_of": "2026-11-17T18:50:48Z",
-        "day_change_pct": -0.901917,
+        "value": 17.57,
+        "as_of": "2026-11-17T20:00:04Z",
+        "day_change_pct": -0.958286,
         "previous_close": 17.74,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:50:48Z",
-        "last_value": 17.58
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 17.58,
+        "start_as_of": "2026-11-17T18:50:48Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 17.57,
+        "end_as_of": "2026-11-17T20:00:04Z",
+        "span_minutes": 69.3,
+        "change_pct": -0.0569,
+        "sampled_high": 17.58,
+        "sampled_low": 17.57
       }
     },
     "JOUL": {
@@ -864,18 +1007,25 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:LYTE:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 13.525,
-        "as_of": "2026-11-17T19:07:03Z",
-        "day_change_pct": -1.060717,
+        "value": 13.47,
+        "as_of": "2026-11-17T20:13:03Z",
+        "day_change_pct": -1.463058,
         "previous_close": 13.67,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T19:07:03Z",
-        "last_value": 13.525
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 13.525,
+        "start_as_of": "2026-11-17T19:07:03Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 13.47,
+        "end_as_of": "2026-11-17T20:13:03Z",
+        "span_minutes": 66.0,
+        "change_pct": -0.4067,
+        "sampled_high": 13.525,
+        "sampled_low": 13.47
       }
     },
     "NLR": {
@@ -885,16 +1035,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:NLR:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 84.56,
-        "as_of": "2026-11-17T19:07:17Z",
-        "day_change_pct": -0.762821,
+        "value": 84.245,
+        "as_of": "2026-11-17T20:14:07Z",
+        "day_change_pct": -1.132496,
         "previous_close": 85.21,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:17Z",
+        "last_value": 84.56
       }
     },
     "XBI": {
@@ -904,16 +1056,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:XBI:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 144.85,
-        "as_of": "2026-11-17T19:07:38Z",
-        "day_change_pct": -0.70606,
+        "value": 144.47,
+        "as_of": "2026-11-17T20:14:36Z",
+        "day_change_pct": -0.966548,
         "previous_close": 145.88,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:38Z",
+        "last_value": 144.85
       }
     },
     "HUMN": {
@@ -923,18 +1077,25 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:HUMN:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 24.74,
-        "as_of": "2026-11-17T18:50:18Z",
-        "day_change_pct": -4.14568,
+        "value": 24.725,
+        "as_of": "2026-11-17T20:08:18Z",
+        "day_change_pct": -4.203797,
         "previous_close": 25.81,
         "currency": "USD"
       },
       "path": {
-        "path_available": false,
-        "reason": "single_quote_only",
-        "n_quotes_in_window": 1,
-        "last_as_of": "2026-11-17T18:50:18Z",
-        "last_value": 24.74
+        "path_available": true,
+        "reason": null,
+        "n_quotes_in_window": 2,
+        "start_value": 24.74,
+        "start_as_of": "2026-11-17T18:50:18Z",
+        "start_is_pre_window_baseline": false,
+        "end_value": 24.725,
+        "end_as_of": "2026-11-17T20:08:18Z",
+        "span_minutes": 78.0,
+        "change_pct": -0.0606,
+        "sampled_high": 24.74,
+        "sampled_low": 24.725
       }
     },
     "COPX": {
@@ -944,16 +1105,18 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:COPX:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 65.351,
-        "as_of": "2026-11-17T19:07:47Z",
-        "day_change_pct": -0.242711,
+        "value": 65.05,
+        "as_of": "2026-11-17T20:14:35Z",
+        "day_change_pct": -0.702183,
         "previous_close": 65.51,
         "currency": "USD"
       },
       "path": {
         "path_available": false,
-        "reason": "no_new_recent_path_quotes",
-        "n_quotes_in_window": 0
+        "reason": "single_quote_only",
+        "n_quotes_in_window": 1,
+        "last_as_of": "2026-11-17T19:07:47Z",
+        "last_value": 65.351
       }
     },
     "CIBR": {
@@ -963,9 +1126,9 @@
       "unit": "share_price",
       "series_id": "YAHOO:chart:CIBR:ETF:share_price:regularMarketPrice",
       "snapshot": {
-        "value": 91.67,
-        "as_of": "2026-11-17T19:07:03Z",
-        "day_change_pct": -1.673281,
+        "value": 91.555,
+        "as_of": "2026-11-17T20:14:33Z",
+        "day_change_pct": -1.796632,
         "previous_close": 93.23,
         "currency": "USD"
       },
