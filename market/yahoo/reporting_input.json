@@ -1,845 +1,18 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261119T091238Z-gh44494252661-1",
-  "reference_time": "2026-11-19T09:12:38Z",
+  "source_run_id": "20261119T110730Z-gh44511925892-1",
+  "reference_time": "2026-11-19T11:07:30Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
-    {
-      "report": "morning",
-      "report_time_kst": "07:00",
-      "window_start": "2026-11-18T09:30:00Z",
-      "window_end": "2026-11-18T21:30:00Z",
-      "cutoff_reached_at_collection": true,
-      "last_collection_before_cutoff": "20261118T205943Z-gh44396775423-1",
-      "last_collection_before_cutoff_gap_minutes": 30.3,
-      "note": null,
-      "instruments": {
-        "^KS11": {
-          "name": "KOSPI",
-          "group": "korea",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 1,
-            "start_value": 5067.44,
-            "start_as_of": "2026-11-18T06:30:40Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 5067.44,
-            "end_as_of": "2026-11-18T11:05:40Z",
-            "span_minutes": 275.0,
-            "change_pct": 0.0,
-            "sampled_high": 5067.44,
-            "sampled_low": 5067.44
-          }
-        },
-        "^KQ11": {
-          "name": "KOSDAQ",
-          "group": "korea",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 1,
-            "start_value": 662.81,
-            "start_as_of": "2026-11-18T06:33:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 662.81,
-            "end_as_of": "2026-11-18T11:05:40Z",
-            "span_minutes": 272.7,
-            "change_pct": 0.0,
-            "sampled_high": 662.81,
-            "sampled_low": 662.81
-          }
-        },
-        "^GSPC": {
-          "name": "S&P 500",
-          "group": "us_index",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 7340.53,
-            "start_as_of": "2026-11-17T21:42:12Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 7321.86,
-            "end_as_of": "2026-11-18T20:59:45Z",
-            "span_minutes": 1397.5,
-            "change_pct": -0.2543,
-            "sampled_high": 7342.73,
-            "sampled_low": 7317.27
-          }
-        },
-        "^NDX": {
-          "name": "Nasdaq 100",
-          "group": "us_index",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 27001.785,
-            "start_as_of": "2026-11-17T22:15:59Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 27107.031,
-            "end_as_of": "2026-11-18T20:59:46Z",
-            "span_minutes": 1363.8,
-            "change_pct": 0.3898,
-            "sampled_high": 27148.703,
-            "sampled_low": 27001.785
-          }
-        },
-        "^SOX": {
-          "name": "PHLX Semiconductor Index",
-          "group": "us_index",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 9642.878,
-            "start_as_of": "2026-11-17T22:15:59Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 9646.272,
-            "end_as_of": "2026-11-18T20:59:46Z",
-            "span_minutes": 1363.8,
-            "change_pct": 0.0352,
-            "sampled_high": 9668.771,
-            "sampled_low": 9575.663
-          }
-        },
-        "^RUT": {
-          "name": "Russell 2000",
-          "group": "us_index",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 2701.871,
-            "start_as_of": "2026-11-17T21:30:12Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 2716.0276,
-            "end_as_of": "2026-11-18T20:44:45Z",
-            "span_minutes": 1394.5,
-            "change_pct": 0.524,
-            "sampled_high": 2733.219,
-            "sampled_low": 2701.871
-          }
-        },
-        "^IXIC": {
-          "name": "Nasdaq Composite",
-          "group": "us_index",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 24328.383,
-            "start_as_of": "2026-11-17T22:15:59Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 24422.715,
-            "end_as_of": "2026-11-18T20:59:43Z",
-            "span_minutes": 1363.7,
-            "change_pct": 0.3877,
-            "sampled_high": 24488.723,
-            "sampled_low": 24328.383
-          }
-        },
-        "^N225": {
-          "name": "Nikkei 225",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T06:45:03Z",
-            "last_value": 59024.28
-          }
-        },
-        "^HSI": {
-          "name": "Hang Seng",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T08:08:28Z",
-            "last_value": 23294.75
-          }
-        },
-        "HSTECH.HK": {
-          "name": "Hang Seng TECH",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T08:08:28Z",
-            "last_value": 3736.33
-          }
-        },
-        "000300.SS": {
-          "name": "CSI 300",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T07:00:29Z",
-            "last_value": 3983.767
-          }
-        },
-        "000001.SS": {
-          "name": "Shanghai Composite",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T07:00:29Z",
-            "last_value": 3587.832
-          }
-        },
-        "399001.SZ": {
-          "name": "Shenzhen Component",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T08:29:10Z",
-            "last_value": 10659.411
-          }
-        },
-        "1306.T": {
-          "name": "TOPIX ETF proxy (not spot index)",
-          "group": "asia",
-          "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-18T06:30:00Z",
-            "last_value": 401.9
-          }
-        },
-        "^IRX": {
-          "name": "US 13-week Treasury yield (Yahoo proxy)",
-          "group": "rates",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 4.138,
-            "start_as_of": "2026-11-17T19:59:53Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 4.145,
-            "end_as_of": "2026-11-18T19:59:55Z",
-            "span_minutes": 1440.0,
-            "change_pct": 0.1692,
-            "sampled_high": 4.147,
-            "sampled_low": 4.138
-          }
-        },
-        "^FVX": {
-          "name": "US 5-year Treasury yield (Yahoo proxy)",
-          "group": "rates",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 4.9,
-            "start_as_of": "2026-11-17T19:59:53Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 4.884,
-            "end_as_of": "2026-11-18T19:59:55Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.3265,
-            "sampled_high": 4.9,
-            "sampled_low": 4.87
-          }
-        },
-        "^TNX": {
-          "name": "US 10-year Treasury yield (Yahoo proxy)",
-          "group": "rates",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 5.103,
-            "start_as_of": "2026-11-17T19:59:53Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 5.066,
-            "end_as_of": "2026-11-18T19:59:55Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.7251,
-            "sampled_high": 5.103,
-            "sampled_low": 5.06
-          }
-        },
-        "^TYX": {
-          "name": "US 30-year Treasury yield (Yahoo proxy)",
-          "group": "rates",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 5.458,
-            "start_as_of": "2026-11-17T19:59:53Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 5.412,
-            "end_as_of": "2026-11-18T19:59:55Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.8428,
-            "sampled_high": 5.458,
-            "sampled_low": 5.41
-          }
-        },
-        "KRW=X": {
-          "name": "USD/KRW",
-          "group": "fx",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 1330.18,
-            "start_as_of": "2026-11-18T08:24:21Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 1332.4,
-            "end_as_of": "2026-11-18T20:59:58Z",
-            "span_minutes": 755.6,
-            "change_pct": 0.1669,
-            "sampled_high": 1333.02,
-            "sampled_low": 1330.18
-          }
-        },
-        "JPY=X": {
-          "name": "USD/JPY",
-          "group": "fx",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 159.292,
-            "start_as_of": "2026-11-18T08:24:23Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 159.304,
-            "end_as_of": "2026-11-18T21:00:01Z",
-            "span_minutes": 755.6,
-            "change_pct": 0.0075,
-            "sampled_high": 159.38,
-            "sampled_low": 159.224
-          }
-        },
-        "CNY=X": {
-          "name": "USD/CNY",
-          "group": "fx",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 8,
-            "start_value": 6.6651,
-            "start_as_of": "2026-11-18T08:24:12Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 6.6671,
-            "end_as_of": "2026-11-18T19:53:06Z",
-            "span_minutes": 688.9,
-            "change_pct": 0.03,
-            "sampled_high": 6.6671,
-            "sampled_low": 6.6538
-          }
-        },
-        "EURUSD=X": {
-          "name": "EUR/USD",
-          "group": "fx",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 1.0966,
-            "start_as_of": "2026-11-18T08:23:46Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 1.0979,
-            "end_as_of": "2026-11-18T20:59:47Z",
-            "span_minutes": 756.0,
-            "change_pct": 0.1185,
-            "sampled_high": 1.0981,
-            "sampled_low": 1.0966
-          }
-        },
-        "JPYKRW=X": {
-          "name": "JPY/KRW",
-          "group": "fx",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 8.329,
-            "start_as_of": "2026-11-18T08:21:45Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 8.343,
-            "end_as_of": "2026-11-18T20:56:47Z",
-            "span_minutes": 755.0,
-            "change_pct": 0.1681,
-            "sampled_high": 8.346,
-            "sampled_low": 8.329
-          }
-        },
-        "NQ=F": {
-          "name": "E-mini Nasdaq 100 futures",
-          "group": "futures",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 27279.25,
-            "start_as_of": "2026-11-18T08:14:25Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 27196.5,
-            "end_as_of": "2026-11-18T20:50:06Z",
-            "span_minutes": 755.7,
-            "change_pct": -0.3033,
-            "sampled_high": 27399.5,
-            "sampled_low": 27042.75
-          }
-        },
-        "ES=F": {
-          "name": "E-mini S&P 500 futures",
-          "group": "futures",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 7392.25,
-            "start_as_of": "2026-11-18T08:14:25Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 7346.75,
-            "end_as_of": "2026-11-18T20:50:08Z",
-            "span_minutes": 755.7,
-            "change_pct": -0.6155,
-            "sampled_high": 7406.75,
-            "sampled_low": 7334.0
-          }
-        },
-        "CL=F": {
-          "name": "WTI crude oil futures",
-          "group": "commodities",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 84.33,
-            "start_as_of": "2026-11-18T08:13:44Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 82.08,
-            "end_as_of": "2026-11-18T20:50:05Z",
-            "span_minutes": 756.4,
-            "change_pct": -2.6681,
-            "sampled_high": 84.33,
-            "sampled_low": 81.44
-          }
-        },
-        "GC=F": {
-          "name": "Gold futures",
-          "group": "commodities",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 3762.8,
-            "start_as_of": "2026-11-18T08:14:27Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 3733.9,
-            "end_as_of": "2026-11-18T20:50:07Z",
-            "span_minutes": 755.7,
-            "change_pct": -0.768,
-            "sampled_high": 3779.9,
-            "sampled_low": 3725.8
-          }
-        },
-        "HG=F": {
-          "name": "Copper futures",
-          "group": "commodities",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 5.753,
-            "start_as_of": "2026-11-18T08:14:27Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 5.67,
-            "end_as_of": "2026-11-18T20:50:04Z",
-            "span_minutes": 755.6,
-            "change_pct": -1.4427,
-            "sampled_high": 5.757,
-            "sampled_low": 5.637
-          }
-        },
-        "NG=F": {
-          "name": "Natural gas futures",
-          "group": "commodities",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 9,
-            "start_value": 3.19,
-            "start_as_of": "2026-11-18T08:14:14Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 3.414,
-            "end_as_of": "2026-11-18T20:50:09Z",
-            "span_minutes": 755.9,
-            "change_pct": 7.0219,
-            "sampled_high": 3.414,
-            "sampled_low": 3.19
-          }
-        },
-        "^VIX": {
-          "name": "CBOE VIX",
-          "group": "volatility",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 10,
-            "start_value": 25.46,
-            "start_as_of": "2026-11-17T21:15:01Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 24.56,
-            "end_as_of": "2026-11-18T21:15:01Z",
-            "span_minutes": 1440.0,
-            "change_pct": -3.535,
-            "sampled_high": 25.75,
-            "sampled_low": 23.54
-          }
-        },
-        "EWY": {
-          "name": "한국 주식",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 135.32,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 136.73,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": 1.042,
-            "sampled_high": 137.055,
-            "sampled_low": 135.32
-          }
-        },
-        "SOXX": {
-          "name": "반도체",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 141.46,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 141.85,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": 0.2757,
-            "sampled_high": 142.08,
-            "sampled_low": 140.67
-          }
-        },
-        "KWEB": {
-          "name": "중국 인터넷",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 22.08,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 21.71,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -1.6757,
-            "sampled_high": 22.08,
-            "sampled_low": 21.71
-          }
-        },
-        "XLF": {
-          "name": "금융",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 57.07,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 56.42,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -1.139,
-            "sampled_high": 57.07,
-            "sampled_low": 56.42
-          }
-        },
-        "XLI": {
-          "name": "산업재",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 164.75,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 164.66,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.0546,
-            "sampled_high": 165.15,
-            "sampled_low": 164.56
-          }
-        },
-        "XLY": {
-          "name": "경기소비재",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 117.1,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 119.2,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": 1.7933,
-            "sampled_high": 119.67,
-            "sampled_low": 117.1
-          }
-        },
-        "XLP": {
-          "name": "필수소비재",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 91.46,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 91.18,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.3061,
-            "sampled_high": 91.56,
-            "sampled_low": 91.14
-          }
-        },
-        "XLE": {
-          "name": "에너지",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 63.36,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 61.29,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -3.267,
-            "sampled_high": 63.36,
-            "sampled_low": 61.29
-          }
-        },
-        "MAGS": {
-          "name": "M7(빅테크)",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 66.42,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 66.83,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": 0.6173,
-            "sampled_high": 67.01,
-            "sampled_low": 66.42
-          }
-        },
-        "QTUP": {
-          "name": "양자컴퓨팅",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 8.77,
-            "start_as_of": "2026-11-17T20:59:46Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 8.62,
-            "end_as_of": "2026-11-18T20:59:45Z",
-            "span_minutes": 1440.0,
-            "change_pct": -1.7104,
-            "sampled_high": 8.79,
-            "sampled_low": 8.62
-          }
-        },
-        "WARP": {
-          "name": "우주산업",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 17.573,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 17.412,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.9162,
-            "sampled_high": 17.79,
-            "sampled_low": 17.412
-          }
-        },
-        "JOUL": {
-          "name": "전력인프라",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 5,
-            "start_value": 18.8265,
-            "start_as_of": "2026-11-17T20:21:02Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 18.9767,
-            "end_as_of": "2026-11-18T20:19:53Z",
-            "span_minutes": 1438.8,
-            "change_pct": 0.7978,
-            "sampled_high": 19.19,
-            "sampled_low": 18.82
-          }
-        },
-        "LYTE": {
-          "name": "AI 광통신·포토닉스",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 13.65,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 13.82,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": 1.2454,
-            "sampled_high": 13.825,
-            "sampled_low": 13.65
-          }
-        },
-        "NLR": {
-          "name": "원전·SMR 밸류체인",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 84.3,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 82.99,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -1.554,
-            "sampled_high": 85.5,
-            "sampled_low": 82.99
-          }
-        },
-        "XBI": {
-          "name": "바이오테크",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 145.28,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 145.04,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -0.1652,
-            "sampled_high": 147.0,
-            "sampled_low": 145.04
-          }
-        },
-        "HUMN": {
-          "name": "휴머노이드",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 24.755,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 24.91,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": 0.6261,
-            "sampled_high": 25.12,
-            "sampled_low": 24.755
-          }
-        },
-        "COPX": {
-          "name": "구리광산",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 7,
-            "start_value": 65.31,
-            "start_as_of": "2026-11-17T21:00:00Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 61.19,
-            "end_as_of": "2026-11-18T21:00:00Z",
-            "span_minutes": 1440.0,
-            "change_pct": -6.3084,
-            "sampled_high": 65.31,
-            "sampled_low": 60.825
-          }
-        },
-        "CIBR": {
-          "name": "사이버보안",
-          "group": "etf",
-          "path": {
-            "path_available": true,
-            "reason": null,
-            "n_quotes_in_window": 6,
-            "start_value": 91.73,
-            "start_as_of": "2026-11-17T21:00:01Z",
-            "start_is_pre_window_baseline": true,
-            "end_value": 96.06,
-            "end_as_of": "2026-11-18T21:00:01Z",
-            "span_minutes": 1440.0,
-            "change_pct": 4.7204,
-            "sampled_high": 96.46,
-            "sampled_low": 91.73
-          }
-        }
-      }
-    },
     {
       "report": "evening",
       "report_time_kst": "19:00",
       "window_start": "2026-11-18T21:30:00Z",
       "window_end": "2026-11-19T09:30:00Z",
-      "cutoff_reached_at_collection": false,
+      "cutoff_reached_at_collection": true,
       "last_collection_before_cutoff": "20261119T091238Z-gh44494252661-1",
       "last_collection_before_cutoff_gap_minutes": 17.4,
-      "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
+      "note": null,
       "instruments": {
         "^KS11": {
           "name": "KOSPI",
@@ -1143,14 +316,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 8,
+            "n_quotes_in_window": 9,
             "start_value": 1332.4,
             "start_as_of": "2026-11-18T20:59:58Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1329.63,
-            "end_as_of": "2026-11-19T07:24:30Z",
-            "span_minutes": 624.5,
-            "change_pct": -0.2079,
+            "end_value": 1329.7,
+            "end_as_of": "2026-11-19T09:12:44Z",
+            "span_minutes": 732.8,
+            "change_pct": -0.2026,
             "sampled_high": 1332.54,
             "sampled_low": 1329.63
           }
@@ -1161,15 +334,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 8,
+            "n_quotes_in_window": 9,
             "start_value": 159.304,
             "start_as_of": "2026-11-18T21:00:01Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 159.625,
-            "end_as_of": "2026-11-19T07:24:31Z",
-            "span_minutes": 624.5,
-            "change_pct": 0.2015,
-            "sampled_high": 159.625,
+            "end_value": 159.832,
+            "end_as_of": "2026-11-19T09:12:54Z",
+            "span_minutes": 732.9,
+            "change_pct": 0.3314,
+            "sampled_high": 159.832,
             "sampled_low": 159.298
           }
         },
@@ -1179,14 +352,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 7,
+            "n_quotes_in_window": 8,
             "start_value": 6.6671,
             "start_as_of": "2026-11-18T19:53:06Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6647,
-            "end_as_of": "2026-11-19T07:24:27Z",
-            "span_minutes": 691.4,
-            "change_pct": -0.036,
+            "end_value": 6.6648,
+            "end_as_of": "2026-11-19T09:12:48Z",
+            "span_minutes": 799.7,
+            "change_pct": -0.0345,
             "sampled_high": 6.6671,
             "sampled_low": 6.6576
           }
@@ -1197,15 +370,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 8,
+            "n_quotes_in_window": 9,
             "start_value": 1.0979,
             "start_as_of": "2026-11-18T20:59:47Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.0979,
-            "end_as_of": "2026-11-19T07:23:45Z",
-            "span_minutes": 624.0,
-            "change_pct": 0.0,
-            "sampled_high": 1.0979,
+            "end_value": 1.0999,
+            "end_as_of": "2026-11-19T09:12:47Z",
+            "span_minutes": 733.0,
+            "change_pct": 0.1822,
+            "sampled_high": 1.0999,
             "sampled_low": 1.0961
           }
         },
@@ -1350,6 +523,609 @@
             "span_minutes": 703.0,
             "change_pct": -10.9528,
             "sampled_high": 24.56,
+            "sampled_low": 21.87
+          }
+        },
+        "EWY": {
+          "name": "한국 주식",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 136.73
+          }
+        },
+        "SOXX": {
+          "name": "반도체",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 141.85
+          }
+        },
+        "KWEB": {
+          "name": "중국 인터넷",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 21.71
+          }
+        },
+        "XLF": {
+          "name": "금융",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 56.42
+          }
+        },
+        "XLI": {
+          "name": "산업재",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 164.66
+          }
+        },
+        "XLY": {
+          "name": "경기소비재",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 119.2
+          }
+        },
+        "XLP": {
+          "name": "필수소비재",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 91.18
+          }
+        },
+        "XLE": {
+          "name": "에너지",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 61.29
+          }
+        },
+        "MAGS": {
+          "name": "M7(빅테크)",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 66.83
+          }
+        },
+        "QTUP": {
+          "name": "양자컴퓨팅",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T20:59:45Z",
+            "last_value": 8.62
+          }
+        },
+        "WARP": {
+          "name": "우주산업",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 17.412
+          }
+        },
+        "JOUL": {
+          "name": "전력인프라",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T20:19:53Z",
+            "last_value": 18.9767
+          }
+        },
+        "LYTE": {
+          "name": "AI 광통신·포토닉스",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 13.82
+          }
+        },
+        "NLR": {
+          "name": "원전·SMR 밸류체인",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 82.99
+          }
+        },
+        "XBI": {
+          "name": "바이오테크",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 145.04
+          }
+        },
+        "HUMN": {
+          "name": "휴머노이드",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 24.91
+          }
+        },
+        "COPX": {
+          "name": "구리광산",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:00Z",
+            "last_value": 61.19
+          }
+        },
+        "CIBR": {
+          "name": "사이버보안",
+          "group": "etf",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:00:01Z",
+            "last_value": 96.06
+          }
+        }
+      }
+    },
+    {
+      "report": "morning",
+      "report_time_kst": "07:00",
+      "window_start": "2026-11-19T09:30:00Z",
+      "window_end": "2026-11-19T21:30:00Z",
+      "cutoff_reached_at_collection": false,
+      "last_collection_before_cutoff": "20261119T110730Z-gh44511925892-1",
+      "last_collection_before_cutoff_gap_minutes": 622.5,
+      "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
+      "instruments": {
+        "^KS11": {
+          "name": "KOSPI",
+          "group": "korea",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T07:32:50Z",
+            "last_value": 5137.89
+          }
+        },
+        "^KQ11": {
+          "name": "KOSDAQ",
+          "group": "korea",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T07:32:50Z",
+            "last_value": 684.81
+          }
+        },
+        "^GSPC": {
+          "name": "S&P 500",
+          "group": "us_index",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:57:25Z",
+            "last_value": 7323.63
+          }
+        },
+        "^NDX": {
+          "name": "Nasdaq 100",
+          "group": "us_index",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T22:15:59Z",
+            "last_value": 27116.258
+          }
+        },
+        "^SOX": {
+          "name": "PHLX Semiconductor Index",
+          "group": "us_index",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T22:15:59Z",
+            "last_value": 9652.797
+          }
+        },
+        "^RUT": {
+          "name": "Russell 2000",
+          "group": "us_index",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T21:30:13Z",
+            "last_value": 2714.306
+          }
+        },
+        "^IXIC": {
+          "name": "Nasdaq Composite",
+          "group": "us_index",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T22:15:59Z",
+            "last_value": 24429.885
+          }
+        },
+        "^N225": {
+          "name": "Nikkei 225",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T06:45:03Z",
+            "last_value": 59444.21
+          }
+        },
+        "^HSI": {
+          "name": "Hang Seng",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T08:08:30Z",
+            "last_value": 22841.62
+          }
+        },
+        "HSTECH.HK": {
+          "name": "Hang Seng TECH",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T08:08:30Z",
+            "last_value": 3649.14
+          }
+        },
+        "000300.SS": {
+          "name": "CSI 300",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T07:00:34Z",
+            "last_value": 3984.8398
+          }
+        },
+        "000001.SS": {
+          "name": "Shanghai Composite",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T07:00:34Z",
+            "last_value": 3577.617
+          }
+        },
+        "399001.SZ": {
+          "name": "Shenzhen Component",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T08:29:43Z",
+            "last_value": 10583.204
+          }
+        },
+        "1306.T": {
+          "name": "TOPIX ETF proxy (not spot index)",
+          "group": "asia",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T06:30:00Z",
+            "last_value": 402.2
+          }
+        },
+        "^IRX": {
+          "name": "US 13-week Treasury yield (Yahoo proxy)",
+          "group": "rates",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T19:59:55Z",
+            "last_value": 4.145
+          }
+        },
+        "^FVX": {
+          "name": "US 5-year Treasury yield (Yahoo proxy)",
+          "group": "rates",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T19:59:55Z",
+            "last_value": 4.884
+          }
+        },
+        "^TNX": {
+          "name": "US 10-year Treasury yield (Yahoo proxy)",
+          "group": "rates",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T19:59:55Z",
+            "last_value": 5.066
+          }
+        },
+        "^TYX": {
+          "name": "US 30-year Treasury yield (Yahoo proxy)",
+          "group": "rates",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-18T19:59:55Z",
+            "last_value": 5.412
+          }
+        },
+        "KRW=X": {
+          "name": "USD/KRW",
+          "group": "fx",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T09:12:44Z",
+            "last_value": 1329.7
+          }
+        },
+        "JPY=X": {
+          "name": "USD/JPY",
+          "group": "fx",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T09:12:54Z",
+            "last_value": 159.832
+          }
+        },
+        "CNY=X": {
+          "name": "USD/CNY",
+          "group": "fx",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 6.6648,
+            "start_as_of": "2026-11-19T09:12:48Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 6.6563,
+            "end_as_of": "2026-11-19T11:04:17Z",
+            "span_minutes": 111.5,
+            "change_pct": -0.1275,
+            "sampled_high": 6.6648,
+            "sampled_low": 6.6563
+          }
+        },
+        "EURUSD=X": {
+          "name": "EUR/USD",
+          "group": "fx",
+          "path": {
+            "path_available": false,
+            "reason": "no_new_recent_path_quotes",
+            "n_quotes_in_window": 0,
+            "last_as_of": "2026-11-19T09:12:47Z",
+            "last_value": 1.0999
+          }
+        },
+        "JPYKRW=X": {
+          "name": "JPY/KRW",
+          "group": "fx",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 8.292,
+            "start_as_of": "2026-11-19T09:11:47Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 8.283,
+            "end_as_of": "2026-11-19T11:06:44Z",
+            "span_minutes": 115.0,
+            "change_pct": -0.1085,
+            "sampled_high": 8.292,
+            "sampled_low": 8.283
+          }
+        },
+        "NQ=F": {
+          "name": "E-mini Nasdaq 100 futures",
+          "group": "futures",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 27709.5,
+            "start_as_of": "2026-11-19T09:02:55Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 27778.0,
+            "end_as_of": "2026-11-19T10:57:50Z",
+            "span_minutes": 114.9,
+            "change_pct": 0.2472,
+            "sampled_high": 27778.0,
+            "sampled_low": 27709.5
+          }
+        },
+        "ES=F": {
+          "name": "E-mini S&P 500 futures",
+          "group": "futures",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 7423.75,
+            "start_as_of": "2026-11-19T09:02:52Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 7432.75,
+            "end_as_of": "2026-11-19T10:57:49Z",
+            "span_minutes": 115.0,
+            "change_pct": 0.1212,
+            "sampled_high": 7432.75,
+            "sampled_low": 7423.75
+          }
+        },
+        "CL=F": {
+          "name": "WTI crude oil futures",
+          "group": "commodities",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 82.29,
+            "start_as_of": "2026-11-19T09:02:53Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 82.39,
+            "end_as_of": "2026-11-19T10:57:44Z",
+            "span_minutes": 114.8,
+            "change_pct": 0.1215,
+            "sampled_high": 82.39,
+            "sampled_low": 82.29
+          }
+        },
+        "GC=F": {
+          "name": "Gold futures",
+          "group": "commodities",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3738.4,
+            "start_as_of": "2026-11-19T09:03:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3736.5,
+            "end_as_of": "2026-11-19T10:57:41Z",
+            "span_minutes": 114.7,
+            "change_pct": -0.0508,
+            "sampled_high": 3738.4,
+            "sampled_low": 3736.5
+          }
+        },
+        "HG=F": {
+          "name": "Copper futures",
+          "group": "commodities",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 5.6855,
+            "start_as_of": "2026-11-19T09:02:58Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 5.6875,
+            "end_as_of": "2026-11-19T10:57:50Z",
+            "span_minutes": 114.9,
+            "change_pct": 0.0352,
+            "sampled_high": 5.6875,
+            "sampled_low": 5.6855
+          }
+        },
+        "NG=F": {
+          "name": "Natural gas futures",
+          "group": "commodities",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3.34,
+            "start_as_of": "2026-11-19T09:02:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3.368,
+            "end_as_of": "2026-11-19T10:57:27Z",
+            "span_minutes": 114.5,
+            "change_pct": 0.8383,
+            "sampled_high": 3.368,
+            "sampled_low": 3.34
+          }
+        },
+        "^VIX": {
+          "name": "CBOE VIX",
+          "group": "volatility",
+          "path": {
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 21.87,
+            "start_as_of": "2026-11-19T08:58:01Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 21.95,
+            "end_as_of": "2026-11-19T10:52:46Z",
+            "span_minutes": 114.8,
+            "change_pct": 0.3658,
+            "sampled_high": 21.95,
             "sampled_low": 21.87
           }
         },
