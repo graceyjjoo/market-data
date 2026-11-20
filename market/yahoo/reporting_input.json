@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261119T235117Z-gh44641065210-1",
-  "reference_time": "2026-11-19T23:51:17Z",
+  "source_run_id": "20261120T011236Z-gh44651875092-1",
+  "reference_time": "2026-11-20T01:12:36Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -837,30 +837,44 @@
       "window_start": "2026-11-19T21:30:00Z",
       "window_end": "2026-11-20T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261119T235117Z-gh44641065210-1",
-      "last_collection_before_cutoff_gap_minutes": 578.7,
+      "last_collection_before_cutoff": "20261120T011236Z-gh44651875092-1",
+      "last_collection_before_cutoff_gap_minutes": 497.4,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
           "name": "KOSPI",
           "group": "korea",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-19T11:05:40Z",
-            "last_value": 5137.89
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 5137.89,
+            "start_as_of": "2026-11-19T11:05:40Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 4897.05,
+            "end_as_of": "2026-11-20T00:52:30Z",
+            "span_minutes": 826.8,
+            "change_pct": -4.6875,
+            "sampled_high": 5137.89,
+            "sampled_low": 4897.05
           }
         },
         "^KQ11": {
           "name": "KOSDAQ",
           "group": "korea",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-19T11:05:40Z",
-            "last_value": 684.81
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 684.81,
+            "start_as_of": "2026-11-19T11:05:40Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 653.71,
+            "end_as_of": "2026-11-20T00:52:30Z",
+            "span_minutes": 826.8,
+            "change_pct": -4.5414,
+            "sampled_high": 684.81,
+            "sampled_low": 653.71
           }
         },
         "^GSPC": {
@@ -957,11 +971,18 @@
           "name": "Nikkei 225",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-19T06:45:03Z",
-            "last_value": 59444.21
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 59444.21,
+            "start_as_of": "2026-11-19T06:45:03Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 56957.75,
+            "end_as_of": "2026-11-20T00:57:40Z",
+            "span_minutes": 1092.6,
+            "change_pct": -4.1828,
+            "sampled_high": 59444.21,
+            "sampled_low": 56957.75
           }
         },
         "^HSI": {
@@ -1023,11 +1044,18 @@
           "name": "TOPIX ETF proxy (not spot index)",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-19T06:30:00Z",
-            "last_value": 402.2
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 402.2,
+            "start_as_of": "2026-11-19T06:30:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 392.6,
+            "end_as_of": "2026-11-20T00:57:47Z",
+            "span_minutes": 1107.8,
+            "change_pct": -2.3869,
+            "sampled_high": 402.2,
+            "sampled_low": 392.6
           }
         },
         "^IRX": {
@@ -1080,14 +1108,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 1333.04,
             "start_as_of": "2026-11-19T20:12:19Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1333.65,
-            "end_as_of": "2026-11-19T22:55:23Z",
-            "span_minutes": 163.1,
-            "change_pct": 0.0458,
+            "end_value": 1334.05,
+            "end_as_of": "2026-11-19T23:51:32Z",
+            "span_minutes": 219.2,
+            "change_pct": 0.0758,
             "sampled_high": 1334.28,
             "sampled_low": 1333.04
           }
@@ -1098,14 +1126,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 159.634,
             "start_as_of": "2026-11-19T20:12:26Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 159.592,
-            "end_as_of": "2026-11-19T22:55:21Z",
-            "span_minutes": 162.9,
-            "change_pct": -0.0263,
+            "end_value": 159.655,
+            "end_as_of": "2026-11-19T23:51:33Z",
+            "span_minutes": 219.1,
+            "change_pct": 0.0132,
             "sampled_high": 159.661,
             "sampled_low": 159.592
           }
@@ -1114,11 +1142,18 @@
           "name": "USD/CNY",
           "group": "fx",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-19T20:27:47Z",
-            "last_value": 6.6665
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 6.6665,
+            "start_as_of": "2026-11-19T20:27:47Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 6.6803,
+            "end_as_of": "2026-11-20T01:12:21Z",
+            "span_minutes": 284.6,
+            "change_pct": 0.207,
+            "sampled_high": 6.6803,
+            "sampled_low": 6.6665
           }
         },
         "EURUSD=X": {
@@ -1145,15 +1180,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 8.329,
             "start_as_of": "2026-11-19T20:11:47Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.335,
-            "end_as_of": "2026-11-19T23:46:46Z",
-            "span_minutes": 215.0,
-            "change_pct": 0.072,
-            "sampled_high": 8.335,
+            "end_value": 8.368,
+            "end_as_of": "2026-11-20T01:11:43Z",
+            "span_minutes": 299.9,
+            "change_pct": 0.4682,
+            "sampled_high": 8.368,
             "sampled_low": 8.329
           }
         },
@@ -1163,16 +1198,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 26602.0,
             "start_as_of": "2026-11-19T20:02:31Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 26451.5,
-            "end_as_of": "2026-11-19T23:41:36Z",
-            "span_minutes": 219.1,
-            "change_pct": -0.5657,
+            "end_value": 26424.0,
+            "end_as_of": "2026-11-20T01:02:57Z",
+            "span_minutes": 300.4,
+            "change_pct": -0.6691,
             "sampled_high": 26602.0,
-            "sampled_low": 26451.5
+            "sampled_low": 26424.0
           }
         },
         "ES=F": {
@@ -1181,14 +1216,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 7201.5,
             "start_as_of": "2026-11-19T20:02:31Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7179.0,
-            "end_as_of": "2026-11-19T23:41:38Z",
-            "span_minutes": 219.1,
-            "change_pct": -0.3124,
+            "end_value": 7177.75,
+            "end_as_of": "2026-11-20T01:02:58Z",
+            "span_minutes": 300.4,
+            "change_pct": -0.3298,
             "sampled_high": 7201.5,
             "sampled_low": 7175.5
           }
@@ -1199,16 +1234,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 82.84,
             "start_as_of": "2026-11-19T20:02:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 82.84,
-            "end_as_of": "2026-11-19T23:41:26Z",
-            "span_minutes": 219.0,
-            "change_pct": 0.0,
+            "end_value": 82.55,
+            "end_as_of": "2026-11-20T01:02:58Z",
+            "span_minutes": 300.5,
+            "change_pct": -0.3501,
             "sampled_high": 83.16,
-            "sampled_low": 82.84
+            "sampled_low": 82.55
           }
         },
         "GC=F": {
@@ -1217,16 +1252,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 3665.8,
             "start_as_of": "2026-11-19T20:02:33Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3605.0,
-            "end_as_of": "2026-11-19T23:41:34Z",
-            "span_minutes": 219.0,
-            "change_pct": -1.6586,
+            "end_value": 3593.0,
+            "end_as_of": "2026-11-20T01:03:01Z",
+            "span_minutes": 300.5,
+            "change_pct": -1.9859,
             "sampled_high": 3665.8,
-            "sampled_low": 3605.0
+            "sampled_low": 3593.0
           }
         },
         "HG=F": {
@@ -1235,16 +1270,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 5.6175,
             "start_as_of": "2026-11-19T20:02:32Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 5.5705,
-            "end_as_of": "2026-11-19T23:41:22Z",
-            "span_minutes": 218.8,
-            "change_pct": -0.8367,
+            "end_value": 5.5255,
+            "end_as_of": "2026-11-20T01:03:01Z",
+            "span_minutes": 300.5,
+            "change_pct": -1.6377,
             "sampled_high": 5.6175,
-            "sampled_low": 5.5705
+            "sampled_low": 5.5255
           }
         },
         "NG=F": {
@@ -1253,14 +1288,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 3.272,
             "start_as_of": "2026-11-19T20:02:27Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3.249,
-            "end_as_of": "2026-11-19T23:40:37Z",
-            "span_minutes": 218.2,
-            "change_pct": -0.7029,
+            "end_value": 3.244,
+            "end_as_of": "2026-11-20T01:02:12Z",
+            "span_minutes": 299.8,
+            "change_pct": -0.8557,
             "sampled_high": 3.272,
             "sampled_low": 3.242
           }
