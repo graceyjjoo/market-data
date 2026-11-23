@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261123T011935Z-gh45093921969-1",
-  "reference_time": "2026-11-23T01:19:35Z",
+  "source_run_id": "20261123T030121Z-gh45103470714-1",
+  "reference_time": "2026-11-23T03:01:21Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -564,8 +564,8 @@
       "window_start": "2026-11-22T21:30:00Z",
       "window_end": "2026-11-23T09:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261123T011935Z-gh45093921969-1",
-      "last_collection_before_cutoff_gap_minutes": 490.4,
+      "last_collection_before_cutoff": "20261123T030121Z-gh45103470714-1",
+      "last_collection_before_cutoff_gap_minutes": 388.6,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -574,16 +574,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 4869.96,
             "start_as_of": "2026-11-20T11:05:30Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4708.47,
-            "end_as_of": "2026-11-23T00:59:30Z",
-            "span_minutes": 3714.0,
-            "change_pct": -3.316,
+            "end_value": 4603.85,
+            "end_as_of": "2026-11-23T02:41:10Z",
+            "span_minutes": 3815.7,
+            "change_pct": -5.4643,
             "sampled_high": 4869.96,
-            "sampled_low": 4708.47
+            "sampled_low": 4603.85
           }
         },
         "^KQ11": {
@@ -592,16 +592,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 645.68,
             "start_as_of": "2026-11-20T11:05:30Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 634.88,
-            "end_as_of": "2026-11-23T00:59:30Z",
-            "span_minutes": 3714.0,
-            "change_pct": -1.6727,
+            "end_value": 620.08,
+            "end_as_of": "2026-11-23T02:41:20Z",
+            "span_minutes": 3815.8,
+            "change_pct": -3.9648,
             "sampled_high": 645.68,
-            "sampled_low": 634.88
+            "sampled_low": 620.08
           }
         },
         "^GSPC": {
@@ -674,55 +674,90 @@
           "name": "Hang Seng",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-20T08:08:54Z",
-            "last_value": 22410.8
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 22410.8,
+            "start_as_of": "2026-11-20T08:08:54Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 22033.07,
+            "end_as_of": "2026-11-23T02:46:26Z",
+            "span_minutes": 3997.5,
+            "change_pct": -1.6855,
+            "sampled_high": 22410.8,
+            "sampled_low": 22033.07
           }
         },
         "HSTECH.HK": {
           "name": "Hang Seng TECH",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-20T08:08:54Z",
-            "last_value": 3511.14
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3511.14,
+            "start_as_of": "2026-11-20T08:08:54Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3405.66,
+            "end_as_of": "2026-11-23T02:46:28Z",
+            "span_minutes": 3997.6,
+            "change_pct": -3.0042,
+            "sampled_high": 3511.14,
+            "sampled_low": 3405.66
           }
         },
         "000300.SS": {
           "name": "CSI 300",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-20T07:00:29Z",
-            "last_value": 3954.565
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3954.565,
+            "start_as_of": "2026-11-20T07:00:29Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3909.27,
+            "end_as_of": "2026-11-23T02:46:25Z",
+            "span_minutes": 4065.9,
+            "change_pct": -1.1454,
+            "sampled_high": 3954.565,
+            "sampled_low": 3909.27
           }
         },
         "000001.SS": {
           "name": "Shanghai Composite",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-20T07:00:29Z",
-            "last_value": 3533.793
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 3533.793,
+            "start_as_of": "2026-11-20T07:00:29Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 3480.335,
+            "end_as_of": "2026-11-23T02:46:30Z",
+            "span_minutes": 4066.0,
+            "change_pct": -1.5128,
+            "sampled_high": 3533.793,
+            "sampled_low": 3480.335
           }
         },
         "399001.SZ": {
           "name": "Shenzhen Component",
           "group": "asia",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-20T08:29:13Z",
-            "last_value": 10256.389
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 10256.389,
+            "start_as_of": "2026-11-20T08:29:13Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 10143.02,
+            "end_as_of": "2026-11-23T02:46:28Z",
+            "span_minutes": 3977.2,
+            "change_pct": -1.1054,
+            "sampled_high": 10256.389,
+            "sampled_low": 10143.02
           }
         },
         "1306.T": {
@@ -786,14 +821,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 1346.04,
             "start_as_of": "2026-11-22T17:19:57Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1343.8,
-            "end_as_of": "2026-11-22T23:49:54Z",
-            "span_minutes": 389.9,
-            "change_pct": -0.1664,
+            "end_value": 1344.78,
+            "end_as_of": "2026-11-23T01:19:50Z",
+            "span_minutes": 479.9,
+            "change_pct": -0.0936,
             "sampled_high": 1346.04,
             "sampled_low": 1343.8
           }
@@ -804,15 +839,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 158.512,
             "start_as_of": "2026-11-20T21:59:58Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 158.81,
-            "end_as_of": "2026-11-22T23:49:57Z",
-            "span_minutes": 2990.0,
-            "change_pct": 0.188,
-            "sampled_high": 158.81,
+            "end_value": 158.843,
+            "end_as_of": "2026-11-23T01:19:51Z",
+            "span_minutes": 3079.9,
+            "change_pct": 0.2088,
+            "sampled_high": 158.843,
             "sampled_low": 158.512
           }
         },
@@ -840,15 +875,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 4,
             "start_value": 1.0975,
             "start_as_of": "2026-11-20T22:29:46Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.0978,
-            "end_as_of": "2026-11-22T23:49:44Z",
-            "span_minutes": 2960.0,
-            "change_pct": 0.0273,
-            "sampled_high": 1.0978,
+            "end_value": 1.0985,
+            "end_as_of": "2026-11-23T03:00:48Z",
+            "span_minutes": 3151.0,
+            "change_pct": 0.0911,
+            "sampled_high": 1.0985,
             "sampled_low": 1.0973
           }
         },
@@ -858,14 +893,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 8.468,
             "start_as_of": "2026-11-20T22:26:46Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.444,
-            "end_as_of": "2026-11-23T01:16:46Z",
-            "span_minutes": 3050.0,
-            "change_pct": -0.2834,
+            "end_value": 8.455,
+            "end_as_of": "2026-11-23T02:56:48Z",
+            "span_minutes": 3150.0,
+            "change_pct": -0.1535,
             "sampled_high": 8.468,
             "sampled_low": 8.44
           }
@@ -876,14 +911,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 25126.5,
             "start_as_of": "2026-11-20T21:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 25824.5,
-            "end_as_of": "2026-11-23T01:09:54Z",
-            "span_minutes": 3069.9,
-            "change_pct": 2.7779,
+            "end_value": 25691.75,
+            "end_as_of": "2026-11-23T02:51:39Z",
+            "span_minutes": 3171.7,
+            "change_pct": 2.2496,
             "sampled_high": 25824.5,
             "sampled_low": 25126.5
           }
@@ -894,14 +929,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 6935.0,
             "start_as_of": "2026-11-20T21:59:58Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7089.0,
-            "end_as_of": "2026-11-23T01:09:55Z",
-            "span_minutes": 3069.9,
-            "change_pct": 2.2206,
+            "end_value": 7068.25,
+            "end_as_of": "2026-11-23T02:51:40Z",
+            "span_minutes": 3171.7,
+            "change_pct": 1.9214,
             "sampled_high": 7089.0,
             "sampled_low": 6935.0
           }
@@ -912,14 +947,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 83.41,
             "start_as_of": "2026-11-20T21:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 83.24,
-            "end_as_of": "2026-11-23T01:09:55Z",
-            "span_minutes": 3069.9,
-            "change_pct": -0.2038,
+            "end_value": 82.99,
+            "end_as_of": "2026-11-23T02:51:41Z",
+            "span_minutes": 3171.7,
+            "change_pct": -0.5035,
             "sampled_high": 83.41,
             "sampled_low": 82.9
           }
@@ -930,14 +965,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 3515.4,
             "start_as_of": "2026-11-20T21:59:57Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3602.6,
-            "end_as_of": "2026-11-23T01:09:56Z",
-            "span_minutes": 3070.0,
-            "change_pct": 2.4805,
+            "end_value": 3587.6,
+            "end_as_of": "2026-11-23T02:51:41Z",
+            "span_minutes": 3171.7,
+            "change_pct": 2.0538,
             "sampled_high": 3602.6,
             "sampled_low": 3515.4
           }
@@ -948,16 +983,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 5.485,
             "start_as_of": "2026-11-20T21:59:55Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 5.547,
-            "end_as_of": "2026-11-23T01:09:40Z",
-            "span_minutes": 3069.8,
-            "change_pct": 1.1304,
+            "end_value": 5.442,
+            "end_as_of": "2026-11-23T02:51:35Z",
+            "span_minutes": 3171.7,
+            "change_pct": -0.784,
             "sampled_high": 5.552,
-            "sampled_low": 5.485
+            "sampled_low": 5.442
           }
         },
         "NG=F": {
@@ -966,16 +1001,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 3.748,
             "start_as_of": "2026-11-20T21:59:59Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3.623,
-            "end_as_of": "2026-11-23T01:09:37Z",
-            "span_minutes": 3069.6,
-            "change_pct": -3.3351,
+            "end_value": 3.617,
+            "end_as_of": "2026-11-23T02:51:23Z",
+            "span_minutes": 3171.4,
+            "change_pct": -3.4952,
             "sampled_high": 3.748,
-            "sampled_low": 3.623
+            "sampled_low": 3.617
           }
         },
         "^VIX": {
