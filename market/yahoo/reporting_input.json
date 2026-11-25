@@ -1,7 +1,7 @@
 {
   "schema_id": "market-yahoo-reporting-v1",
-  "source_run_id": "20261125T133848Z-gh45625697187-1",
-  "reference_time": "2026-11-25T13:38:48Z",
+  "source_run_id": "20261125T151445Z-gh45642939442-1",
+  "reference_time": "2026-11-25T15:14:45Z",
   "window_basis": "source as_of; change = last quote <= window_end vs last quote <= window_start (baseline, up to 4 days back)",
   "windows": [
     {
@@ -732,8 +732,8 @@
       "window_start": "2026-11-25T09:30:00Z",
       "window_end": "2026-11-25T21:30:00Z",
       "cutoff_reached_at_collection": false,
-      "last_collection_before_cutoff": "20261125T133848Z-gh45625697187-1",
-      "last_collection_before_cutoff_gap_minutes": 471.2,
+      "last_collection_before_cutoff": "20261125T151445Z-gh45642939442-1",
+      "last_collection_before_cutoff_gap_minutes": 375.2,
       "note": "cutoff not yet reached; data ends at latest collection, no interpolation",
       "instruments": {
         "^KS11": {
@@ -787,11 +787,18 @@
           "name": "Nasdaq 100",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T22:15:59Z",
-            "last_value": 26214.168
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 26214.168,
+            "start_as_of": "2026-11-24T22:15:59Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 25289.857,
+            "end_as_of": "2026-11-25T15:14:42Z",
+            "span_minutes": 1018.7,
+            "change_pct": -3.526,
+            "sampled_high": 26214.168,
+            "sampled_low": 25289.857
           }
         },
         "^SOX": {
@@ -809,11 +816,18 @@
           "name": "Russell 2000",
           "group": "us_index",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T21:30:11Z",
-            "last_value": 2684.942
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 2684.942,
+            "start_as_of": "2026-11-24T21:30:11Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 2636.077,
+            "end_as_of": "2026-11-25T14:59:45Z",
+            "span_minutes": 1049.6,
+            "change_pct": -1.82,
+            "sampled_high": 2684.942,
+            "sampled_low": 2636.077
           }
         },
         "^IXIC": {
@@ -910,16 +924,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 4.168,
             "start_as_of": "2026-11-24T19:59:53Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4.153,
-            "end_as_of": "2026-11-25T13:23:53Z",
-            "span_minutes": 1044.0,
-            "change_pct": -0.3599,
+            "end_value": 4.147,
+            "end_as_of": "2026-11-25T14:59:53Z",
+            "span_minutes": 1140.0,
+            "change_pct": -0.5038,
             "sampled_high": 4.168,
-            "sampled_low": 4.153
+            "sampled_low": 4.147
           }
         },
         "^FVX": {
@@ -928,13 +942,13 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 4.712,
             "start_as_of": "2026-11-24T19:59:53Z",
             "start_is_pre_window_baseline": true,
             "end_value": 4.632,
-            "end_as_of": "2026-11-25T13:23:53Z",
-            "span_minutes": 1044.0,
+            "end_as_of": "2026-11-25T14:59:53Z",
+            "span_minutes": 1140.0,
             "change_pct": -1.6978,
             "sampled_high": 4.712,
             "sampled_low": 4.632
@@ -946,16 +960,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 4.904,
             "start_as_of": "2026-11-24T19:59:53Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 4.84,
-            "end_as_of": "2026-11-25T13:23:53Z",
-            "span_minutes": 1044.0,
-            "change_pct": -1.3051,
+            "end_value": 4.836,
+            "end_as_of": "2026-11-25T14:59:53Z",
+            "span_minutes": 1140.0,
+            "change_pct": -1.3866,
             "sampled_high": 4.904,
-            "sampled_low": 4.84
+            "sampled_low": 4.836
           }
         },
         "^TYX": {
@@ -964,16 +978,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 5.292,
             "start_as_of": "2026-11-24T19:59:53Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 5.254,
-            "end_as_of": "2026-11-25T13:23:53Z",
-            "span_minutes": 1044.0,
-            "change_pct": -0.7181,
+            "end_value": 5.245,
+            "end_as_of": "2026-11-25T14:59:53Z",
+            "span_minutes": 1140.0,
+            "change_pct": -0.8881,
             "sampled_high": 5.292,
-            "sampled_low": 5.254
+            "sampled_low": 5.245
           }
         },
         "KRW=X": {
@@ -982,15 +996,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 1,
+            "n_quotes_in_window": 2,
             "start_value": 1343.3,
             "start_as_of": "2026-11-25T09:04:15Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1343.0,
-            "end_as_of": "2026-11-25T10:06:51Z",
-            "span_minutes": 62.6,
-            "change_pct": -0.0223,
-            "sampled_high": 1343.3,
+            "end_value": 1345.18,
+            "end_as_of": "2026-11-25T13:39:03Z",
+            "span_minutes": 274.8,
+            "change_pct": 0.14,
+            "sampled_high": 1345.18,
             "sampled_low": 1343.0
           }
         },
@@ -1000,16 +1014,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 159.352,
             "start_as_of": "2026-11-25T09:18:45Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 159.229,
-            "end_as_of": "2026-11-25T12:09:53Z",
-            "span_minutes": 171.1,
-            "change_pct": -0.0772,
+            "end_value": 159.218,
+            "end_as_of": "2026-11-25T13:39:04Z",
+            "span_minutes": 260.3,
+            "change_pct": -0.0841,
             "sampled_high": 159.352,
-            "sampled_low": 159.229
+            "sampled_low": 159.218
           }
         },
         "CNY=X": {
@@ -1018,14 +1032,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 6.6615,
             "start_as_of": "2026-11-25T09:12:12Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 6.6597,
-            "end_as_of": "2026-11-25T13:36:56Z",
-            "span_minutes": 264.7,
-            "change_pct": -0.027,
+            "end_value": 6.6606,
+            "end_as_of": "2026-11-25T15:12:13Z",
+            "span_minutes": 360.0,
+            "change_pct": -0.0135,
             "sampled_high": 6.6638,
             "sampled_low": 6.6597
           }
@@ -1036,14 +1050,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 1.0946,
             "start_as_of": "2026-11-25T09:18:46Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 1.0948,
-            "end_as_of": "2026-11-25T13:38:47Z",
-            "span_minutes": 260.0,
-            "change_pct": 0.0183,
+            "end_value": 1.0942,
+            "end_as_of": "2026-11-25T15:14:44Z",
+            "span_minutes": 356.0,
+            "change_pct": -0.0365,
             "sampled_high": 1.0948,
             "sampled_low": 1.0941
           }
@@ -1054,15 +1068,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 2,
+            "n_quotes_in_window": 3,
             "start_value": 8.406,
             "start_as_of": "2026-11-25T09:16:46Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 8.426,
-            "end_as_of": "2026-11-25T13:36:47Z",
-            "span_minutes": 260.0,
-            "change_pct": 0.2379,
-            "sampled_high": 8.426,
+            "end_value": 8.442,
+            "end_as_of": "2026-11-25T15:11:44Z",
+            "span_minutes": 355.0,
+            "change_pct": 0.4283,
+            "sampled_high": 8.442,
             "sampled_low": 8.406
           }
         },
@@ -1072,16 +1086,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 25768.75,
             "start_as_of": "2026-11-25T09:08:44Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 25576.5,
-            "end_as_of": "2026-11-25T13:29:07Z",
-            "span_minutes": 260.4,
-            "change_pct": -0.7461,
+            "end_value": 25447.5,
+            "end_as_of": "2026-11-25T15:05:03Z",
+            "span_minutes": 356.3,
+            "change_pct": -1.2467,
             "sampled_high": 25768.75,
-            "sampled_low": 25527.5
+            "sampled_low": 25447.5
           }
         },
         "ES=F": {
@@ -1090,16 +1104,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 7145.5,
             "start_as_of": "2026-11-25T09:08:48Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 7086.5,
-            "end_as_of": "2026-11-25T13:29:09Z",
-            "span_minutes": 260.4,
-            "change_pct": -0.8257,
+            "end_value": 7069.0,
+            "end_as_of": "2026-11-25T15:05:05Z",
+            "span_minutes": 356.3,
+            "change_pct": -1.0706,
             "sampled_high": 7145.5,
-            "sampled_low": 7084.5
+            "sampled_low": 7069.0
           }
         },
         "CL=F": {
@@ -1108,15 +1122,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 81.43,
             "start_as_of": "2026-11-25T09:08:47Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 82.53,
-            "end_as_of": "2026-11-25T13:29:07Z",
-            "span_minutes": 260.3,
-            "change_pct": 1.3509,
-            "sampled_high": 82.53,
+            "end_value": 83.64,
+            "end_as_of": "2026-11-25T15:04:58Z",
+            "span_minutes": 356.2,
+            "change_pct": 2.714,
+            "sampled_high": 83.64,
             "sampled_low": 81.24
           }
         },
@@ -1126,16 +1140,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 3562.5,
             "start_as_of": "2026-11-25T09:08:40Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3535.7,
-            "end_as_of": "2026-11-25T13:29:10Z",
-            "span_minutes": 260.5,
-            "change_pct": -0.7523,
+            "end_value": 3498.0,
+            "end_as_of": "2026-11-25T15:05:03Z",
+            "span_minutes": 356.4,
+            "change_pct": -1.8105,
             "sampled_high": 3562.5,
-            "sampled_low": 3518.5
+            "sampled_low": 3498.0
           }
         },
         "HG=F": {
@@ -1144,16 +1158,16 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 5.425,
             "start_as_of": "2026-11-25T09:08:47Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 5.41,
-            "end_as_of": "2026-11-25T13:29:11Z",
-            "span_minutes": 260.4,
-            "change_pct": -0.2765,
+            "end_value": 5.371,
+            "end_as_of": "2026-11-25T15:05:07Z",
+            "span_minutes": 356.3,
+            "change_pct": -0.9954,
             "sampled_high": 5.425,
-            "sampled_low": 5.378
+            "sampled_low": 5.371
           }
         },
         "NG=F": {
@@ -1162,14 +1176,14 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 3.594,
             "start_as_of": "2026-11-25T09:08:47Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 3.63,
-            "end_as_of": "2026-11-25T13:29:04Z",
-            "span_minutes": 260.3,
-            "change_pct": 1.0017,
+            "end_value": 3.643,
+            "end_as_of": "2026-11-25T15:05:09Z",
+            "span_minutes": 356.4,
+            "change_pct": 1.3634,
             "sampled_high": 3.663,
             "sampled_low": 3.594
           }
@@ -1180,15 +1194,15 @@
           "path": {
             "path_available": true,
             "reason": null,
-            "n_quotes_in_window": 3,
+            "n_quotes_in_window": 4,
             "start_value": 28.2,
             "start_as_of": "2026-11-25T09:03:46Z",
             "start_is_pre_window_baseline": true,
-            "end_value": 30.85,
-            "end_as_of": "2026-11-25T13:24:01Z",
-            "span_minutes": 260.2,
-            "change_pct": 9.3972,
-            "sampled_high": 30.85,
+            "end_value": 31.68,
+            "end_as_of": "2026-11-25T15:00:01Z",
+            "span_minutes": 356.2,
+            "change_pct": 12.3404,
+            "sampled_high": 31.68,
             "sampled_low": 28.2
           }
         },
@@ -1295,44 +1309,72 @@
           "name": "양자컴퓨팅",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T20:59:52Z",
-            "last_value": 7.93
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 7.93,
+            "start_as_of": "2026-11-24T20:59:52Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 7.56,
+            "end_as_of": "2026-11-25T15:10:03Z",
+            "span_minutes": 1090.2,
+            "change_pct": -4.6658,
+            "sampled_high": 7.93,
+            "sampled_low": 7.56
           }
         },
         "WARP": {
           "name": "우주산업",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T21:00:00Z",
-            "last_value": 15.8
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 15.8,
+            "start_as_of": "2026-11-24T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 14.99,
+            "end_as_of": "2026-11-25T15:09:27Z",
+            "span_minutes": 1089.5,
+            "change_pct": -5.1266,
+            "sampled_high": 15.8,
+            "sampled_low": 14.99
           }
         },
         "JOUL": {
           "name": "전력인프라",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T20:56:32Z",
-            "last_value": 17.93
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 17.93,
+            "start_as_of": "2026-11-24T20:56:32Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 17.2,
+            "end_as_of": "2026-11-25T15:07:58Z",
+            "span_minutes": 1091.4,
+            "change_pct": -4.0714,
+            "sampled_high": 17.93,
+            "sampled_low": 17.2
           }
         },
         "LYTE": {
           "name": "AI 광통신·포토닉스",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T21:00:00Z",
-            "last_value": 12.89
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 12.89,
+            "start_as_of": "2026-11-24T21:00:00Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 12.137,
+            "end_as_of": "2026-11-25T15:14:06Z",
+            "span_minutes": 1094.1,
+            "change_pct": -5.8417,
+            "sampled_high": 12.89,
+            "sampled_low": 12.137
           }
         },
         "NLR": {
@@ -1361,11 +1403,18 @@
           "name": "휴머노이드",
           "group": "etf",
           "path": {
-            "path_available": false,
-            "reason": "no_new_recent_path_quotes",
-            "n_quotes_in_window": 0,
-            "last_as_of": "2026-11-24T20:55:26Z",
-            "last_value": 25.13
+            "path_available": true,
+            "reason": null,
+            "n_quotes_in_window": 1,
+            "start_value": 25.13,
+            "start_as_of": "2026-11-24T20:55:26Z",
+            "start_is_pre_window_baseline": true,
+            "end_value": 23.875,
+            "end_as_of": "2026-11-25T15:13:55Z",
+            "span_minutes": 1098.5,
+            "change_pct": -4.994,
+            "sampled_high": 25.13,
+            "sampled_low": 23.875
           }
         },
         "COPX": {
